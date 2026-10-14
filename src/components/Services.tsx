@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const Services: React.FC = () => {
@@ -55,19 +55,10 @@ export const Services: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Floating Feature Pill */}
-          <div className="absolute -bottom-4 left-6 hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-slate-100 text-xs font-semibold text-slate-800">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span>{language === 'en' ? 'Dust-Free Preparation' : 'Preparación Libre de Polvo'}</span>
-          </div>
         </div>
 
         {/* Right Editorial Copy */}
         <div className="lg:col-span-6 flex flex-col items-start gap-4 lg:pl-6">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue">
-            {language === 'en' ? 'COMPLETE HOME RENOVATIONS' : 'RENOVACIONES INTEGRALES'}
-          </span>
           <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 tracking-tight">
             {language === 'en' ? 'Total Makeovers' : 'Transformaciones Completas'}
           </h3>
@@ -81,21 +72,6 @@ export const Services: React.FC = () => {
               ? 'We project manage your home transformation from start to finish. You deal directly with owners Yalila and Rodolfo—which means no sales reps, no pushy middle-men, and absolute accountability.'
               : 'Supervisamos cada etapa de tu renovación. Tratas directamente con los dueños, Yalila y Rodolfo, lo que garantiza comunicación transparente, sin intermediarios y con total responsabilidad.'}
           </p>
-
-          <div className="space-y-2 py-2">
-            <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-              <span>{language === 'en' ? '100% Floor & Furniture Protective Masking' : 'Empapelado total de pisos, muebles y molduras'}</span>
-            </div>
-            <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-              <span>{language === 'en' ? 'Premium Sherwin-Williams & Benjamin Moore Paints' : 'Pinturas de gama alta Sherwin-Williams y Benjamin Moore'}</span>
-            </div>
-            <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-              <span>{language === 'en' ? 'Full Multi-Million Dollar Liability Insurance' : 'Póliza de seguro y licencia activa en Florida'}</span>
-            </div>
-          </div>
 
           <div className="pt-2">
             <a
@@ -115,9 +91,6 @@ export const Services: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-20 md:mb-28">
         {/* Left Editorial Copy */}
         <div className="lg:col-span-6 flex flex-col items-start gap-4 lg:pr-6 order-2 lg:order-1">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue">
-            {language === 'en' ? 'SMOOTH CEILINGS & MODERN INTERIORS' : 'TECHOS LISOS E INTERIORES MODERNOS'}
-          </span>
           <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 tracking-tight">
             {language === 'en' ? 'Living Rooms & Popcorn Removal' : 'Salas de Estar y Retiro de Popcorn'}
           </h3>
