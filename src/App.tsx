@@ -6,6 +6,7 @@ import { WhyChooseUs } from './components/WhyChooseUs';
 import { AboutUs } from './components/AboutUs';
 import { Testimonials } from './components/Testimonials';
 import { Gallery } from './components/Gallery';
+import { BeforeAfter } from './components/BeforeAfter';
 
 function PageContent() {
   return (
@@ -18,6 +19,7 @@ function PageContent() {
         <AboutUs />
         <Testimonials />
         <Gallery />
+        <BeforeAfter />
       </main>
     </div>
   );
