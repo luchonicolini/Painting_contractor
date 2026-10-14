@@ -36,7 +36,7 @@ export const ContactEstimate: React.FC = () => {
   };
 
   return (
-    <section className="bg-slate-950 text-white py-20 md:py-28" id="contact">
+    <section className="bg-slate-50 text-slate-900 py-20 md:py-28 border-t border-slate-200/70" id="contact">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Context & Direct Contact */}
@@ -44,30 +44,30 @@ export const ContactEstimate: React.FC = () => {
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-blue block">
               {language === 'en' ? 'GET IN TOUCH' : 'CONTACTO DIRECTO'}
             </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-tight">
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
               {language === 'en'
                 ? 'Schedule Your Free On-Site Estimate'
                 : 'Agenda Tu Presupuesto Gratis en Obra'}
             </h2>
-            <p className="text-slate-300 text-sm leading-relaxed">
+            <p className="text-slate-600 text-sm leading-relaxed">
               {language === 'en'
                 ? 'Owners Yalila and Rodolfo personally visit your property to measure square footage, inspect substrate conditions, and provide an accurate, guaranteed quote.'
                 : 'Los dueños, Yalila y Rodolfo, visitan personalmente tu propiedad para medir, revisar las condiciones de las paredes y brindarte un presupuesto exacto y por escrito.'}
             </p>
 
-            <div className="space-y-4 pt-4 border-t border-white/10">
+            <div className="space-y-4 pt-4 border-t border-slate-200/80">
               {/* Phone */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-blue-400 flex-shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100/80 flex items-center justify-center text-brand-blue flex-shrink-0 shadow-xs">
                   <Phone className="w-5 h-5 text-brand-blue" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block font-medium">
+                  <span className="text-xs text-slate-500 block font-medium">
                     {language === 'en' ? 'Direct Phone Line' : 'Línea Telefónica Directa'}
                   </span>
                   <a
                     href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                    className="text-base font-bold text-white hover:text-blue-400 transition-colors"
+                    className="text-base font-bold text-slate-900 hover:text-brand-blue transition-colors"
                   >
                     {BUSINESS_INFO.phone}
                   </a>
@@ -76,18 +76,18 @@ export const ContactEstimate: React.FC = () => {
 
               {/* WhatsApp */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0">
-                  <MessageCircle className="w-5 h-5 text-emerald-400" />
+                <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100/80 flex items-center justify-center text-emerald-600 flex-shrink-0 shadow-xs">
+                  <MessageCircle className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block font-medium">
+                  <span className="text-xs text-slate-500 block font-medium">
                     {language === 'en' ? 'Fast Photo Estimates' : 'Cotización Rápida por Fotos'}
                   </span>
                   <a
                     href={BUSINESS_INFO.social.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-base font-bold text-emerald-400 hover:underline flex items-center gap-1"
+                    className="text-base font-bold text-emerald-600 hover:text-emerald-700 hover:underline flex items-center gap-1"
                   >
                     <span>WhatsApp (786) 370-6098</span>
                   </a>
@@ -96,32 +96,32 @@ export const ContactEstimate: React.FC = () => {
 
               {/* Email */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-blue-400 flex-shrink-0">
-                  <Mail className="w-5 h-5 text-slate-300" />
+                <div className="w-11 h-11 rounded-xl bg-slate-100 border border-slate-200/80 flex items-center justify-center text-slate-600 flex-shrink-0 shadow-xs">
+                  <Mail className="w-5 h-5 text-slate-600" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block font-medium">
+                  <span className="text-xs text-slate-500 block font-medium">
                     {language === 'en' ? 'Direct Email' : 'Correo Electrónico'}
                   </span>
                   <a
                     href={`mailto:${BUSINESS_INFO.email}`}
-                    className="text-sm font-semibold text-slate-200 hover:text-white transition-colors"
+                    className="text-sm font-semibold text-slate-800 hover:text-brand-blue transition-colors"
                   >
                     {BUSINESS_INFO.email}
                   </a>
                 </div>
               </div>
 
-              {/* Location & Hours */}
+              {/* Location & Coverage */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-blue-400 flex-shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100/80 flex items-center justify-center text-brand-blue flex-shrink-0 shadow-xs">
                   <MapPin className="w-5 h-5 text-brand-blue" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block font-medium">
+                  <span className="text-xs text-slate-500 block font-medium">
                     {language === 'en' ? 'Service Areas' : 'Zona de Cobertura'}
                   </span>
-                  <span className="text-sm font-medium text-slate-200">
+                  <span className="text-sm font-medium text-slate-800">
                     Hialeah, Miami-Dade & Broward County
                   </span>
                 </div>
@@ -130,7 +130,7 @@ export const ContactEstimate: React.FC = () => {
           </div>
 
           {/* Right Column: Modern High-Converting Estimate Form */}
-          <div className="lg:col-span-7 bg-white text-slate-900 p-7 sm:p-10 rounded-3xl shadow-2xl border border-slate-100">
+          <div className="lg:col-span-7 bg-white text-slate-900 p-7 sm:p-10 rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-200/80">
             <h3 className="font-heading font-extrabold text-2xl text-slate-900 mb-1">
               {language === 'en' ? 'Tell Us About Your Project' : 'Cuéntanos Sobre Tu Proyecto'}
             </h3>
