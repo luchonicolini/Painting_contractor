@@ -7,6 +7,8 @@ import { AboutUs } from './components/AboutUs';
 import { Testimonials } from './components/Testimonials';
 import { Gallery } from './components/Gallery';
 import { BeforeAfter } from './components/BeforeAfter';
+import { ContactEstimate } from './components/ContactEstimate';
+import { Footer } from './components/Footer';
 
 function PageContent() {
   return (
@@ -20,7 +22,9 @@ function PageContent() {
         <Testimonials />
         <Gallery />
         <BeforeAfter />
+        <ContactEstimate />
       </main>
+      <Footer />
     </div>
   );
 }
