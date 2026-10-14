@@ -97,13 +97,6 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Right Floating Badge (Active Service Area) */}
-        <div className="absolute bottom-6 right-6 hidden md:flex items-center gap-3 px-4 py-2.5 rounded-xl bg-slate-950/80 backdrop-blur-md border border-white/15 text-white text-xs shadow-2xl">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-medium text-slate-200">
-            Hialeah • Pembroke Pines • Doral • Miami
-          </span>
-        </div>
 
         {/* Floating Social Proof Quote on Desktop */}
         <div className="absolute top-12 right-12 hidden xl:flex max-w-xs flex-col gap-2 p-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 text-white shadow-2xl">
