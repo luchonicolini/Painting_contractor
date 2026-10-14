@@ -63,6 +63,8 @@ export const BeforeAfter: React.FC = () => {
           <img
             src={activeCase.afterImage}
             alt="After finish"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             draggable={false}
           />
@@ -83,6 +85,8 @@ export const BeforeAfter: React.FC = () => {
             <img
               src={activeCase.beforeImage}
               alt="Before finish"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover max-w-none"
               style={{
                 width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100%',

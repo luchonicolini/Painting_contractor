@@ -35,8 +35,10 @@ export const Services: React.FC = () => {
             <div className="col-span-7">
               <div className="rounded-2xl overflow-hidden shadow-lg bg-slate-100 h-80 sm:h-96 group">
                 <img
-                  src="https://ded7t1cra1lh5.cloudfront.net/media/718356/c8f95309e3e88371c12b1b76759334c8c4807b9f/original/CD4119B2-82DF-4558-B3D7-05CE4EEC2FE6.jpeg?1672597247"
+                  src="/images/project-interior-smooth.webp"
                   alt="Living room smooth Level 5 ceiling and painted interior in Florida"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -44,8 +46,10 @@ export const Services: React.FC = () => {
             <div className="col-span-5 pb-4">
               <div className="rounded-2xl overflow-hidden shadow-xl bg-slate-100 h-60 sm:h-72 group">
                 <img
-                  src="https://ded7t1cra1lh5.cloudfront.net/media/718360/2db21c774885573528503849f97d4d2ff4a885eb/original/6D369F98-DF98-4FB0-84A0-BA87EFA1C608.jpeg?1672597306"
+                  src="/images/project-trim-accent.webp"
                   alt="Accent wall and trim craftsmanship"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -150,8 +154,10 @@ export const Services: React.FC = () => {
             <div className="col-span-7">
               <div className="rounded-2xl overflow-hidden shadow-lg bg-slate-100 h-80 sm:h-96 group">
                 <img
-                  src="https://ded7t1cra1lh5.cloudfront.net/media/718355/3cfab9ddc7d55e94146128083998ed36e4587186/original/A4A1ED9A-A0C1-4E08-B6A1-AE7A8F3D81B5.jpeg?1672597239"
+                  src="/images/project-living-room-white.webp"
                   alt="Flawless exterior and interior transition finished in pure white"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -159,15 +165,19 @@ export const Services: React.FC = () => {
             <div className="col-span-5 space-y-4">
               <div className="rounded-xl overflow-hidden shadow-md bg-slate-100 h-36 sm:h-44 group">
                 <img
-                  src="https://ded7t1cra1lh5.cloudfront.net/media/718359/d1cccb1a525465b9948ba67cbf97041b4908daef/original/93D29A1B-487F-4BE7-8F52-46358218705C.jpeg?1672597258"
+                  src="/images/project-exterior-facade.webp"
                   alt="Exterior detail and facade"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="rounded-xl overflow-hidden shadow-md bg-slate-100 h-36 sm:h-44 group">
                 <img
-                  src="https://ded7t1cra1lh5.cloudfront.net/media/718367/61b4c336b74714af47cf7346be501267c8b783cf/original/C4BE1383-7C7D-478E-8B94-7E638BB3E38D.jpeg?1672597388"
+                  src="/images/project-roof-driveway.webp"
                   alt="Roof restoration and driveway sealing"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -191,8 +201,10 @@ export const Services: React.FC = () => {
           <div className="group flex flex-col items-center text-center p-4 rounded-2xl hover:bg-slate-50 transition-colors">
             <div className="w-full h-48 rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition">
               <img
-                src="https://ded7t1cra1lh5.cloudfront.net/media/718371/6b9708f62b6dc4d0b65fef9d8c151c0edb91d1b1/original/26CEF41A-DF76-4173-BBE5-0EB8DF038CEE.jpeg?1672597406"
+                src="/images/project-exterior-weatherproof.webp"
                 alt="Exterior weatherproofing"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -209,8 +221,10 @@ export const Services: React.FC = () => {
           <div className="group flex flex-col items-center text-center p-4 rounded-2xl hover:bg-slate-50 transition-colors">
             <div className="w-full h-48 rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition">
               <img
-                src="https://ded7t1cra1lh5.cloudfront.net/media/718356/c8f95309e3e88371c12b1b76759334c8c4807b9f/original/CD4119B2-82DF-4558-B3D7-05CE4EEC2FE6.jpeg?1672597247"
+                src="/images/project-interior-smooth.webp"
                 alt="Interior ceilings and walls"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -227,8 +241,10 @@ export const Services: React.FC = () => {
           <div className="group flex flex-col items-center text-center p-4 rounded-2xl hover:bg-slate-50 transition-colors">
             <div className="w-full h-48 rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition">
               <img
-                src="https://ded7t1cra1lh5.cloudfront.net/media/718368/c2b178a9d8aab9cb728c1ce9627c9abeab8b486b/original/3D6D3C0C-21F7-4B81-8F2E-3EAADD204340.jpeg?1672597395"
+                src="/images/project-popcorn-smooth.webp"
                 alt="Roof and pressure washing"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>

@@ -70,6 +70,7 @@ export const Gallery: React.FC = () => {
               alt={item.title[language]}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
+              decoding="async"
             />
 
             {/* Hover Dark Gradient & Zoom Overlay */}

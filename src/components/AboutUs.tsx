@@ -97,8 +97,10 @@ export const AboutUs: React.FC = () => {
         <div className="lg:col-span-6">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-900 group">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv_2BTOv8Vtl_-zNeREKkAu9CSJg4qhDzbN-R6VQCEb7Y7znEHyD9KB5FojLwqzpuuAjP8Cbe_yAecL8MGp4QS_5CUQ_MtXn5sLEtJfLS08jcJ07pa--S9xt1C1gfM4G8NklDPQzYT0dhulPZeth0vvNNPdWVvhB87PIDNETPAmFC6bZgZq8s_POJI9bAuZ9nWOFJSLOTNaiMmAABmljSYdkvE1-kPttTi2y5VGSWaQwR7rWDpUWQ"
+              src="/images/founders-yalila-rodolfo.webp"
               alt="Yalila and Rodolfo - Founders of El Palmar Painting and Services"
+              loading="lazy"
+              decoding="async"
               className="w-full h-[480px] sm:h-[540px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
             />
 

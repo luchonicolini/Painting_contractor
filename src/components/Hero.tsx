@@ -11,8 +11,10 @@ export const Hero: React.FC = () => {
       <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden min-h-[560px] md:min-h-[620px] flex items-center bg-slate-950 shadow-2xl shadow-slate-900/20 border border-slate-800">
         {/* Background Architectural Florida Residence */}
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
+          src="/images/hero-bg.webp"
           alt="Luxury South Florida residence finished in pristine exterior painting"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-70 scale-[1.02] transition-transform duration-1000"
         />
 

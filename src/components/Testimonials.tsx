@@ -32,8 +32,10 @@ export const Testimonials: React.FC = () => {
         <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[540px] flex items-center bg-slate-900 shadow-2xl border border-slate-800">
           {/* Authentic Craftsman Backdrop Image */}
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
+            src="/images/testimonials-bg.webp"
             alt="South Florida renovated residential property"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover opacity-60 scale-[1.02] transition-transform duration-1000"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/25" />

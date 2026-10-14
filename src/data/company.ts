@@ -66,7 +66,7 @@ export const SERVICES: ServiceItem[] = [
       { en: "Low-VOC premium washable paints", es: "Pinturas lavables ecológicas de bajo olor" }
     ],
     icon: "Paintbrush",
-    image: "https://s3.amazonaws.com/brandrepup/page_images/56235/original/interior-painting.jpg?1633128830",
+    image: "/images/service-interior.webp",
     category: "interior"
   },
   {
@@ -90,7 +90,7 @@ export const SERVICES: ServiceItem[] = [
       { en: "UV protective long-life exterior paints", es: "Pinturas con filtro solar UV de máxima duración" }
     ],
     icon: "Home",
-    image: "https://s3.amazonaws.com/brandrepup/page_images/56236/original/exterior-painting.jpg?1633128854",
+    image: "/images/service-exterior.webp",
     category: "exterior"
   },
   {
@@ -114,7 +114,7 @@ export const SERVICES: ServiceItem[] = [
       { en: "Wallpaper removal available", es: "También retiramos papel tapiz antiguo" }
     ],
     icon: "Layers",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/714902/0518eb837a986ea61f3d2394e990e12584739588/original/85670357-035B-4714-B4A4-9624101B2C00.jpeg?1669037833",
+    image: "/images/service-drywall.webp",
     category: "specialty"
   },
   {
@@ -138,7 +138,7 @@ export const SERVICES: ServiceItem[] = [
       { en: "Safe OSHA-compliant equipment", es: "Equipamiento seguro y profesional" }
     ],
     icon: "ShieldCheck",
-    image: "https://s3.amazonaws.com/brandrepup/page_images/56238/original/roof-painting.jpg?1633128870",
+    image: "/images/service-roof-painting.webp",
     category: "exterior"
   },
   {
@@ -162,7 +162,7 @@ export const SERVICES: ServiceItem[] = [
       { en: "Eco-friendly surface treatments", es: "Tratamientos biodegradables seguros para plantas" }
     ],
     icon: "Sparkles",
-    image: "https://s3.amazonaws.com/brandrepup/page_images/56237/original/pressure-washing.jpg?1633128862",
+    image: "/images/service-pressure-washing.webp",
     category: "specialty"
   },
   {
@@ -186,7 +186,7 @@ export const SERVICES: ServiceItem[] = [
       { en: "Itemized invoices and commercial receipts", es: "Facturas detalladas para contabilidad" }
     ],
     icon: "Building",
-    image: "https://s3.amazonaws.com/brandrepup/page_images/56234/original/service-residential-painting.jpg?1633128814",
+    image: "/images/service-residential.webp",
     category: "commercial"
   }
 ];
@@ -277,7 +277,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     title: { en: "Modern Residence Exterior Makeover", es: "Renovación Exterior Residencial Moderna" },
     category: "exterior",
     location: "Pembroke Pines, FL",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/718355/3cfab9ddc7d55e94146128083998ed36e4587186/original/A4A1ED9A-A0C1-4E08-B6A1-AE7A8F3D81B5.jpeg?1672597239",
+    image: "/images/project-living-room-white.webp",
     isFeatured: true
   },
   {
@@ -285,7 +285,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     title: { en: "Custom Living Room & Ceiling Finish", es: "Acabado en Sala de Estar y Techos" },
     category: "interior",
     location: "Hialeah, FL",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/718356/c8f95309e3e88371c12b1b76759334c8c4807b9f/original/CD4119B2-82DF-4558-B3D7-05CE4EEC2FE6.jpeg?1672597247",
+    image: "/images/project-interior-smooth.webp",
     isFeatured: true
   },
   {
@@ -293,7 +293,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     title: { en: "South Florida Villa Exterior Repaint", es: "Pintura Exterior de Villa en Florida" },
     category: "exterior",
     location: "Miramar, FL",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/718359/d1cccb1a525465b9948ba67cbf97041b4908daef/original/93D29A1B-487F-4BE7-8F52-46358218705C.jpeg?1672597258",
+    image: "/images/project-exterior-facade.webp",
     isFeatured: true
   },
   {
@@ -301,35 +301,35 @@ export const PORTFOLIO: PortfolioItem[] = [
     title: { en: "Crisp Kitchen Cabinets & Wall Contrast", es: "Contraste de Paredes y Cocina Moderna" },
     category: "interior",
     location: "Miami-Dade, FL",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/718360/2db21c774885573528503849f97d4d2ff4a885eb/original/6D369F98-DF98-4FB0-84A0-BA87EFA1C608.jpeg?1672597306"
+    image: "/images/project-trim-accent.webp"
   },
   {
     id: "project-5",
     title: { en: "Roof Coating & Weather Sealant", es: "Revestimiento y Sellado de Techo" },
     category: "roof",
     location: "Hialeah, FL",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/718367/61b4c336b74714af47cf7346be501267c8b783cf/original/C4BE1383-7C7D-478E-8B94-7E638BB3E38D.jpeg?1672597388"
+    image: "/images/project-roof-driveway.webp"
   },
   {
     id: "project-6",
     title: { en: "Pressure Wash & Driveway Restoration", es: "Lavado a Presión y Restauración de Entrada" },
     category: "pressure-washing",
     location: "Doral, FL",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/718368/c2b178a9d8aab9cb728c1ce9627c9abeab8b486b/original/3D6D3C0C-21F7-4B81-8F2E-3EAADD204340.jpeg?1672597395"
+    image: "/images/project-popcorn-smooth.webp"
   },
   {
     id: "project-7",
     title: { en: "High-End Entryway & Door Trim", es: "Entrada Principal y Molduras de Puerta" },
     category: "interior",
     location: "Pembroke Pines, FL",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/718371/6b9708f62b6dc4d0b65fef9d8c151c0edb91d1b1/original/26CEF41A-DF76-4173-BBE5-0EB8DF038CEE.jpeg?1672597406"
+    image: "/images/project-exterior-weatherproof.webp"
   },
   {
     id: "project-8",
     title: { en: "Commercial Facility Interior Painting", es: "Pintura Interior de Instalación Comercial" },
     category: "commercial",
     location: "Miami, FL",
-    image: "https://ded7t1cra1lh5.cloudfront.net/media/718372/f3bc05ee3d8980e10929d74f78e983a7aa0768e1/original/E70F93B1-FA5B-4DC1-8892-DF849759CB8B.jpeg?1672597465"
+    image: "/images/project-commercial-clean.webp"
   }
 ];
 
@@ -344,8 +344,8 @@ export const BEFORE_AFTER_CASES = [
       en: "Faded stucco and weather-worn walls restored with elastomeric primer and premium satin acrylic exterior paint.",
       es: "Estuco desgastado por el sol restaurado con sellador elastomérico y pintura acrílica satinada de máxima protección."
     },
-    beforeImage: "https://ded7t1cra1lh5.cloudfront.net/media/660736/9d554ea4d61e89644b73994719542acd7282a74b/original/DDD38604-8AAD-486C-A89A-0BF20B3BF761.jpeg?1634230171",
-    afterImage: "https://ded7t1cra1lh5.cloudfront.net/media/718355/3cfab9ddc7d55e94146128083998ed36e4587186/original/A4A1ED9A-A0C1-4E08-B6A1-AE7A8F3D81B5.jpeg?1672597239",
+    beforeImage: "/images/before-weathered.webp",
+    afterImage: "/images/after-restored.webp",
     location: "Pembroke Pines, FL"
   }
 ];
