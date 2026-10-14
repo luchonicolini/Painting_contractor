@@ -27,7 +27,7 @@ export const Gallery: React.FC = () => {
     <section className="max-w-[1240px] mx-auto px-4 sm:px-6 py-20 border-t border-slate-100" id="gallery">
       {/* Section Header */}
       <div className="text-center max-w-xl mx-auto mb-10">
-        <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
+        <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
           {language === 'en' ? 'OUR RECENT CRAFTSMANSHIP' : 'TRABAJOS RECIENTES'}
         </span>
         <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">
@@ -87,7 +87,7 @@ export const Gallery: React.FC = () => {
             </div>
 
             {/* Category Tag (Always visible) */}
-            <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-slate-800 text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-md shadow-sm">
+            <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-slate-800 text-xs uppercase tracking-wider font-bold px-2.5 py-1 rounded-md shadow-sm">
               {item.category}
             </div>
           </div>

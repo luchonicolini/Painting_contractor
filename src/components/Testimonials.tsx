@@ -20,7 +20,7 @@ export const Testimonials: React.FC = () => {
   return (
     <section className="w-full py-16 md:py-24" id="reviews">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mb-10 text-center">
-        <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
+        <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
           {language === 'en' ? 'VERIFIED EXPERIENCES' : 'TESTIMONIOS REALES'}
         </span>
         <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">
@@ -69,7 +69,7 @@ export const Testimonials: React.FC = () => {
 
               {/* Next / Prev Controls */}
               <div className="flex items-center gap-2">
-                <span className="text-[12px] font-semibold text-slate-400">
+                <span className="text-xs font-semibold text-slate-400">
                   {currentIndex + 1} / {TESTIMONIALS.length}
                 </span>
                 <button
@@ -92,7 +92,7 @@ export const Testimonials: React.FC = () => {
             {/* Review Quote with Clear Contrast */}
             <div className="relative">
               <Quote className="w-8 h-8 text-blue-100 absolute -top-2 -left-2 -z-10 opacity-70" />
-              <p className="text-slate-800 text-[14px] sm:text-[15px] leading-relaxed italic font-normal">
+              <p className="text-slate-800 text-sm leading-relaxed italic font-normal">
                 “{current.comment[language]}”
               </p>
             </div>
@@ -108,17 +108,17 @@ export const Testimonials: React.FC = () => {
                     .join('')}
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-heading font-bold text-slate-900 text-[14px] leading-tight">
+                  <span className="font-heading font-bold text-slate-900 text-sm leading-tight">
                     {current.author}
                   </span>
-                  <span className="text-slate-500 text-[11px] mt-0.5">
+                  <span className="text-slate-500 text-xs mt-0.5">
                     {current.location || 'South Florida'}
                   </span>
                 </div>
               </div>
 
               {current.serviceMentioned && (
-                <span className="text-[11px] font-semibold text-brand-blue bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md">
+                <span className="text-xs font-semibold text-brand-blue bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md">
                   {current.serviceMentioned}
                 </span>
               )}

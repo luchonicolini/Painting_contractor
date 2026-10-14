@@ -10,7 +10,7 @@ export const AboutUs: React.FC = () => {
         {/* Left Column: Editorial Structured Story */}
         <div className="lg:col-span-6 flex flex-col gap-6">
           <div>
-            <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
               {language === 'en' ? 'ABOUT EL PALMAR' : 'SOBRE EL PALMAR'}
             </span>
             <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[40px] text-slate-900 tracking-tight leading-tight">
@@ -20,7 +20,7 @@ export const AboutUs: React.FC = () => {
             </h2>
           </div>
 
-          <div className="space-y-4 text-slate-600 text-[15px] leading-relaxed">
+          <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
             <div>
               <h3 className="font-heading font-bold text-lg text-slate-900 mb-1.5 flex items-center gap-2">
                 <HeartHandshake className="w-5 h-5 text-brand-blue" />
@@ -45,7 +45,7 @@ export const AboutUs: React.FC = () => {
               </p>
 
               {/* Highlighted Quote Box */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border-l-4 border-brand-blue text-slate-700 italic text-sm leading-relaxed">
+              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 text-slate-700 italic text-sm leading-relaxed">
                 {language === 'en' ? (
                   <>
                     “When you invite someone into your home, you are placing trust in their character. We never send anonymous sub-contractors. Our family is on your property treating your landscaping, tile, and furnishings as if they were our own.”
@@ -68,7 +68,7 @@ export const AboutUs: React.FC = () => {
               <span className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 block">
                 12+
               </span>
-              <span className="text-[12px] text-slate-400 font-medium">
+              <span className="text-xs text-slate-400 font-medium">
                 {language === 'en' ? 'Years in Florida' : 'Años en Florida'}
               </span>
             </div>
@@ -77,7 +77,7 @@ export const AboutUs: React.FC = () => {
               <span className="font-heading font-extrabold text-2xl sm:text-3xl text-brand-blue block">
                 5.0 ★
               </span>
-              <span className="text-[12px] text-slate-400 font-medium">
+              <span className="text-xs text-slate-400 font-medium">
                 {language === 'en' ? 'Google Rating' : 'Calificación Google'}
               </span>
             </div>
@@ -86,7 +86,7 @@ export const AboutUs: React.FC = () => {
               <span className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 block">
                 100%
               </span>
-              <span className="text-[12px] text-slate-400 font-medium">
+              <span className="text-xs text-slate-400 font-medium">
                 {language === 'en' ? 'Owner Supervised' : 'Supervisado por Dueños'}
               </span>
             </div>
@@ -115,7 +115,7 @@ export const AboutUs: React.FC = () => {
                   {language === 'en' ? 'Founders & Master Finishers' : 'Fundadores y Maestros de Acabados'}
                 </span>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full shadow-sm">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full shadow-sm">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                 <span>{language === 'en' ? 'FL Licensed & Insured' : 'Licencia y Seguro en Florida'}</span>
               </span>

@@ -9,7 +9,7 @@ export const Services: React.FC = () => {
       {/* Editorial Section Header */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-16 md:mb-20">
         <div className="md:col-span-5">
-          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2.5">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2.5">
             {language === 'en' ? 'WHAT WE OFFER' : 'NUESTROS SERVICIOS'}
           </span>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
@@ -19,7 +19,7 @@ export const Services: React.FC = () => {
           </h2>
         </div>
         <div className="md:col-span-7 md:pt-4">
-          <p className="text-slate-500 font-normal leading-relaxed text-[15px] sm:text-[16px] max-w-xl">
+          <p className="text-slate-500 font-normal leading-relaxed text-sm sm:text-base max-w-xl">
             {language === 'en'
               ? 'As South Florida’s dedicated family-owned architectural painting specialists, we design and execute finish coatings that protect and elevate your residence. From full exterior weatherproofing to luxury interior smooth skimming.'
               : 'Como especialistas familiares de pintura y acabados arquitectónicos en el sur de la Florida, aplicamos recubrimientos que protegen y elevan tu propiedad. Desde impermeabilización exterior hasta alisado de techos y pintura interior de alta gama.'}
@@ -61,18 +61,18 @@ export const Services: React.FC = () => {
 
         {/* Right Editorial Copy */}
         <div className="lg:col-span-6 flex flex-col items-start gap-4 lg:pl-6">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-brand-blue">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue">
             {language === 'en' ? 'COMPLETE HOME RENOVATIONS' : 'RENOVACIONES INTEGRALES'}
           </span>
           <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 tracking-tight">
             {language === 'en' ? 'Total Makeovers' : 'Transformaciones Completas'}
           </h3>
-          <p className="text-slate-600 text-[15px] leading-relaxed">
+          <p className="text-slate-600 text-sm leading-relaxed">
             {language === 'en'
               ? 'By working with you from the initial color consultation and sample testing, we create a structured plan and execute with zero dust and surgical cleanliness.'
               : 'Trabajando contigo desde la consulta inicial de color y pruebas en pared, diseñamos un plan estructurado que ejecutamos con pulcritud y limpieza quirúrgica.'}
           </p>
-          <p className="text-slate-600 text-[15px] leading-relaxed">
+          <p className="text-slate-600 text-sm leading-relaxed">
             {language === 'en'
               ? 'We project manage your home transformation from start to finish. You deal directly with owners Yalila and Rodolfo—which means no sales reps, no pushy middle-men, and absolute accountability.'
               : 'Supervisamos cada etapa de tu renovación. Tratas directamente con los dueños, Yalila y Rodolfo, lo que garantiza comunicación transparente, sin intermediarios y con total responsabilidad.'}
@@ -96,7 +96,7 @@ export const Services: React.FC = () => {
           <div className="pt-2">
             <a
               href="#gallery"
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white font-heading text-[13px] font-semibold shadow-sm hover:shadow-md transition-all group"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white font-heading text-xs font-semibold shadow-sm hover:shadow-md transition-all group"
             >
               <span>{language === 'en' ? 'Check our Projects to see more' : 'Ver nuestros proyectos'}</span>
               <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform">
@@ -111,23 +111,23 @@ export const Services: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-20 md:mb-28">
         {/* Left Editorial Copy */}
         <div className="lg:col-span-6 flex flex-col items-start gap-4 lg:pr-6 order-2 lg:order-1">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-brand-blue">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue">
             {language === 'en' ? 'SMOOTH CEILINGS & MODERN INTERIORS' : 'TECHOS LISOS E INTERIORES MODERNOS'}
           </span>
           <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 tracking-tight">
             {language === 'en' ? 'Living Rooms & Popcorn Removal' : 'Salas de Estar y Retiro de Popcorn'}
           </h3>
-          <p className="text-slate-600 text-[15px] leading-relaxed">
+          <p className="text-slate-600 text-sm leading-relaxed">
             {language === 'en'
               ? 'Color is making its way back into our living spaces and open architectures. You can elevate your property using contrasting trim lines, architectural casing, or smooth Level 5 ceiling conversions.'
               : 'El color y la luz son el alma de los espacios modernos. Puedes modernizar tu propiedad eliminando texturas pesadas y aplicando molduras nítidas y techos lisos Nivel 5.'}
           </p>
-          <p className="text-slate-600 text-[15px] leading-relaxed">
+          <p className="text-slate-600 text-sm leading-relaxed">
             {language === 'en'
               ? 'The secret to timeless interiors is in substrate preparation. We scrape dated textured popcorn ceilings under full containment, skim smooth, and finish with non-reflective matte coatings that bounce Florida natural light effortlessly.'
               : 'El secreto de un acabado impecable está en la preparación del fondo. Raspamos techos con textura popcorn bajo aislamiento hermético, aplicamos pasta niveladora y terminamos con pintura mate que refleja la luz natural de Florida.'}
           </p>
-          <p className="text-slate-600 text-[15px] leading-relaxed">
+          <p className="text-slate-600 text-sm leading-relaxed">
             {language === 'en'
               ? 'We use strictly premium low/zero-VOC formulations so you can enjoy your transformed sanctuary immediately without lingering chemical odors.'
               : 'Usamos pinturas de bajísimo olor (Zero-VOC) para que disfrutes de tu hogar transformado de inmediato sin olores molestos ni químicos nocivos.'}
@@ -136,7 +136,7 @@ export const Services: React.FC = () => {
           <div className="pt-2">
             <a
               href="#contact"
-              className="text-brand-blue font-semibold text-[14px] hover:text-brand-blue-hover underline underline-offset-4 flex items-center gap-1.5 group"
+              className="text-brand-blue font-semibold text-sm hover:text-brand-blue-hover underline underline-offset-4 flex items-center gap-1.5 group"
             >
               <span>{language === 'en' ? 'Schedule an in-home sample test' : 'Agenda una prueba de color en tu hogar'}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -179,7 +179,7 @@ export const Services: React.FC = () => {
       {/* MINI SERVICE CARDS ROW (What Do We Do?) */}
       <div className="mt-8 pt-12 border-t border-slate-100">
         <div className="text-center mb-10">
-          <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
             {language === 'en' ? 'SPECIALIZED SCOPE' : 'ESPECIALIDADES PRINCIPALES'}
           </span>
           <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900">

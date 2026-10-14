@@ -84,7 +84,7 @@ export const WhyChooseUs: React.FC = () => {
     <section className="bg-slate-50/80 py-20 border-y border-slate-100" id="why-us">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-16">
-          <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
             {language === 'en' ? 'WHY CHOOSE US?' : '¿POR QUÉ ELEGIRNOS?'}
           </span>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">
@@ -103,10 +103,10 @@ export const WhyChooseUs: React.FC = () => {
                 <div className="w-13 h-13 p-3.5 rounded-2xl bg-white shadow-sm border border-slate-200/80 flex items-center justify-center text-brand-blue mb-4 group-hover:scale-105 group-hover:border-blue-200 group-hover:shadow-md transition-all">
                   <Icon className="w-6 h-6" />
                 </div>
-                <span className="font-heading font-bold text-slate-900 text-[16px] block">
+                <span className="font-heading font-bold text-slate-900 text-base block">
                   {item.title[language]}
                 </span>
-                <p className="text-slate-500 text-[13px] leading-relaxed mt-2 max-w-xs">
+                <p className="text-slate-500 text-xs leading-relaxed mt-2 max-w-xs">
                   {item.desc[language]}
                 </p>
               </div>

@@ -41,7 +41,7 @@ export const ContactEstimate: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Context & Direct Contact */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-brand-blue block">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-blue block">
               {language === 'en' ? 'GET IN TOUCH' : 'CONTACTO DIRECTO'}
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-tight">
@@ -49,7 +49,7 @@ export const ContactEstimate: React.FC = () => {
                 ? 'Schedule Your Free On-Site Estimate'
                 : 'Agenda Tu Presupuesto Gratis en Obra'}
             </h2>
-            <p className="text-slate-300 text-[15px] leading-relaxed">
+            <p className="text-slate-300 text-sm leading-relaxed">
               {language === 'en'
                 ? 'Owners Yalila and Rodolfo personally visit your property to measure square footage, inspect substrate conditions, and provide an accurate, guaranteed quote.'
                 : 'Los dueños, Yalila y Rodolfo, visitan personalmente tu propiedad para medir, revisar las condiciones de las paredes y brindarte un presupuesto exacto y por escrito.'}
@@ -196,7 +196,7 @@ export const ContactEstimate: React.FC = () => {
                           }`}
                         >
                           <span
-                            className={`w-4 h-4 rounded-md flex items-center justify-center border text-[10px] ${
+                            className={`w-4 h-4 rounded-md flex items-center justify-center border text-xs ${
                               isChecked
                                 ? 'bg-brand-blue border-brand-blue text-white'
                                 : 'bg-white border-slate-300'

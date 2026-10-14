@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
                 <span className="font-heading font-extrabold text-slate-900 text-lg leading-none">
                   El Palmar
                 </span>
-                <span className="text-[9px] uppercase tracking-widest font-bold text-slate-400">
+                <span className="text-xs uppercase tracking-widest font-bold text-slate-400">
                   Painting & Services
                 </span>
               </div>
@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
 
           {/* Services Links */}
           <div className="md:col-span-3 flex flex-col gap-2.5 text-xs">
-            <span className="font-heading font-bold text-slate-900 uppercase tracking-wider text-[11px] mb-1">
+            <span className="font-heading font-bold text-slate-900 uppercase tracking-wider text-xs mb-1">
               {language === 'en' ? 'Services' : 'Servicios'}
             </span>
             <a href="#services" className="hover:text-brand-blue transition-colors">
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
 
           {/* Service Areas */}
           <div className="md:col-span-3 flex flex-col gap-2.5 text-xs">
-            <span className="font-heading font-bold text-slate-900 uppercase tracking-wider text-[11px] mb-1">
+            <span className="font-heading font-bold text-slate-900 uppercase tracking-wider text-xs mb-1">
               {language === 'en' ? 'Service Areas' : 'Áreas de Servicio'}
             </span>
             <span>Hialeah & Miami Lakes</span>
@@ -118,7 +118,7 @@ export const Footer: React.FC = () => {
 
           {/* Direct Contact & Hours */}
           <div className="md:col-span-2 flex flex-col gap-2 text-xs">
-            <span className="font-heading font-bold text-slate-900 uppercase tracking-wider text-[11px] mb-1">
+            <span className="font-heading font-bold text-slate-900 uppercase tracking-wider text-xs mb-1">
               {language === 'en' ? 'Direct Contact' : 'Contacto Directo'}
             </span>
             <a
@@ -134,12 +134,12 @@ export const Footer: React.FC = () => {
               className="text-slate-600 hover:text-brand-blue transition-colors break-all flex items-center gap-1.5 mt-1"
             >
               <Mail className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
-              <span className="text-[11px]">{BUSINESS_INFO.email}</span>
+              <span className="text-xs">{BUSINESS_INFO.email}</span>
             </a>
 
             <div className="flex items-start gap-1.5 text-slate-500 mt-2">
               <Clock className="w-3.5 h-3.5 text-slate-400 mt-0.5 flex-shrink-0" />
-              <div className="text-[11px] leading-tight">
+              <div className="text-xs leading-tight">
                 <span>Mon-Fri 8am–5pm</span>
                 <br />
                 <span>Sat-Sun 10am–3pm</span>

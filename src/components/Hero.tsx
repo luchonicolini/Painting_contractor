@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
         {/* Hero Content Container */}
         <div className="relative z-10 max-w-2xl px-6 sm:px-12 md:px-16 py-12 md:py-16 flex flex-col items-start gap-6">
           {/* Trust Badge Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white text-[12px] font-medium border border-white/20 shadow-sm animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white text-xs font-medium border border-white/20 shadow-sm animate-fade-in">
             <span className="flex text-amber-400">★★★★★</span>
             <span className="text-slate-200">
               {language === 'en'
@@ -33,14 +33,14 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-white font-heading font-extrabold text-3xl sm:text-5xl lg:text-[56px] tracking-tight leading-[1.12]">
+          <h1 className="text-white font-heading font-extrabold text-3xl sm:text-5xl lg:text-5xl tracking-tight leading-[1.12]">
             {language === 'en' ? (
               <>
-                Enhance Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-blue-200">Favorite Lifestyle</span>
+                Enhance Your <span className="text-blue-200">Favorite Lifestyle</span>
               </>
             ) : (
               <>
-                Renueva Tu Hogar con <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-blue-200">Acabados de Lujo</span>
+                Renueva Tu Hogar con <span className="text-blue-200">Acabados de Lujo</span>
               </>
             )}
           </h1>
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3.5 pt-2 w-full sm:w-auto">
             <a
               href="#contact"
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-slate-900 font-heading text-[14px] font-bold hover:bg-slate-100 active:scale-[0.98] transition-all shadow-xl shadow-black/20 flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-slate-900 font-heading text-sm font-bold hover:bg-slate-100 active:scale-[0.98] transition-all shadow-xl shadow-black/20 flex items-center justify-center gap-2 group"
             >
               <span>{language === 'en' ? 'Request a Free Quote' : 'Solicitar Presupuesto Gratis'}</span>
               <ArrowRight className="w-4 h-4 text-slate-900 group-hover:translate-x-0.5 transition-transform" />
@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
 
             <a
               href="#services"
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 backdrop-blur-md text-white border border-white/25 font-heading text-[14px] font-semibold hover:bg-white/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 backdrop-blur-md text-white border border-white/25 font-heading text-sm font-semibold hover:bg-white/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
             >
               <span>{language === 'en' ? 'Explore Services' : 'Ver Servicios'}</span>
             </a>
@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Bottom Right Floating Badge (Active Service Area) */}
-        <div className="absolute bottom-6 right-6 hidden md:flex items-center gap-3 px-4 py-2.5 rounded-xl bg-slate-950/80 backdrop-blur-md border border-white/15 text-white text-[12px] shadow-2xl">
+        <div className="absolute bottom-6 right-6 hidden md:flex items-center gap-3 px-4 py-2.5 rounded-xl bg-slate-950/80 backdrop-blur-md border border-white/15 text-white text-xs shadow-2xl">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
           <span className="font-medium text-slate-200">
             Hialeah • Pembroke Pines • Doral • Miami
@@ -107,14 +107,14 @@ export const Hero: React.FC = () => {
         <div className="absolute top-12 right-12 hidden xl:flex max-w-xs flex-col gap-2 p-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 text-white shadow-2xl">
           <div className="flex items-center justify-between">
             <span className="text-amber-400 text-xs">★★★★★</span>
-            <span className="text-[10px] text-slate-300 bg-white/10 px-2 py-0.5 rounded">Verified Review</span>
+            <span className="text-xs text-slate-300 bg-white/10 px-2 py-0.5 rounded">Verified Review</span>
           </div>
           <p className="text-xs text-slate-200 leading-relaxed italic">
             {language === 'en'
               ? '“Yalila & Rodolfo treated our home as their own. Flawless finishes, clean execution, and zero shortcuts!”'
               : '“Yalila y Rodolfo trataron nuestra casa como si fuera la suya. ¡Acabados impecables y máxima limpieza!”'}
           </p>
-          <span className="text-[11px] font-semibold text-white">
+          <span className="text-xs font-semibold text-white">
             — Homeowner in Pembroke Pines, FL
           </span>
         </div>

@@ -15,7 +15,7 @@ export const MobileStickyBar: React.FC = () => {
           aria-label="Call El Palmar Painting"
         >
           <Phone className="w-4 h-4 text-emerald-600" />
-          <span className="text-[11px] font-heading font-bold leading-none">
+          <span className="text-xs font-heading font-bold leading-none">
             {language === 'en' ? 'Call Us' : 'Llamar'}
           </span>
         </a>
@@ -29,7 +29,7 @@ export const MobileStickyBar: React.FC = () => {
           aria-label="Chat on WhatsApp"
         >
           <MessageCircle className="w-4 h-4 text-white" />
-          <span className="text-[11px] font-heading font-bold leading-none">
+          <span className="text-xs font-heading font-bold leading-none">
             WhatsApp
           </span>
         </a>
@@ -41,7 +41,7 @@ export const MobileStickyBar: React.FC = () => {
           aria-label="Request Free Estimate"
         >
           <FileText className="w-4 h-4 text-white" />
-          <span className="text-[11px] font-heading font-bold leading-none">
+          <span className="text-xs font-heading font-bold leading-none">
             {language === 'en' ? 'Estimate' : 'Cotizar'}
           </span>
         </a>

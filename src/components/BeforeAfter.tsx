@@ -37,7 +37,7 @@ export const BeforeAfter: React.FC = () => {
     <section className="max-w-[1240px] mx-auto px-4 sm:px-6 py-20 border-t border-slate-100" id="before-after">
       {/* Header */}
       <div className="text-center max-w-xl mx-auto mb-12">
-        <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-brand-blue block mb-2">
+        <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-blue block mb-2">
           {language === 'en' ? 'REAL TRANSFORMATIONS' : 'TRANSFORMACIONES REALES'}
         </span>
         <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">
