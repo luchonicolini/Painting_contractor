@@ -1,7 +1,6 @@
 import React from 'react';
-import { ArrowRight, Phone, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { BUSINESS_INFO } from '../data/company';
 
 export const Hero: React.FC = () => {
   const { language } = useLanguage();
@@ -70,29 +69,23 @@ export const Hero: React.FC = () => {
             >
               <span>{language === 'en' ? 'Explore Services' : 'Ver Servicios'}</span>
             </a>
-
-            <a
-              href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-3.5 text-white/90 hover:text-white text-xs font-semibold hover:underline"
-            >
-              <Phone className="w-3.5 h-3.5 text-emerald-400" />
-              <span>{BUSINESS_INFO.phone}</span>
-            </a>
           </div>
 
-          {/* Key Quick Highlights */}
-          <div className="pt-4 flex flex-wrap items-center gap-6 text-slate-300 text-xs font-medium border-t border-white/10 w-full">
+          {/* Editorial Trust Line (Option A) */}
+          <div className="pt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-slate-300 text-xs font-medium tracking-wide">
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-brand-blue" />
-              <span>{language === 'en' ? 'Licensed & Insured' : 'Licencia y Seguro en Florida'}</span>
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              <span>{language === 'en' ? 'Florida Licensed & Insured' : 'Licencia y Seguro en Florida'}</span>
             </div>
+            <span className="hidden sm:inline text-white/30">·</span>
             <div className="flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>{language === 'en' ? 'Zero Dust Guarantee' : 'Protección Total Sin Polvo'}</span>
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              <span>{language === 'en' ? 'Full Property Protection' : 'Protección Total de Muebles y Pisos'}</span>
             </div>
+            <span className="hidden sm:inline text-white/30">·</span>
             <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              <span>{language === 'en' ? 'Direct Owner Supervision' : 'Supervisión de los Dueños'}</span>
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              <span>{language === 'en' ? '100% Owner Supervised' : 'Supervisado por sus Dueños'}</span>
             </div>
           </div>
         </div>
