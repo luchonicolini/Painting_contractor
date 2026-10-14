@@ -113,10 +113,12 @@ export const Services: React.FC = () => {
           <div className="pt-2">
             <a
               href="#contact"
-              className="text-brand-blue font-semibold text-sm hover:text-brand-blue-hover underline underline-offset-4 flex items-center gap-1.5 group"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white font-heading text-xs font-semibold shadow-sm hover:shadow-md transition-all group"
             >
               <span>{language === 'en' ? 'Schedule an in-home sample test' : 'Agenda una prueba de color en tu hogar'}</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform">
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
             </a>
           </div>
         </div>
