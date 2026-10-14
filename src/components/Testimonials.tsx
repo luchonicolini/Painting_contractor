@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Quote, CheckCircle2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { TESTIMONIALS } from '../data/company';
 
@@ -44,11 +44,6 @@ export const Testimonials: React.FC = () => {
 
           {/* Big Bold Impact Message on Left */}
           <div className="relative z-10 p-8 sm:p-14 lg:p-16 max-w-xl flex flex-col gap-4">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold text-brand-blue bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20 w-fit">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>{language === 'en' ? '100% Real Homeowners' : '100% Reseñas Verificadas'}</span>
-            </span>
-
             <h3 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15]">
               {language === 'en'
                 ? 'We helped over 500 Florida families get their perfect home finish'
