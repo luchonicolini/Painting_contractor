@@ -29,14 +29,14 @@ export const Testimonials: React.FC = () => {
       </div>
 
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        <div className="relative rounded-3xl overflow-hidden min-h-[480px] sm:min-h-[520px] flex items-center bg-slate-900 shadow-2xl border border-slate-800">
-          {/* Large Authentic Craftsman Backdrop Image */}
+        <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[540px] flex items-center bg-slate-900 shadow-2xl border border-slate-800">
+          {/* Authentic Craftsman Backdrop Image */}
           <img
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
             alt="South Florida renovated residential property"
-            className="absolute inset-0 w-full h-full object-cover opacity-60 scale-105 transition-transform duration-1000"
+            className="absolute inset-0 w-full h-full object-cover opacity-60 scale-[1.02] transition-transform duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/25" />
 
           {/* Big Bold Impact Message on Left */}
           <div className="relative z-10 p-8 sm:p-14 lg:p-16 max-w-xl flex flex-col gap-4">
@@ -45,7 +45,7 @@ export const Testimonials: React.FC = () => {
               <span>{language === 'en' ? '100% Real Homeowners' : '100% Reseñas Verificadas'}</span>
             </span>
 
-            <h3 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
+            <h3 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15]">
               {language === 'en'
                 ? 'We helped over 500 Florida families get their perfect home finish'
                 : 'Hemos ayudado a más de 500 familias en Florida a renovar su hogar'}
@@ -58,40 +58,41 @@ export const Testimonials: React.FC = () => {
             </p>
           </div>
 
-          {/* Floating Testimonial Card in Lower-Right with Interactive Carousel Controls */}
-          <div className="absolute bottom-6 right-6 left-6 sm:left-auto sm:max-w-md lg:max-w-lg z-20 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl p-6 sm:p-7 border border-white/60 flex flex-col gap-3.5 transition-all">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-1 text-amber-400 text-sm">
-                {'★'.repeat(current.rating)}
-                <span className="text-slate-400 text-xs font-semibold ml-1.5">5.0</span>
+          {/* Solid White Floating Testimonial Card with 100% High Contrast */}
+          <div className="relative z-20 m-6 sm:m-8 sm:ml-auto w-full sm:max-w-md lg:max-w-lg bg-white rounded-2xl shadow-2xl p-6 sm:p-7 border border-slate-100 flex flex-col gap-4">
+            {/* Header: Stars & Carousel Controls */}
+            <div className="flex items-center justify-between pb-1">
+              <div className="flex items-center gap-1.5">
+                <span className="text-amber-400 text-base tracking-widest font-bold">★★★★★</span>
+                <span className="text-slate-900 text-xs font-bold ml-1">5.0</span>
               </div>
 
               {/* Next / Prev Controls */}
-              <div className="flex items-center gap-2 text-slate-500">
-                <span className="text-[11px] font-semibold text-slate-400 mr-1">
+              <div className="flex items-center gap-2">
+                <span className="text-[12px] font-semibold text-slate-400">
                   {currentIndex + 1} / {TESTIMONIALS.length}
                 </span>
                 <button
                   onClick={prevReview}
                   aria-label="Previous review"
-                  className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors active:scale-95"
+                  className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors active:scale-95 shadow-sm"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
                 <button
                   onClick={nextReview}
                   aria-label="Next review"
-                  className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors active:scale-95"
+                  className="w-8 h-8 rounded-full bg-brand-blue hover:bg-brand-blue-hover text-white flex items-center justify-center transition-colors active:scale-95 shadow-sm"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
-            {/* Review Quote */}
+            {/* Review Quote with Clear Contrast */}
             <div className="relative">
-              <Quote className="w-8 h-8 text-blue-100 absolute -top-2 -left-2 -z-10" />
-              <p className="text-slate-700 text-[14px] sm:text-[15px] leading-relaxed italic">
+              <Quote className="w-8 h-8 text-blue-100 absolute -top-2 -left-2 -z-10 opacity-70" />
+              <p className="text-slate-800 text-[14px] sm:text-[15px] leading-relaxed italic font-normal">
                 “{current.comment[language]}”
               </p>
             </div>
@@ -110,14 +111,14 @@ export const Testimonials: React.FC = () => {
                   <span className="font-heading font-bold text-slate-900 text-[14px] leading-tight">
                     {current.author}
                   </span>
-                  <span className="text-slate-400 text-[11px]">
+                  <span className="text-slate-500 text-[11px] mt-0.5">
                     {current.location || 'South Florida'}
                   </span>
                 </div>
               </div>
 
               {current.serviceMentioned && (
-                <span className="hidden sm:inline-block text-[11px] font-semibold text-brand-blue bg-blue-50 px-2.5 py-1 rounded-md">
+                <span className="text-[11px] font-semibold text-brand-blue bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md">
                   {current.serviceMentioned}
                 </span>
               )}
