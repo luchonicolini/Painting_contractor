@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, MessageCircle, MapPin, Clock, CheckCircle2, Send, Mail } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, CheckCircle2, Send, Mail } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { BUSINESS_INFO } from '../data/company';
 
@@ -123,20 +123,6 @@ export const ContactEstimate: React.FC = () => {
                   </span>
                   <span className="text-sm font-medium text-slate-200">
                     Hialeah, Miami-Dade & Broward County
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-blue-400 flex-shrink-0">
-                  <Clock className="w-5 h-5 text-slate-400" />
-                </div>
-                <div>
-                  <span className="text-xs text-slate-400 block font-medium">
-                    {language === 'en' ? 'Business Hours' : 'Horarios de Atención'}
-                  </span>
-                  <span className="text-xs font-medium text-slate-300 block">
-                    Mon-Fri: 8:00 AM – 5:00 PM | Sat-Sun: 10:00 AM – 3:00 PM
                   </span>
                 </div>
               </div>
