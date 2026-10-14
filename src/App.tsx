@@ -9,10 +9,11 @@ import { Gallery } from './components/Gallery';
 import { BeforeAfter } from './components/BeforeAfter';
 import { ContactEstimate } from './components/ContactEstimate';
 import { Footer } from './components/Footer';
+import { MobileStickyBar } from './components/MobileStickyBar';
 
 function PageContent() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-20 lg:pb-0">
       <Navbar />
       <main>
         <Hero />
@@ -25,6 +26,7 @@ function PageContent() {
         <ContactEstimate />
       </main>
       <Footer />
+      <MobileStickyBar />
     </div>
   );
 }
