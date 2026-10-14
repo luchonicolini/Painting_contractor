@@ -86,11 +86,6 @@ export const Gallery: React.FC = () => {
                 <ZoomIn className="w-4 h-4" />
               </div>
             </div>
-
-            {/* Category Tag (Always visible) */}
-            <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-slate-800 text-xs uppercase tracking-wider font-bold px-2.5 py-1 rounded-md shadow-sm">
-              {item.category}
-            </div>
           </div>
         ))}
       </div>
