@@ -15,12 +15,12 @@ export const Hero: React.FC = () => {
           alt="Luxury South Florida residence finished in pristine exterior painting"
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-70 scale-[1.02] transition-transform duration-1000"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-90 scale-[1.02] transition-transform duration-1000"
         />
 
-        {/* Cinematic Vignette Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30" />
+        {/* Cinematic Scrim: readable text on left, bright Florida daylight on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-slate-950/15 pointer-events-none" />
 
         {/* Hero Content Container */}
         <div className="relative z-10 max-w-2xl px-6 sm:px-12 md:px-16 py-12 md:py-16 flex flex-col items-start gap-6">

@@ -36,9 +36,11 @@ export const Testimonials: React.FC = () => {
             alt="South Florida renovated residential property"
             loading="lazy"
             decoding="async"
-            className="absolute inset-0 w-full h-full object-cover opacity-60 scale-[1.02] transition-transform duration-1000"
+            className="absolute inset-0 w-full h-full object-cover opacity-90 scale-[1.02] transition-transform duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/25" />
+          {/* Directional scrim: high contrast for text on the left, clear view of the residence on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-slate-950/20 pointer-events-none" />
 
           {/* Big Bold Impact Message on Left */}
           <div className="relative z-10 p-8 sm:p-14 lg:p-16 max-w-xl flex flex-col gap-4">
