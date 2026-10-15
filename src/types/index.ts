@@ -65,5 +65,5 @@ export interface TestimonialItem {
   rating: number;
   date?: string;
   comment: LocalizedString;
-  serviceMentioned?: string;
+  serviceMentioned?: LocalizedString | string;
 }

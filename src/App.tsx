@@ -1,7 +1,6 @@
 import { LanguageProvider } from './context/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { BrandTrust } from './components/BrandTrust';
 import { Services } from './components/Services';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { AboutUs } from './components/AboutUs';
@@ -18,7 +17,6 @@ function PageContent() {
       <Navbar />
       <main>
         <Hero />
-        <BrandTrust />
         <Services />
         <WhyChooseUs />
         <AboutUs />

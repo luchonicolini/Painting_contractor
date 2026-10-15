@@ -16,8 +16,8 @@ export const Services: React.FC = () => {
           </span>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
             {language === 'en'
-              ? 'Want to Know More About Our Services?'
-              : '¿Deseas Conocer Más Sobre Nuestros Servicios?'}
+              ? 'Architectural Painting & Surface Protection'
+              : 'Pintura Especializada y Protección de Superficies'}
           </h2>
         </div>
         <div className="md:col-span-7 md:pt-4">
@@ -80,7 +80,7 @@ export const Services: React.FC = () => {
               href="#gallery"
               className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white font-heading text-xs font-semibold shadow-sm hover:shadow-md transition-all group"
             >
-              <span>{language === 'en' ? 'Check our Projects to see more' : 'Ver nuestros proyectos'}</span>
+              <span>{language === 'en' ? 'Explore Completed Projects' : 'Ver Proyectos Realizados'}</span>
               <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform">
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
@@ -117,7 +117,7 @@ export const Services: React.FC = () => {
               href="#contact"
               className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white font-heading text-xs font-semibold shadow-sm hover:shadow-md transition-all group"
             >
-              <span>{language === 'en' ? 'Schedule an in-home sample test' : 'Agenda una prueba de color en tu hogar'}</span>
+              <span>{language === 'en' ? 'Schedule a Free Color Consultation' : 'Agenda una Asesoría de Color en Tu Hogar'}</span>
               <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform">
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
@@ -170,7 +170,7 @@ export const Services: React.FC = () => {
             {language === 'en' ? 'SPECIALIZED SCOPE' : 'ESPECIALIDADES PRINCIPALES'}
           </span>
           <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900">
-            {language === 'en' ? 'What Do We Do?' : '¿Qué Hacemos en El Palmar?'}
+            {language === 'en' ? 'Core Painting Specialties' : 'Nuestras Especialidades Principales'}
           </h3>
         </div>
 

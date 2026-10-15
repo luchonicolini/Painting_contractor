@@ -64,7 +64,7 @@ export const Testimonials: React.FC = () => {
             {/* Header: Stars & Carousel Controls */}
             <div className="flex items-center justify-between pb-1">
               <div className="flex items-center gap-1.5">
-                <span className="text-amber-400 text-base tracking-widest font-bold">★★★★★</span>
+                <span className="text-amber-400 text-base tracking-widest font-bold" aria-label="5 de 5 estrellas">★★★★★</span>
                 <span className="text-slate-900 text-xs font-bold ml-1">5.0</span>
               </div>
 
@@ -120,7 +120,9 @@ export const Testimonials: React.FC = () => {
 
               {current.serviceMentioned && (
                 <span className="text-xs font-semibold text-brand-blue bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md">
-                  {current.serviceMentioned}
+                  {typeof current.serviceMentioned === 'string'
+                    ? current.serviceMentioned
+                    : current.serviceMentioned[language]}
                 </span>
               )}
             </div>
