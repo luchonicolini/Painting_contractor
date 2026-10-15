@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import { TESTIMONIALS } from '../data/company';
 
 export const Testimonials: React.FC = () => {
   const { language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const revealRef = useScrollReveal();
 
   const prevReview = () => {
     setCurrentIndex(prev => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1));
@@ -18,7 +20,7 @@ export const Testimonials: React.FC = () => {
   const current = TESTIMONIALS[currentIndex];
 
   return (
-    <section className="w-full py-16 md:py-24" id="reviews">
+    <section ref={revealRef} className="scroll-reveal w-full py-16 md:py-24" id="reviews">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mb-10 text-center">
         <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
           {language === 'en' ? 'VERIFIED EXPERIENCES' : 'TESTIMONIOS REALES'}
@@ -32,8 +34,8 @@ export const Testimonials: React.FC = () => {
         <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[540px] flex items-center bg-slate-900 shadow-2xl border border-slate-800">
           {/* Authentic Craftsman Backdrop Image */}
           <img
-            src="/images/testimonials-bg.webp"
-            alt="South Florida renovated residential property"
+            src="/images/testimonials-new-interior.jpg"
+            alt="South Florida renovated luxury interior residential property"
             loading="lazy"
             decoding="async"
             className="absolute inset-0 w-full h-full object-cover opacity-90 scale-[1.02] transition-transform duration-1000"

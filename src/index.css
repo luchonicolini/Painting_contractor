@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
     margin: 0;
     padding: 0;
@@ -15,4 +19,66 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     letter-spacing: -0.02em;
   }
+}
+
+/* Prestige Scroll Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered delay helpers */
+.scroll-reveal.delay-100 { transition-delay: 100ms; }
+.scroll-reveal.delay-200 { transition-delay: 200ms; }
+.scroll-reveal.delay-300 { transition-delay: 300ms; }
+.scroll-reveal.delay-400 { transition-delay: 400ms; }
+.scroll-reveal.delay-500 { transition-delay: 500ms; }
+
+/* Subtle high-end button shine */
+.btn-prestige {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-prestige::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.28),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: left 0.8s ease;
+  pointer-events: none;
+}
+
+.btn-prestige:hover::after {
+  left: 130%;
+}
+
+/* Subtle luxury card hover glow */
+.card-prestige {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.card-prestige:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(15, 41, 66, 0.12),
+              0 8px 16px -6px rgba(15, 41, 66, 0.08);
 }

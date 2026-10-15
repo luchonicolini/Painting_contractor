@@ -272,64 +272,252 @@ export const TESTIMONIALS: TestimonialItem[] = [
 ];
 
 export const PORTFOLIO: PortfolioItem[] = [
+  // --- EXTERIOR PAINTING ---
   {
-    id: "project-1",
-    title: { en: "Modern Residence Exterior Makeover", es: "Renovación Exterior Residencial Moderna" },
+    id: "ext-pool-home",
+    title: { en: "South Florida Luxury Pool Residence", es: "Residencia de Lujo con Piscina en Florida" },
     category: "exterior",
     location: "Pembroke Pines, FL",
-    image: "/images/project-living-room-white.webp",
+    image: "/images/gallery/gallery-exterior-pool-home.jpg",
     isFeatured: true
   },
   {
-    id: "project-2",
-    title: { en: "Custom Living Room & Ceiling Finish", es: "Acabado en Sala de Estar y Techos" },
-    category: "interior",
-    location: "Hialeah, FL",
-    image: "/images/project-interior-smooth.webp",
-    isFeatured: true
-  },
-  {
-    id: "project-3",
-    title: { en: "South Florida Villa Exterior Repaint", es: "Pintura Exterior de Villa en Florida" },
+    id: "ext-stone-facade",
+    title: { en: "Modern Stone Facade & Entry Accent", es: "Fachada con Piedra Decorativa y Entrada Principal" },
     category: "exterior",
     location: "Miramar, FL",
-    image: "/images/project-exterior-facade.webp",
+    image: "/images/gallery/gallery-exterior-stone-facade.jpg",
     isFeatured: true
   },
   {
-    id: "project-4",
-    title: { en: "Crisp Kitchen Cabinets & Wall Contrast", es: "Contraste de Paredes y Cocina Moderna" },
-    category: "interior",
-    location: "Miami-Dade, FL",
-    image: "/images/project-trim-accent.webp"
-  },
-  {
-    id: "project-5",
-    title: { en: "Roof Coating & Weather Sealant", es: "Revestimiento y Sellado de Techo" },
-    category: "roof",
+    id: "ext-house-front",
+    title: { en: "Full Exterior Stucco Makeover & Walkway", es: "Renovación Exterior Completa de Estuco y Aceras" },
+    category: "exterior",
     location: "Hialeah, FL",
-    image: "/images/project-roof-driveway.webp"
+    image: "/images/gallery/gallery-exterior-house-front.jpg"
   },
   {
-    id: "project-6",
-    title: { en: "Pressure Wash & Driveway Restoration", es: "Lavado a Presión y Restauración de Entrada" },
-    category: "pressure-washing",
+    id: "ext-modern-villa",
+    title: { en: "Crisp White Architectural Villa", es: "Villa Arquitectónica en Blanco Puro" },
+    category: "exterior",
+    location: "Miami, FL",
+    image: "/images/gallery/gallery-exterior-modern-villa.jpg"
+  },
+  {
+    id: "ext-brick-path",
+    title: { en: "Contemporary Ranch Home Exterior", es: "Pintura Exterior de Casa Estilo Rancho" },
+    category: "exterior",
     location: "Doral, FL",
-    image: "/images/project-popcorn-smooth.webp"
+    image: "/images/gallery/gallery-exterior-brick-path-residence.jpg"
   },
   {
-    id: "project-7",
-    title: { en: "High-End Entryway & Door Trim", es: "Entrada Principal y Molduras de Puerta" },
+    id: "ext-garage-bronze",
+    title: { en: "Architectural Bronze Garage Door Finish", es: "Acabado Bronce Arquitectónico en Puerta de Garaje" },
+    category: "exterior",
+    location: "Pembroke Pines, FL",
+    image: "/images/gallery/gallery-exterior-garage-bronze.jpg"
+  },
+  {
+    id: "ext-white-villa-side",
+    title: { en: "Perimeter Wall & Villa Side Elevation", es: "Muro Perimetral y Lateral de Residencia" },
+    category: "exterior",
+    location: "Hialeah, FL",
+    image: "/images/gallery/gallery-exterior-white-villa-side.jpg"
+  },
+  {
+    id: "ext-porch-columns",
+    title: { en: "Covered Entry Porch & Structural Columns", es: "Pórtico de Entrada Techado y Columnas" },
+    category: "exterior",
+    location: "Miami-Dade, FL",
+    image: "/images/gallery/gallery-exterior-porch-columns.jpg"
+  },
+  {
+    id: "ext-rear-overhang",
+    title: { en: "Rear Patio Overhang & Facelift", es: "Alero Trasero de Patio y Remodelación Exterior" },
+    category: "exterior",
+    location: "Miramar, FL",
+    image: "/images/gallery/gallery-exterior-rear-overhang.jpg"
+  },
+  {
+    id: "ext-patio-geometric",
+    title: { en: "Custom Finished Outdoor Covered Patio", es: "Patio Techado con Acabado Personalizado" },
+    category: "exterior",
+    location: "Hialeah, FL",
+    image: "/images/gallery/gallery-exterior-patio-geometric.jpg"
+  },
+
+  // --- INTERIOR & CEILINGS ---
+  {
+    id: "int-master-bedroom",
+    title: { en: "Master Suite Level 5 Smooth Ceilings", es: "Suite Principal con Techos Lisos Nivel 5" },
     category: "interior",
     location: "Pembroke Pines, FL",
-    image: "/images/project-exterior-weatherproof.webp"
+    image: "/images/gallery/gallery-interior-master-bedroom.jpg",
+    isFeatured: true
   },
   {
-    id: "project-8",
-    title: { en: "Commercial Facility Interior Painting", es: "Pintura Interior de Instalación Comercial" },
+    id: "int-high-foyer",
+    title: { en: "Grand Double-Height Foyer & High Walls", es: "Vestíbulo de Doble Altura y Techos Altos" },
+    category: "interior",
+    location: "Doral, FL",
+    image: "/images/gallery/gallery-interior-high-foyer.jpg",
+    isFeatured: true
+  },
+  {
+    id: "int-kitchen-island",
+    title: { en: "Open Concept Kitchen & Dining Repaint", es: "Pintura Interior en Cocina y Sala Abierta" },
+    category: "interior",
+    location: "Miami, FL",
+    image: "/images/gallery/gallery-interior-kitchen-island.jpg"
+  },
+  {
+    id: "int-door-spraying",
+    title: { en: "Fine Finish Airless Door Spraying", es: "Pintura Airless de Puertas de Entrada" },
+    category: "interior",
+    location: "Miramar, FL",
+    image: "/images/gallery/gallery-interior-door-spraying.jpg"
+  },
+  {
+    id: "int-hallway-doors",
+    title: { en: "Interior Trim, Baseboards & Casing", es: "Molduras, Rodapiés y Puertas Interiores" },
+    category: "interior",
+    location: "Hialeah, FL",
+    image: "/images/gallery/gallery-interior-hallway-doors.jpg"
+  },
+  {
+    id: "int-fresh-bedroom",
+    title: { en: "Bedroom Popcorn Removal & Flat Finish", es: "Retiro de Popcorn y Pintura Plana en Habitación" },
+    category: "interior",
+    location: "Pembroke Pines, FL",
+    image: "/images/gallery/gallery-interior-fresh-bedroom.jpg"
+  },
+  {
+    id: "int-smooth-room",
+    title: { en: "Living Area Clean Wall & Ceiling Skim", es: "Alisado y Pintura Impecable en Sala de Estar" },
+    category: "interior",
+    location: "Miami-Dade, FL",
+    image: "/images/gallery/gallery-interior-smooth-room.jpg"
+  },
+  {
+    id: "int-closet-doors",
+    title: { en: "Custom Sliding Closets & Frame Lacquer", es: "Armarios Corredizos y Marcos Laqueados" },
+    category: "interior",
+    location: "Doral, FL",
+    image: "/images/gallery/gallery-interior-closet-doors.jpg"
+  },
+  {
+    id: "int-door-masking",
+    title: { en: "Precision Masking & Protection Craftsmanship", es: "Empapelado y Protección Quirúrgica de Entrada" },
+    category: "interior",
+    location: "Hialeah, FL",
+    image: "/images/gallery/gallery-interior-door-masking.jpg"
+  },
+
+  // --- ROOF PAINTING & SEALING ---
+  {
+    id: "roof-tile-restoration",
+    title: { en: "Spanish Barrel Tile Cleaning & Restoration", es: "Restauración y Sellado de Tejas Españolas" },
+    category: "roof",
+    location: "Hialeah, FL",
+    image: "/images/gallery/gallery-roof-tile-restoration.jpg",
+    isFeatured: true
+  },
+  {
+    id: "roof-coating-sprayer",
+    title: { en: "Elastomeric Thermal Roof Coating Application", es: "Aplicación de Sellador Térmico Elastomérico en Techo" },
+    category: "roof",
+    location: "Miramar, FL",
+    image: "/images/gallery/gallery-roof-coating-sprayer.jpg"
+  },
+  {
+    id: "roof-tile-worker",
+    title: { en: "High-Pitch Tile Roof Waterproof Sealant", es: "Impermeabilización Segura de Techo de Tejas" },
+    category: "roof",
+    location: "Pembroke Pines, FL",
+    image: "/images/gallery/gallery-roof-tile-worker.jpg"
+  },
+  {
+    id: "roof-terracotta-comparison",
+    title: { en: "Terracotta Roof Tile Decontamination", es: "Descontaminación y Pintura de Tejas Terracota" },
+    category: "roof",
+    location: "Miami, FL",
+    image: "/images/gallery/gallery-roof-terracotta-comparison.jpg"
+  },
+  {
+    id: "roof-two-story-prep",
+    title: { en: "Two-Story Mediterranean Estate Roof Preparation", es: "Preparación de Techo en Residencia de Dos Pisos" },
+    category: "roof",
+    location: "Doral, FL",
+    image: "/images/gallery/gallery-roof-two-story-prep.jpg"
+  },
+
+  // --- PRESSURE WASHING ---
+  {
+    id: "wash-patio-cleaner",
+    title: { en: "Commercial Pressure Washing on Concrete Deck", es: "Lavado a Presión Profesional en Patio de Concreto" },
+    category: "pressure-washing",
+    location: "Hialeah, FL",
+    image: "/images/gallery/gallery-wash-patio-cleaner.jpg",
+    isFeatured: true
+  },
+  {
+    id: "wash-sidewalk-line",
+    title: { en: "Neighborhood Sidewalk Mildew Removal", es: "Eliminación de Moho y Suciedad en Aceras" },
+    category: "pressure-washing",
+    location: "Pembroke Pines, FL",
+    image: "/images/gallery/gallery-wash-sidewalk-line.jpg"
+  },
+  {
+    id: "wash-terracotta-driveway",
+    title: { en: "Stamped Concrete Driveway Sealing & Staining", es: "Sellado y Coloración de Entrada de Concreto Estampado" },
+    category: "pressure-washing",
+    location: "Miramar, FL",
+    image: "/images/gallery/gallery-wash-terracotta-driveway.jpg"
+  },
+  {
+    id: "wash-backyard-patio",
+    title: { en: "Backyard Slab High-Pressure Deep Clean", es: "Limpieza Profunda de Placa Trasera con Alta Presión" },
+    category: "pressure-washing",
+    location: "Miami, FL",
+    image: "/images/gallery/gallery-wash-backyard-patio.jpg"
+  },
+  {
+    id: "wash-patio-rolling",
+    title: { en: "Acrylic Protective Sealer for Patio Floor", es: "Sellador Acrílico Protector para Piso de Patio" },
+    category: "pressure-washing",
+    location: "Hialeah, FL",
+    image: "/images/gallery/gallery-wash-patio-rolling.jpg"
+  },
+  {
+    id: "wash-driveway-pavers",
+    title: { en: "Paver Driveway Pressure Wash & Sealing", es: "Lavado a Presión y Sellado de Entrada de Adoquines" },
+    category: "pressure-washing",
+    location: "Doral, FL",
+    image: "/images/project-driveway-wash.webp"
+  },
+
+  // --- COMMERCIAL PAINTING ---
+  {
+    id: "comm-facility",
+    title: { en: "Commercial Facility Interior Turnover", es: "Renovación Interior de Instalación Comercial" },
     category: "commercial",
     location: "Miami, FL",
-    image: "/images/project-commercial-clean.webp"
+    image: "/images/project-commercial-clean.webp",
+    isFeatured: true
+  },
+  {
+    id: "comm-rental-doors",
+    title: { en: "Rental Unit Fast Turnover & Trim Painting", es: "Pintura Rápida para Propiedad de Alquiler" },
+    category: "commercial",
+    location: "Pembroke Pines, FL",
+    image: "/images/gallery/gallery-interior-hallway-doors.jpg"
+  },
+  {
+    id: "comm-multi-family",
+    title: { en: "Multi-Family Residential Exterior Maintenance", es: "Mantenimiento Exterior para Propiedades Multifamiliares" },
+    category: "commercial",
+    location: "Miami-Dade, FL",
+    image: "/images/gallery/gallery-exterior-modern-villa.jpg"
   }
 ];
 
@@ -344,8 +532,8 @@ export const BEFORE_AFTER_CASES = [
       en: "Faded stucco and weather-worn walls restored with elastomeric primer and premium satin acrylic exterior paint.",
       es: "Estuco desgastado por el sol restaurado con sellador elastomérico y pintura acrílica satinada de máxima protección."
     },
-    beforeImage: "/images/before-weathered.webp",
-    afterImage: "/images/after-restored.webp",
+    beforeImage: "/images/before-weathered-new.jpg",
+    afterImage: "/images/after-restored-new.jpg",
     location: "Pembroke Pines, FL"
   }
 ];

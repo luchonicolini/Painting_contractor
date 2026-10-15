@@ -1,11 +1,14 @@
 import { ShieldCheck, Award, HeartHandshake } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
+import { AnimatedCounter } from './AnimatedCounter';
 
 export const AboutUs: React.FC = () => {
   const { language } = useLanguage();
+  const revealRef = useScrollReveal();
 
   return (
-    <section className="max-w-[1240px] mx-auto px-4 sm:px-6 py-20 md:py-28" id="about">
+    <section ref={revealRef} className="scroll-reveal max-w-[1240px] mx-auto px-4 sm:px-6 py-20 md:py-28" id="about">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* Left Column: Editorial Structured Story */}
         <div className="lg:col-span-6 flex flex-col gap-6">
@@ -66,7 +69,7 @@ export const AboutUs: React.FC = () => {
           <div className="pt-4 flex items-center gap-6 sm:gap-8 border-t border-slate-100">
             <div>
               <span className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 block">
-                12+
+                <AnimatedCounter end={12} suffix="+" />
               </span>
               <span className="text-xs text-slate-400 font-medium">
                 {language === 'en' ? 'Years in Florida' : 'Años en Florida'}
@@ -84,7 +87,7 @@ export const AboutUs: React.FC = () => {
             <div className="w-px h-10 bg-slate-200" />
             <div>
               <span className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 block">
-                100%
+                <AnimatedCounter end={100} suffix="%" />
               </span>
               <span className="text-xs text-slate-400 font-medium">
                 {language === 'en' ? 'Owner Supervised' : 'Supervisado por Dueños'}

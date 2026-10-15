@@ -1,13 +1,17 @@
-import { useState } from 'react';
-import { MapPin, ZoomIn, X, Columns2 } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
+import { MapPin, ZoomIn, X, Columns2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import { PORTFOLIO } from '../data/company';
 import { PortfolioItem } from '../types';
 
 export const Gallery: React.FC = () => {
   const { language } = useLanguage();
   const [activeFilter, setActiveFilter] = useState<string>('all');
+  const [visibleCount, setVisibleCount] = useState<number>(12);
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const revealRef = useScrollReveal();
 
   const filterTabs = [
     { id: 'all', label: { en: 'All Projects', es: 'Todos los Proyectos' } },
@@ -23,8 +27,39 @@ export const Gallery: React.FC = () => {
     return item.category === activeFilter;
   });
 
+  const displayedItems = filteredItems.slice(0, visibleCount);
+
+  useEffect(() => {
+    if (!selectedItem) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedItem(null);
+      } else if (e.key === 'ArrowRight') {
+        const idx = filteredItems.findIndex(i => i.id === selectedItem.id);
+        if (idx !== -1) {
+          setSelectedItem(filteredItems[(idx + 1) % filteredItems.length]);
+        }
+      } else if (e.key === 'ArrowLeft') {
+        const idx = filteredItems.findIndex(i => i.id === selectedItem.id);
+        if (idx !== -1) {
+          setSelectedItem(filteredItems[(idx - 1 + filteredItems.length) % filteredItems.length]);
+        }
+      }
+    };
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedItem, filteredItems]);
+
   return (
-    <section className="max-w-[1240px] mx-auto px-4 sm:px-6 py-20 border-t border-slate-100" id="gallery">
+    <section ref={revealRef} className="scroll-reveal max-w-[1240px] mx-auto px-4 sm:px-6 py-20 border-t border-slate-100" id="gallery">
       {/* Section Header */}
       <div className="text-center max-w-xl mx-auto mb-10">
         <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
@@ -45,7 +80,10 @@ export const Gallery: React.FC = () => {
         {filterTabs.map(tab => (
           <button
             key={tab.id}
-            onClick={() => setActiveFilter(tab.id)}
+            onClick={() => {
+              setActiveFilter(tab.id);
+              setVisibleCount(12);
+            }}
             className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
               activeFilter === tab.id
                 ? 'bg-brand-navy text-white shadow-md'
@@ -59,7 +97,7 @@ export const Gallery: React.FC = () => {
 
       {/* Responsive Gallery Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-        {filteredItems.map(item => (
+        {displayedItems.map(item => (
           <div
             key={item.id}
             onClick={() => setSelectedItem(item)}
@@ -90,38 +128,91 @@ export const Gallery: React.FC = () => {
         ))}
       </div>
 
-      {/* Lightbox Modal */}
-      {selectedItem && (
-        <div
-          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fade-in"
-          onClick={() => setSelectedItem(null)}
-        >
-          <div
-            className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl"
-            onClick={e => e.stopPropagation()}
+      {/* Load More Button */}
+      {filteredItems.length > visibleCount && (
+        <div className="mt-12 text-center">
+          <button
+            onClick={() => setVisibleCount(prev => prev + 12)}
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white font-heading text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg transition-all"
           >
-            <button
-              onClick={() => setSelectedItem(null)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slate-900/60 hover:bg-slate-900 text-white flex items-center justify-center transition-colors shadow-lg"
-              aria-label="Close image viewer"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <span>
+              {language === 'en'
+                ? `Load More Projects (${filteredItems.length - visibleCount} remaining)`
+                : `Ver Más Proyectos (${filteredItems.length - visibleCount} restantes)`}
+            </span>
+          </button>
+        </div>
+      )}
 
-            <div className="max-h-[75vh] bg-slate-950 flex items-center justify-center">
+      {/* Lightbox Modal via Portal */}
+      {selectedItem && typeof document !== 'undefined' && createPortal(
+        <div
+          className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
+          onClick={() => setSelectedItem(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => setSelectedItem(null)}
+            className="fixed top-4 right-4 z-[110] w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
+            aria-label="Close image viewer"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          {/* Navigation Previous */}
+          {filteredItems.length > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                const idx = filteredItems.findIndex(i => i.id === selectedItem.id);
+                setSelectedItem(filteredItems[(idx - 1 + filteredItems.length) % filteredItems.length]);
+              }}
+              className="hidden md:flex fixed left-5 top-1/2 -translate-y-1/2 z-[110] w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 text-white items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-7 h-7" />
+            </button>
+          )}
+
+          {/* Navigation Next */}
+          {filteredItems.length > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                const idx = filteredItems.findIndex(i => i.id === selectedItem.id);
+                setSelectedItem(filteredItems[(idx + 1) % filteredItems.length]);
+              }}
+              className="hidden md:flex fixed right-5 top-1/2 -translate-y-1/2 z-[110] w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 text-white items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-7 h-7" />
+            </button>
+          )}
+
+          {/* Modal Card */}
+          <div
+            className="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col my-auto"
+            onClick={e => e.stopPropagation()}
+            style={{ maxHeight: '88vh' }}
+          >
+            {/* Image Box */}
+            <div className="relative flex-1 bg-black flex items-center justify-center overflow-hidden min-h-[260px] max-h-[62vh]">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title[language]}
-                className="max-h-[75vh] w-full object-contain"
+                className="max-h-[62vh] w-auto max-w-full object-contain mx-auto"
               />
             </div>
 
-            <div className="p-6 bg-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            {/* Bottom Info Bar */}
+            <div className="p-4 sm:p-5 bg-slate-900 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/10 flex-shrink-0">
               <div>
-                <h3 className="font-heading font-bold text-lg text-slate-900">
+                <h3 className="font-heading font-bold text-base sm:text-lg text-white">
                   {selectedItem.title[language]}
                 </h3>
-                <div className="flex items-center gap-1.5 text-xs text-slate-500 mt-1">
+                <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-0.5">
                   <MapPin className="w-3.5 h-3.5 text-brand-blue" />
                   <span>{selectedItem.location}</span>
                 </div>
@@ -130,13 +221,14 @@ export const Gallery: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => setSelectedItem(null)}
-                className="px-5 py-2.5 rounded-xl bg-brand-blue hover:bg-brand-blue-hover text-white font-heading text-xs font-bold transition-colors shadow-sm"
+                className="btn-prestige px-5 py-2.5 rounded-xl bg-brand-blue hover:bg-brand-blue-hover text-white font-heading text-xs font-bold transition-all shadow-md shadow-blue-500/20 whitespace-nowrap"
               >
                 {language === 'en' ? 'Get Similar Finish' : 'Cotizar Trabajo Similar'}
               </a>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* Interactive Before/After Banner */}

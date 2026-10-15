@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Send, Mail } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import { BUSINESS_INFO } from '../data/company';
 
 export const ContactEstimate: React.FC = () => {
   const { language } = useLanguage();
+  const revealRef = useScrollReveal();
   const [selectedServices, setSelectedServices] = useState<string[]>(['exterior']);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [formData, setFormData] = useState({
@@ -36,7 +38,7 @@ export const ContactEstimate: React.FC = () => {
   };
 
   return (
-    <section className="bg-slate-50 text-slate-900 py-20 md:py-28 border-t border-slate-200/70" id="contact">
+    <section ref={revealRef} className="scroll-reveal bg-slate-50 text-slate-900 py-20 md:py-28 border-t border-slate-200/70" id="contact">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Context & Direct Contact */}
@@ -277,7 +279,7 @@ export const ContactEstimate: React.FC = () => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-xl bg-brand-blue hover:bg-brand-blue-hover text-white font-heading font-extrabold text-sm shadow-lg shadow-blue-500/25 hover:shadow-xl active:scale-[0.99] transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                    className="btn-prestige w-full py-4 rounded-xl bg-brand-blue hover:bg-brand-blue-hover text-white font-heading font-extrabold text-sm shadow-lg shadow-blue-500/25 hover:shadow-xl active:scale-[0.99] transition-all flex items-center justify-center gap-2 group cursor-pointer"
                   >
                     <span>{language === 'en' ? 'Request Free On-Site Estimate' : 'Solicitar Presupuesto Gratuito'}</span>
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

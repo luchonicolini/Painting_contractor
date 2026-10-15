@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
       <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden min-h-[560px] md:min-h-[620px] flex items-center bg-slate-950 shadow-2xl shadow-slate-900/20 border border-slate-800">
         {/* Background Architectural Florida Residence */}
         <img
-          src="/images/hero-bg.webp"
+          src="/images/hero-new-luxury.jpg"
           alt="Luxury South Florida residence finished in pristine exterior painting"
           fetchPriority="high"
           decoding="async"
@@ -57,7 +57,7 @@ export const Hero: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3.5 pt-2 w-full sm:w-auto">
             <a
               href="#contact"
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-slate-900 font-heading text-sm font-bold hover:bg-slate-100 active:scale-[0.98] transition-all shadow-xl shadow-black/20 flex items-center justify-center gap-2 group"
+              className="btn-prestige w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-slate-900 font-heading text-sm font-bold hover:bg-slate-50 active:scale-[0.98] transition-all shadow-xl shadow-black/20 flex items-center justify-center gap-2 group"
             >
               <span>{language === 'en' ? 'Request a Free Quote' : 'Solicitar Presupuesto Gratis'}</span>
               <ArrowRight className="w-4 h-4 text-slate-900 group-hover:translate-x-0.5 transition-transform" />

@@ -9,9 +9,11 @@ import {
   Sun,
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const WhyChooseUs: React.FC = () => {
   const { language } = useLanguage();
+  const revealRef = useScrollReveal();
 
   const reasons = [
     {
@@ -81,7 +83,7 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="bg-slate-50/80 py-20 border-y border-slate-100" id="why-us">
+    <section ref={revealRef} className="scroll-reveal bg-slate-50/80 py-20 border-y border-slate-100" id="why-us">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-16">
           <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">

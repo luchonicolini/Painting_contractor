@@ -1,11 +1,13 @@
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const Services: React.FC = () => {
   const { language } = useLanguage();
+  const revealRef = useScrollReveal();
 
   return (
-    <section className="max-w-[1240px] mx-auto px-4 sm:px-6 py-12 md:py-20 border-t border-slate-100" id="services">
+    <section ref={revealRef} className="scroll-reveal max-w-[1240px] mx-auto px-4 sm:px-6 py-12 md:py-20 border-t border-slate-100" id="services">
       {/* Editorial Section Header */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-16 md:mb-20">
         <div className="md:col-span-5">
@@ -129,8 +131,8 @@ export const Services: React.FC = () => {
             <div className="col-span-7">
               <div className="rounded-2xl overflow-hidden shadow-lg bg-slate-100 h-80 sm:h-96 group">
                 <img
-                  src="/images/project-living-room-white.webp"
-                  alt="Flawless exterior and interior transition finished in pure white"
+                  src="/images/project-popcorn-smooth.webp"
+                  alt="Flawless ceiling and interior drywall finishing"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -140,8 +142,8 @@ export const Services: React.FC = () => {
             <div className="col-span-5 space-y-4">
               <div className="rounded-xl overflow-hidden shadow-md bg-slate-100 h-36 sm:h-44 group">
                 <img
-                  src="/images/project-exterior-facade.webp"
-                  alt="Exterior detail and facade"
+                  src="/images/project-living-room-white.webp"
+                  alt="Exterior detail and facade painting"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -149,8 +151,8 @@ export const Services: React.FC = () => {
               </div>
               <div className="rounded-xl overflow-hidden shadow-md bg-slate-100 h-36 sm:h-44 group">
                 <img
-                  src="/images/project-roof-driveway.webp"
-                  alt="Roof restoration and driveway sealing"
+                  src="/images/project-exterior-weatherproof.webp"
+                  alt="Exterior weatherproofing and entrance finish"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -176,7 +178,7 @@ export const Services: React.FC = () => {
           <div className="group flex flex-col items-center text-center p-4 rounded-2xl hover:bg-slate-50 transition-colors">
             <div className="w-full h-48 rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition">
               <img
-                src="/images/project-exterior-weatherproof.webp"
+                src="/images/service-exterior.webp"
                 alt="Exterior weatherproofing"
                 loading="lazy"
                 decoding="async"
@@ -196,7 +198,7 @@ export const Services: React.FC = () => {
           <div className="group flex flex-col items-center text-center p-4 rounded-2xl hover:bg-slate-50 transition-colors">
             <div className="w-full h-48 rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition">
               <img
-                src="/images/project-interior-smooth.webp"
+                src="/images/service-drywall.webp"
                 alt="Interior ceilings and walls"
                 loading="lazy"
                 decoding="async"
@@ -216,7 +218,7 @@ export const Services: React.FC = () => {
           <div className="group flex flex-col items-center text-center p-4 rounded-2xl hover:bg-slate-50 transition-colors">
             <div className="w-full h-48 rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition">
               <img
-                src="/images/project-popcorn-smooth.webp"
+                src="/images/service-pressure-washing.webp"
                 alt="Roof and pressure washing"
                 loading="lazy"
                 decoding="async"
