@@ -34,7 +34,7 @@ export const Testimonials: React.FC = () => {
         <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[540px] flex items-center bg-slate-900 shadow-2xl border border-slate-800">
           {/* Authentic Craftsman Backdrop Image */}
           <img
-            src="/images/testimonials-new-interior.jpg"
+            src="/images/testimonials-new-interior.webp"
             alt="South Florida renovated luxury interior residential property"
             loading="lazy"
             decoding="async"

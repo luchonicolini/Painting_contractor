@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
       <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden min-h-[560px] md:min-h-[620px] flex items-center bg-slate-950 shadow-2xl shadow-slate-900/20 border border-slate-800">
         {/* Background Architectural Florida Residence */}
         <img
-          src="/images/hero-new-luxury.jpg"
+          src="/images/hero-new-luxury.webp"
           alt="Luxury South Florida residence finished in pristine exterior painting"
           fetchPriority="high"
           decoding="async"

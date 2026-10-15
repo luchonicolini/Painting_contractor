@@ -532,8 +532,8 @@ export const BEFORE_AFTER_CASES = [
       en: "Faded stucco and weather-worn walls restored with elastomeric primer and premium satin acrylic exterior paint.",
       es: "Estuco desgastado por el sol restaurado con sellador elastomérico y pintura acrílica satinada de máxima protección."
     },
-    beforeImage: "/images/before-weathered-new.jpg",
-    afterImage: "/images/after-restored-new.jpg",
+    beforeImage: "/images/before-weathered-new.webp",
+    afterImage: "/images/after-restored-new.webp",
     location: "Pembroke Pines, FL"
   }
 ];
