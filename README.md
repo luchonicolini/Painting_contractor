@@ -1,4 +1,4 @@
-# 🏡 El Palmar Painting & Services — Luxury Architectural Web Platform
+# El Palmar Painting & Services — Luxury Architectural Web Platform
 
 [![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=black&style=flat-square)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-3178C6?logo=typescript&logoColor=white&style=flat-square)](https://www.typescriptlang.org/)
@@ -12,7 +12,7 @@ Designed from the ground up to eliminate generic "AI landing page tropes" and de
 
 ---
 
-## 🌟 Portfolio Highlights & Senior Engineering Pillars
+## Portfolio Highlights & Senior Engineering Pillars
 
 ### 1. Performance-First Asset Optimization (Sub-Second LCP)
 - **Local WebP Asset Pipeline:** Converted all raw high-resolution photography into localized `.webp` format at quality 85%, reducing total image payloads by **over 77%** (e.g., Hero image reduced from 869 KB to 174 KB; Before/After comparisons reduced from 1.95 MB to 515 KB).
@@ -55,7 +55,7 @@ flowchart TD
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Layer | Technology | Rationale |
 | :--- | :--- | :--- |
@@ -68,7 +68,7 @@ flowchart TD
 
 ---
 
-## 📐 Design System & Color Tokens
+## Design System & Color Tokens
 
 ```
 Primary Navy:       #0B192C  (Deep Architectural Anchor)
@@ -81,7 +81,7 @@ Typography:         Plus Jakarta Sans (Headings) + Inter (Body Copy)
 
 ---
 
-## 📁 Repository Directory Structure
+## Repository Directory Structure
 
 ```
 painting-contractor/
@@ -127,7 +127,7 @@ painting-contractor/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js `18.x` or higher
@@ -161,7 +161,7 @@ npm run preview
 
 ---
 
-## 📊 Key Engineering Benchmarks
+## Key Engineering Benchmarks
 
 | Metric | Measurement | Result |
 | :--- | :--- | :--- |
@@ -174,7 +174,7 @@ npm run preview
 
 ---
 
-## 👨‍💻 Author & Engineering Credits
+## Author & Engineering Credits
 
 Developed and refined by **Luciano Nicolini** as a showcase of senior frontend engineering, performance optimization, and architectural digital design.
 
