@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { BUSINESS_INFO } from '../data/company';
 
 export const Navbar: React.FC = () => {
-  const { language, toggleLanguage, t } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -18,10 +18,10 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { href: '#services', label: { en: 'Services', es: 'Servicios' } },
+    { href: '#gallery', label: { en: 'Work Gallery', es: 'Galería' } },
     { href: '#why-us', label: { en: 'Why Choose Us', es: 'Por Qué Elegirnos' } },
     { href: '#about', label: { en: 'About Us', es: 'Sobre Nosotros' } },
     { href: '#reviews', label: { en: 'Reviews', es: 'Reseñas' } },
-    { href: '#gallery', label: { en: 'Work Gallery', es: 'Galería' } },
     { href: '#contact', label: { en: 'Contact', es: 'Contacto' } },
   ];
 
@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
         <div className="max-w-[1240px] mx-auto px-6 py-2 flex items-center justify-between">
           {/* Location & Service Area */}
           <div className="flex items-center gap-2 text-slate-300">
-            <MapPin className="w-3.5 h-3.5 text-brand-blue" />
+            <MapPin className="w-3.5 h-3.5 text-brand-amber" />
             <span>
               {language === 'en'
                 ? 'Serving Miami-Dade & Broward County | Hialeah, Pembroke Pines, Doral & Miami'
@@ -53,7 +53,7 @@ export const Navbar: React.FC = () => {
 
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="flex items-center gap-1.5 text-white font-semibold hover:text-brand-blue transition-colors"
+              className="flex items-center gap-1.5 text-white font-semibold hover:text-brand-amber transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-emerald-400" />
               <span>{BUSINESS_INFO.phone}</span>
@@ -61,15 +61,45 @@ export const Navbar: React.FC = () => {
 
             <div className="h-3 w-px bg-white/20" />
 
-            {/* Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-medium transition-colors border border-white/15"
-              aria-label="Toggle language"
-            >
-              <Globe className="w-3 h-3 text-brand-blue" />
-              <span>{language === 'en' ? 'Español' : 'English'}</span>
-            </button>
+            {/* Smooth Segmented Language Switch */}
+            <div className="inline-flex items-center gap-1.5">
+              <Globe className="w-3 h-3 text-brand-amber" />
+              <div
+                role="radiogroup"
+                aria-label="Language selector"
+                className="relative inline-flex items-center p-0.5 rounded-full bg-black/30 border border-white/20 text-xs shadow-inner"
+              >
+                {/* Sliding indicator */}
+                <span
+                  aria-hidden="true"
+                  className={`absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] rounded-full bg-white shadow-sm transition-all duration-200 ease-out ${
+                    language === 'es' ? 'left-[calc(50%+1px)]' : 'left-[2px]'
+                  }`}
+                />
+                <button
+                  type="button"
+                  onClick={() => setLanguage('en')}
+                  className={`relative z-10 px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase transition-colors duration-200 cursor-pointer ${
+                    language === 'en' ? 'text-slate-900' : 'text-slate-300 hover:text-white'
+                  }`}
+                  aria-checked={language === 'en'}
+                  role="radio"
+                >
+                  EN
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLanguage('es')}
+                  className={`relative z-10 px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase transition-colors duration-200 cursor-pointer ${
+                    language === 'es' ? 'text-slate-900' : 'text-slate-300 hover:text-white'
+                  }`}
+                  aria-checked={language === 'es'}
+                  role="radio"
+                >
+                  ES
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -85,7 +115,7 @@ export const Navbar: React.FC = () => {
         <div className="max-w-[1240px] mx-auto px-6 flex items-center justify-between">
           {/* Logo with architectural brush mark */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-brand-blue flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:bg-brand-blue-hover transition-colors">
+            <div className="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white shadow-md shadow-slate-900/15 group-hover:bg-brand-navy-light transition-colors">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                 <polyline strokeLinecap="round" strokeLinejoin="round" points="9 22 9 12 15 12 15 22" />
@@ -107,7 +137,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="hover:text-brand-blue transition-colors duration-150 py-1"
+                className="hover:text-brand-amber transition-colors duration-150 py-1"
               >
                 {t(link.label)}
               </a>
@@ -123,29 +153,57 @@ export const Navbar: React.FC = () => {
               <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                 {language === 'en' ? 'Direct Line' : 'Línea Directa'}
               </span>
-              <span className="text-sm font-bold text-slate-800 group-hover:text-brand-blue transition-colors">
+              <span className="text-sm font-bold text-slate-800 group-hover:text-brand-amber transition-colors">
                 {BUSINESS_INFO.phone}
               </span>
             </a>
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-blue hover:bg-brand-blue-hover text-white font-heading text-sm font-semibold shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30 active:scale-[0.98] transition-all"
+              className="btn-prestige inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-amber hover:bg-brand-amber-hover text-white font-heading text-sm font-bold shadow-md shadow-brand-amber/25 hover:shadow-lg hover:shadow-brand-amber/35 active:scale-[0.98] transition-all"
             >
               <span>{language === 'en' ? 'Request Free Quote' : 'Presupuesto Gratis'}</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
 
-          {/* Mobile Right Controls: Language & Hamburger */}
-          <div className="flex items-center gap-2.5 lg:hidden">
-            <button
-              onClick={toggleLanguage}
-              className="px-2 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold"
-              aria-label="Toggle language"
+          {/* Mobile Right Controls: Segmented Language & Hamburger */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <div
+              role="radiogroup"
+              aria-label="Language selector"
+              className="relative inline-flex items-center p-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs shadow-inner"
             >
-              {language === 'en' ? 'ES' : 'EN'}
-            </button>
+              {/* Sliding indicator */}
+              <span
+                aria-hidden="true"
+                className={`absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] rounded-full bg-white shadow-xs transition-all duration-200 ease-out ${
+                  language === 'es' ? 'left-[calc(50%+1px)]' : 'left-[2px]'
+                }`}
+              />
+              <button
+                type="button"
+                onClick={() => setLanguage('en')}
+                className={`relative z-10 px-2 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase transition-colors duration-200 cursor-pointer ${
+                  language === 'en' ? 'text-slate-900 font-extrabold' : 'text-slate-400'
+                }`}
+                aria-checked={language === 'en'}
+                role="radio"
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                onClick={() => setLanguage('es')}
+                className={`relative z-10 px-2 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase transition-colors duration-200 cursor-pointer ${
+                  language === 'es' ? 'text-slate-900 font-extrabold' : 'text-slate-400'
+                }`}
+                aria-checked={language === 'es'}
+                role="radio"
+              >
+                ES
+              </button>
+            </div>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -166,7 +224,7 @@ export const Navbar: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-base font-semibold text-slate-800 hover:text-brand-blue transition-colors py-1 border-b border-slate-50"
+                  className="text-base font-semibold text-slate-800 hover:text-brand-amber transition-colors py-1 border-b border-slate-50"
                 >
                   {t(link.label)}
                 </a>
@@ -194,7 +252,7 @@ export const Navbar: React.FC = () => {
                 <a
                   href="#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-brand-blue text-white font-heading text-sm font-semibold shadow-md shadow-blue-500/25"
+                  className="btn-prestige w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-brand-amber hover:bg-brand-amber-hover text-white font-heading text-sm font-bold shadow-md shadow-brand-amber/25"
                 >
                   <span>{language === 'en' ? 'Request Free Quote' : 'Presupuesto Gratis'}</span>
                   <ArrowRight className="w-4 h-4" />

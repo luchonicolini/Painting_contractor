@@ -86,7 +86,7 @@ export const WhyChooseUs: React.FC = () => {
     <section ref={revealRef} className="scroll-reveal bg-slate-50/80 py-20 border-y border-slate-100" id="why-us">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-blue block mb-2">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-amber block mb-2">
             {language === 'en' ? 'THE EL PALMAR PROMISE' : 'LA PROMESA EL PALMAR'}
           </span>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">
@@ -107,7 +107,7 @@ export const WhyChooseUs: React.FC = () => {
             const Icon = item.icon;
             return (
               <div key={idx} className="flex flex-col items-center text-center group">
-                <div className="w-13 h-13 p-3.5 rounded-2xl bg-white shadow-sm border border-slate-200/80 flex items-center justify-center text-brand-blue mb-4 group-hover:scale-105 group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                <div className="w-13 h-13 p-3.5 rounded-2xl bg-white shadow-sm border border-slate-200/80 flex items-center justify-center text-brand-navy mb-4 group-hover:scale-105 group-hover:border-amber-200 group-hover:text-brand-amber group-hover:shadow-md transition-all">
                   <Icon className="w-6 h-6" />
                 </div>
                 <span className="font-heading font-bold text-slate-900 text-base block">

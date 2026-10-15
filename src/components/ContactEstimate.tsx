@@ -43,7 +43,7 @@ export const ContactEstimate: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Context & Direct Contact */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-blue block">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-teal block">
               {language === 'en' ? 'GET IN TOUCH' : 'CONTACTO DIRECTO'}
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
@@ -60,8 +60,8 @@ export const ContactEstimate: React.FC = () => {
             <div className="space-y-4 pt-4 border-t border-slate-200/80">
               {/* Phone */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100/80 flex items-center justify-center text-brand-blue flex-shrink-0 shadow-xs">
-                  <Phone className="w-5 h-5 text-brand-blue" />
+                <div className="w-11 h-11 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-brand-amber flex-shrink-0 shadow-xs">
+                  <Phone className="w-5 h-5 text-brand-amber" />
                 </div>
                 <div>
                   <span className="text-xs text-slate-500 block font-medium">
@@ -69,7 +69,7 @@ export const ContactEstimate: React.FC = () => {
                   </span>
                   <a
                     href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                    className="text-base font-bold text-slate-900 hover:text-brand-blue transition-colors"
+                    className="text-base font-bold text-slate-900 hover:text-brand-amber transition-colors"
                   >
                     {BUSINESS_INFO.phone}
                   </a>
@@ -107,7 +107,7 @@ export const ContactEstimate: React.FC = () => {
                   </span>
                   <a
                     href={`mailto:${BUSINESS_INFO.email}`}
-                    className="text-sm font-semibold text-slate-800 hover:text-brand-blue transition-colors"
+                    className="text-sm font-semibold text-slate-800 hover:text-brand-amber transition-colors"
                   >
                     {BUSINESS_INFO.email}
                   </a>
@@ -116,8 +116,8 @@ export const ContactEstimate: React.FC = () => {
 
               {/* Location & Coverage */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100/80 flex items-center justify-center text-brand-blue flex-shrink-0 shadow-xs">
-                  <MapPin className="w-5 h-5 text-brand-blue" />
+                <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-200/60 flex items-center justify-center text-brand-teal flex-shrink-0 shadow-xs">
+                  <MapPin className="w-5 h-5 text-brand-teal" />
                 </div>
                 <div>
                   <span className="text-xs text-slate-500 block font-medium">
@@ -179,14 +179,14 @@ export const ContactEstimate: React.FC = () => {
                           onClick={() => toggleService(srv.id)}
                           className={`flex items-center gap-2 p-2.5 rounded-xl border text-xs font-semibold transition-all text-left ${
                             isChecked
-                              ? 'bg-blue-50 border-brand-blue text-brand-blue shadow-sm'
+                              ? 'bg-amber-50 border-brand-amber text-brand-amber shadow-sm'
                               : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                           }`}
                         >
                           <span
                             className={`w-4 h-4 rounded-md flex items-center justify-center border text-xs ${
                               isChecked
-                                ? 'bg-brand-blue border-brand-blue text-white'
+                                ? 'bg-brand-amber border-brand-amber text-white'
                                 : 'bg-white border-slate-300'
                             }`}
                           >
@@ -211,7 +211,7 @@ export const ContactEstimate: React.FC = () => {
                       value={formData.name}
                       onChange={e => setFormData({ ...formData, name: e.target.value })}
                       placeholder={language === 'en' ? 'e.g. John Smith' : 'Ej. Carlos Gómez'}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50/50"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-slate-50/50"
                     />
                   </div>
                   <div>
@@ -224,7 +224,7 @@ export const ContactEstimate: React.FC = () => {
                       value={formData.phone}
                       onChange={e => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="(786) 000-0000"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50/50"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-slate-50/50"
                     />
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export const ContactEstimate: React.FC = () => {
                       value={formData.email}
                       onChange={e => setFormData({ ...formData, email: e.target.value })}
                       placeholder="name@example.com"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50/50"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-slate-50/50"
                     />
                   </div>
                   <div>
@@ -252,7 +252,7 @@ export const ContactEstimate: React.FC = () => {
                       value={formData.city}
                       onChange={e => setFormData({ ...formData, city: e.target.value })}
                       placeholder={language === 'en' ? 'e.g. Pembroke Pines, 33028' : 'Ej. Hialeah, 33012'}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50/50"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-slate-50/50"
                     />
                   </div>
                 </div>
@@ -271,7 +271,7 @@ export const ContactEstimate: React.FC = () => {
                         ? 'Briefly describe your home, approximate rooms, or any specific timeline...'
                         : 'Describe brevemente tu casa, cantidad de habitaciones o fechas estimadas...'
                     }
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue bg-slate-50/50 resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-slate-50/50 resize-none"
                   />
                 </div>
 
@@ -279,7 +279,7 @@ export const ContactEstimate: React.FC = () => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="btn-prestige w-full py-4 rounded-xl bg-brand-blue hover:bg-brand-blue-hover text-white font-heading font-extrabold text-sm shadow-lg shadow-blue-500/25 hover:shadow-xl active:scale-[0.99] transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                    className="btn-prestige w-full py-4 rounded-xl bg-brand-amber hover:bg-brand-amber-hover text-white font-heading font-extrabold text-sm shadow-lg shadow-brand-amber/25 hover:shadow-xl active:scale-[0.99] transition-all flex items-center justify-center gap-2 group cursor-pointer"
                   >
                     <span>{language === 'en' ? 'Request Free On-Site Estimate' : 'Solicitar Presupuesto Gratuito'}</span>
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -1,4 +1,4 @@
-import { LanguageProvider } from './context/LanguageContext';
+import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
@@ -12,17 +12,19 @@ import { Footer } from './components/Footer';
 import { MobileStickyBar } from './components/MobileStickyBar';
 
 function PageContent() {
+  const { isChanging } = useLanguage();
+
   return (
     <div className="min-h-screen bg-white pb-20 lg:pb-0">
       <Navbar />
-      <main>
+      <main className={`transition-opacity duration-150 ease-out ${isChanging ? 'opacity-75' : 'opacity-100'}`}>
         <Hero />
         <Services />
+        <BeforeAfter />
+        <Gallery />
         <WhyChooseUs />
         <AboutUs />
         <Testimonials />
-        <Gallery />
-        <BeforeAfter />
         <ContactEstimate />
       </main>
       <Footer />

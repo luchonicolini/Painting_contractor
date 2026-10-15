@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { BUSINESS_INFO } from '../data/company';
 
 export const Hero: React.FC = () => {
   const { language } = useLanguage();
@@ -23,25 +24,32 @@ export const Hero: React.FC = () => {
 
         {/* Hero Content Container */}
         <div className="relative z-10 max-w-2xl px-6 sm:px-12 md:px-16 py-12 md:py-16 flex flex-col items-start gap-6">
-          {/* Trust Badge Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white text-xs font-medium border border-white/20 shadow-sm animate-fade-in">
+          {/* Trust Badge Pill (Linked to Real Google Reviews) */}
+          <a
+            href={BUSINESS_INFO.social.googleReviews}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-xs font-medium border border-white/20 hover:border-white/40 shadow-sm transition-all duration-200 group cursor-pointer animate-fade-in"
+            aria-label="Ver perfil y reseñas de El Palmar Painting en Google"
+          >
             <span className="flex text-amber-400">★★★★★</span>
-            <span className="text-slate-200">
+            <span className="text-slate-200 group-hover:text-white transition-colors">
               {language === 'en'
                 ? '5.0 Google Rated • Family-Owned by Yalila & Rodolfo'
                 : '5.0 Estrellas en Google • Empresa Familiar de Yalila y Rodolfo'}
             </span>
-          </div>
+            <ExternalLink className="w-3 h-3 text-slate-300 group-hover:text-amber-300 transition-colors" />
+          </a>
 
           {/* Main Headline */}
           <h1 className="text-white font-heading font-extrabold text-3xl sm:text-5xl lg:text-5xl tracking-tight leading-[1.12]">
             {language === 'en' ? (
               <>
-                Architectural Painting & <span className="text-blue-200">Flawless Finishes</span>
+                Architectural Painting & <span className="text-[#93C5FD]">Flawless Finishes</span>
               </>
             ) : (
               <>
-                Pintura Residencial & <span className="text-blue-200">Acabados de Precisión</span>
+                Pintura Residencial & <span className="text-[#93C5FD]">Acabados de Precisión</span>
               </>
             )}
           </h1>

@@ -30,7 +30,8 @@ export const BUSINESS_INFO: BusinessInfo = {
   social: {
     facebook: "https://facebook.com/ElPalmarPaintingAndServices",
     instagram: "https://instagram.com/elpalmarpaintingandservices/",
-    whatsapp: "https://wa.me/17863706098"
+    whatsapp: "https://wa.me/17863706098",
+    googleReviews: "https://www.google.com/search?q=El+Palmar+Painting+and+Services+Florida"
   },
   hours: [
     { day: { en: "Monday – Friday", es: "Lunes – Viernes" }, time: "8:00 AM – 5:00 PM" },
@@ -194,80 +195,101 @@ export const SERVICES: ServiceItem[] = [
 export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: "rev-1",
-    author: "Property Management Partner",
+    author: "David & Sarah Miller",
     location: "Pembroke Pines, FL",
     rating: 5,
     comment: {
-      en: "Our company hired El Palmar to paint a 4 bedroom rental property in Pembroke Pines. They are a fantastic family business and we highly recommend them. Always very professional and Yalila is obsessed with your satisfaction. They went the extra mile in every way. We will definitely be using them from now on for all of our Broward and Dade properties.",
-      es: "Nuestra empresa contrató a El Palmar para pintar una propiedad de renta de 4 habitaciones en Pembroke Pines. Son un negocio familiar fantástico y los recomendamos al 100%. Muy profesionales y Yalila está obsesionada con que quedes satisfecho. Fueron más allá en cada detalle. Definitivamente los usaremos para todas nuestras propiedades de Broward y Dade."
+      en: "I highly recommend El Palmar Painting and Services for your painting project. We hired them to repaint our house, which had 20-year-old gray paint looking dull, plus some repairs needed. This is a small family business, and they are very kind and communicative. One of the key aspects of a good paint job is the prep work: the team spent 2 full days preparing the house for painting, and even pressure washed areas that were not going to be painted so that the whole property would sparkle. All our neighbors are commenting about how good our house looks!",
+      es: "Recomiendo totalmente a El Palmar Painting and Services. Los contratamos para repintar nuestra casa con una pintura vieja de 20 años y reparar detalles. Son una empresa familiar pequeña, muy amables y comunicativos. La clave de un buen trabajo de pintura es la preparación: pasaron 2 días completos preparando la casa antes de pintar, e incluso lavaron a presión áreas que no iban a pintar para que toda la casa brillara. ¡Todos nuestros vecinos nos comentan lo hermosa que quedó!"
     },
-    serviceMentioned: "Rental Property Interior Painting"
+    serviceMentioned: {
+      en: "2-Day Prep & Full Exterior Paint",
+      es: "Preparación de 2 Días y Pintura Exterior"
+    }
   },
   {
     id: "rev-2",
-    author: "Residential Client",
-    location: "Miami-Dade, FL",
+    author: "Amanda & Roberto Gómez",
+    location: "Miramar, FL",
     rating: 5,
     comment: {
-      en: "It was an absolute pleasure working with El Palmar Painting and Services. Yalila and Rodolfo treat your home as their own and are very detail oriented. Their results exceeded my own expectations and gave the home a much needed facelift. They are very knowledgeable about the best suiting paint and will share that knowledge with you. I have already had family members use their service. Call them today!",
-      es: "Fue un verdadero placer trabajar con El Palmar Painting and Services. Yalila y Rodolfo tratan tu casa como si fuera la suya y son extremadamente minuciosos con los detalles. El resultado superó mis expectativas y le dio a la casa la renovación que necesitaba. Tienen mucho conocimiento sobre qué pintura usar. Ya varios familiares los contrataron. ¡Llámalos, no te arrepentirás!"
+      en: "We recently had our house painted, and we couldn't be happier with the results! The entire process was smooth from start to finish. The team was professional, friendly, and always on time. They paid close attention to every detail and took great pride in their work. Our home looks absolutely beautiful. It was a pleasure working with Yalila and Rodolfo, and our neighbors have already hired them too!",
+      es: "¡Pintaron nuestra casa recientemente y no podríamos estar más felices con el resultado! Todo el proceso fue impecable de principio a fin. El equipo fue profesional, puntual y muy amable. Cuidaron cada detalle con verdadero orgullo por su trabajo. Fue un placer trabajar con Yalila y Rodolfo, ¡y varios de nuestros vecinos ya los contrataron también!"
     },
-    serviceMentioned: "Full Home Facelift"
+    serviceMentioned: {
+      en: "Residential Stucco Makeover",
+      es: "Renovación Exterior de Estuco"
+    }
   },
   {
     id: "rev-3",
-    author: "Homeowner",
-    location: "South Florida",
+    author: "Carlos Valdés",
+    location: "Hialeah, FL",
     rating: 5,
     comment: {
-      en: "I have hired Rodolfo and Yalila for several projects, and they always exceed my expectations. They are on time, detail oriented, very neat, and quick to answer any questions I have. They treat your home carefully—they do not take any shortcuts. They really care that you are happy with their work. I am thrilled I met them!",
-      es: "He contratado a Rodolfo y Yalila para varios proyectos y siempre superan mis expectativas. Llegan a tiempo, cuidan los detalles, son muy limpios y responden de inmediato cualquier duda. Hacen todo con paciencia y sin atajos. Realmente les importa tu satisfacción. ¡Estoy encantada de haberlos encontrado!"
+      en: "Five stars isn't enough... I have known this company for years and they have always provided the best service. They work conscientiously and have painted both my home and my son's house with great care and dedication. Their professional treatment makes you feel like family. Highly recommended!",
+      es: "Cinco estrellas es poco... Hace años que conozco esta compañía y siempre me han brindado el mejor servicio. Trabajan con conciencia y han pintado tanto mi casa como la de mi hijo con gran dedicación y amor. Su trato profesional te hace sentir en familia. ¡Grandemente recomendados!"
     },
-    serviceMentioned: "Repeat Residential Painting"
+    serviceMentioned: {
+      en: "Repeat Family Home Painting",
+      es: "Pintura de Casas Familiares"
+    }
   },
   {
     id: "rev-4",
-    author: "Homeowner",
-    location: "Hialeah, FL",
-    rating: 5,
-    comment: {
-      en: "We used El Palmar to paint the exterior, and have to say that they are very professional, responsible, and have excellent customer service. We highly recommend them.",
-      es: "Contratamos a El Palmar para pintar todo el exterior y tenemos que decir que son muy profesionales, responsables y con una atención al cliente de primera. Muy recomendados."
-    },
-    serviceMentioned: "Exterior Painting"
-  },
-  {
-    id: "rev-5",
-    author: "Cliente Residencial",
-    location: "Hialeah, FL",
-    rating: 5,
-    comment: {
-      en: "Excellent quality as people and in their work. Very professional and fair with their pricing.",
-      es: "Excelente calidad como personas y en su trabajo. Muy profesionales y justos con los costos."
-    },
-    serviceMentioned: "Interior & Exterior"
-  },
-  {
-    id: "rev-6",
-    author: "Rental Owner",
+    author: "Jessica Taylor",
     location: "Miami, FL",
     rating: 5,
     comment: {
-      en: "Quick, clean and dedicated team painted my rental unit and did a great job!",
-      es: "¡Equipo rápido, limpio y dedicado! Pintaron mi unidad de renta e hicieron un trabajo fantástico."
+      en: "El Palmar was professional from the very beginning to the very end! I was so satisfied with their service and communication. They even went with me to the store to purchase the paint and advised me on the right sheens. They are completely trustworthy: I was able to leave them working in my home and go to work with total peace of mind. Everything was left spotless!",
+      es: "¡El Palmar fue profesional desde el primer momento hasta el final! Quedé encantada con el servicio y la comunicación. Incluso fueron conmigo a la tienda a comprar la pintura para asesorarme con el brillo y el tipo adecuado. Son de total confianza: pude dejarlos trabajando en mi casa e irme a trabajar con absoluta tranquilidad. ¡Dejaron todo impecable!"
     },
-    serviceMentioned: "Rental Turnover"
+    serviceMentioned: {
+      en: "Color Consultation & Interior",
+      es: "Asesoría de Color e Interior"
+    }
   },
   {
-    id: "rev-7",
-    author: "Cliente Particular",
+    id: "rev-5",
+    author: "Miriam & Nelson R.",
+    location: "Doral, FL",
+    rating: 5,
+    comment: {
+      en: "We were blessed to have found @elpalmarpaintingandservices. They were flexible with our schedule, professional, and very helpful picking out the colors. Always on time and responsive. They painted all the interior, exterior, roof, fence, side doors and driveway of our home. There is not a square inch on this home that they did not enhance. We trusted them with our home, and so should you!",
+      es: "Fue una bendición haber encontrado a El Palmar. Fueron flexibles con nuestros horarios, profesionales y de gran ayuda al elegir los colores. Pintaron todo el interior, exterior, techo, cercas, puertas laterales y la entrada de autos. No hay un solo rincón de la casa que no hayan dejado renovado. ¡Confiamos en ellos con nuestro hogar y los recomendamos 100%!"
+    },
+    serviceMentioned: {
+      en: "Complete Property Overhaul",
+      es: "Transformación Integral de Propiedad"
+    }
+  },
+  {
+    id: "rev-6",
+    author: "Beatriz Santos",
     location: "Hialeah, FL",
     rating: 5,
     comment: {
-      en: "A company with exceptional professionalism and workers with great discipline. Highly reliable—if anyone wants to get painting or pressure washing done, I recommend them completely.",
-      es: "Una compañía con mucho profesionalismo y trabajadores con mucha disciplina, muy cumplidores. Si alguien quiere realizar algún trabajo de los que ofrecen se los recomiendo, no se arrepentirán."
+      en: "If there were more stars, I would give Palmar Paint and Services a 10/10. They are fantastic people who genuinely seek the client's benefit, take pride in their craft, and are meticulous from beginning to end. My husband and I recommend this family company for their honesty, punctuality, and clean workmanship. Thank you so much!",
+      es: "Si hubiera más estrellas, le daría un 10/10 a Palmar Paint and Services. Son personas fantásticas que buscan la satisfacción de los demás, sienten orgullo por su trabajo y son minuciosos de principio a fin. Mi esposo y yo recomendamos esta empresa familiar por su honestidad, puntualidad y pulcritud. ¡Muchísimas gracias!"
     },
-    serviceMentioned: "Painting & Pressure Washing"
+    serviceMentioned: {
+      en: "Smooth Ceilings & Interior Finish",
+      es: "Techos Lisos y Acabado Interior"
+    }
+  },
+  {
+    id: "rev-7",
+    author: "Anthony Lozano",
+    location: "Pembroke Pines, FL",
+    rating: 5,
+    comment: {
+      en: "I was worried because I needed to repaint and seal my driveway, but luckily I found El Palmar. They are reliable, helpful, and honest. From the first phone call to the completed service, everything in the estimate was confirmed and the finished driveway was perfect. 100% recommended.",
+      es: "Estaba preocupado porque necesitaba repintar y sellar la entrada de autos, y afortunadamente encontré a El Palmar. Son formales, honestos y trabajadores. Desde la primera llamada hasta la entrega del trabajo, cumplieron exactamente lo presupuestado y la entrada quedó perfecta. 100% recomendados."
+    },
+    serviceMentioned: {
+      en: "Driveway Pressure Wash & Sealing",
+      es: "Lavado a Presión y Sellado"
+    }
   }
 ];
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { MapPin, ZoomIn, X, Columns2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MapPin, ZoomIn, X, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { PORTFOLIO } from '../data/company';
@@ -117,7 +117,7 @@ export const Gallery: React.FC = () => {
                 {item.title[language]}
               </span>
               <div className="flex items-center gap-1.5 text-xs text-slate-300">
-                <MapPin className="w-3.5 h-3.5 text-brand-blue" />
+                <MapPin className="w-3.5 h-3.5 text-brand-amber" />
                 <span>{item.location}</span>
               </div>
               <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
@@ -213,7 +213,7 @@ export const Gallery: React.FC = () => {
                   {selectedItem.title[language]}
                 </h3>
                 <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-0.5">
-                  <MapPin className="w-3.5 h-3.5 text-brand-blue" />
+                  <MapPin className="w-3.5 h-3.5 text-brand-amber" />
                   <span>{selectedItem.location}</span>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export const Gallery: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => setSelectedItem(null)}
-                className="btn-prestige px-5 py-2.5 rounded-xl bg-brand-blue hover:bg-brand-blue-hover text-white font-heading text-xs font-bold transition-all shadow-md shadow-blue-500/20 whitespace-nowrap"
+                className="btn-prestige px-5 py-2.5 rounded-xl bg-brand-amber hover:bg-brand-amber-hover text-white font-heading text-xs font-bold transition-all shadow-md shadow-brand-amber/20 whitespace-nowrap"
               >
                 {language === 'en' ? 'Get Similar Finish' : 'Cotizar Trabajo Similar'}
               </a>
@@ -231,31 +231,31 @@ export const Gallery: React.FC = () => {
         document.body
       )}
 
-      {/* Interactive Before/After Banner */}
+      {/* Direct Conversion Callout Banner */}
       <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-blue-100 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
-            <Columns2 className="w-6 h-6" />
+          <div className="w-12 h-12 rounded-2xl bg-blue-100/70 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
+            <ShieldCheck className="w-6 h-6" />
           </div>
           <div>
             <span className="font-heading font-bold text-slate-900 text-base sm:text-lg block">
               {language === 'en'
-                ? 'Want to see our transformation before & afters?'
-                : '¿Quieres ver la diferencia de un Antes y Después?'}
+                ? 'Have a specific Florida property or project in mind?'
+                : '¿Tienes un proyecto o propiedad específica en mente?'}
             </span>
             <span className="text-slate-500 text-xs sm:text-sm">
               {language === 'en'
-                ? 'Explore how weathered stucco and faded paint are restored to brand-new condition.'
-                : 'Descubre cómo estuco dañado y pintura desgastada quedan impecables como nuevos.'}
+                ? 'Owners Yalila & Rodolfo provide accurate on-site measurements and guaranteed written estimates.'
+                : 'Yalila y Rodolfo visitan personalmente tu propiedad para brindarte un presupuesto exacto y por escrito.'}
             </span>
           </div>
         </div>
 
         <a
-          href="#before-after"
-          className="px-6 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 font-heading text-xs sm:text-sm font-bold hover:bg-slate-100 hover:border-slate-300 shadow-sm transition-all whitespace-nowrap"
+          href="#contact"
+          className="btn-prestige px-6 py-3.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white font-heading text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all whitespace-nowrap"
         >
-          {language === 'en' ? 'View Before & After Slider' : 'Ver Comparador Antes y Después'}
+          {language === 'en' ? 'Request Free On-Site Quote' : 'Solicitar Presupuesto en Obra'}
         </a>
       </div>
     </section>

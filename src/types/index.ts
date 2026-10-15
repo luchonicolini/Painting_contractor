@@ -24,6 +24,7 @@ export interface BusinessInfo {
     facebook: string;
     instagram: string;
     whatsapp: string;
+    googleReviews: string;
   };
   hours: {
     day: LocalizedString;

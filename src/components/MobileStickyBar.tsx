@@ -37,7 +37,7 @@ export const MobileStickyBar: React.FC = () => {
         {/* Free Estimate Jump */}
         <a
           href="#contact"
-          className="flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl bg-brand-blue hover:bg-brand-blue-hover text-white transition-colors active:scale-95 shadow-sm shadow-blue-600/30"
+          className="flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl bg-brand-amber hover:bg-brand-amber-hover text-white transition-colors active:scale-95 shadow-sm shadow-brand-amber/30"
           aria-label="Request Free Estimate"
         >
           <FileText className="w-4 h-4 text-white" />

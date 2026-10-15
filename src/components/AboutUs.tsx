@@ -1,7 +1,8 @@
-import { ShieldCheck, Award, HeartHandshake } from 'lucide-react';
+import { Award, HeartHandshake } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { AnimatedCounter } from './AnimatedCounter';
+import { BUSINESS_INFO } from '../data/company';
 
 export const AboutUs: React.FC = () => {
   const { language } = useLanguage();
@@ -26,7 +27,7 @@ export const AboutUs: React.FC = () => {
           <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
             <div>
               <h3 className="font-heading font-bold text-lg text-slate-900 mb-1.5 flex items-center gap-2">
-                <HeartHandshake className="w-5 h-5 text-brand-blue" />
+                <HeartHandshake className="w-5 h-5 text-brand-teal" />
                 <span>{language === 'en' ? 'Our Team' : 'Nuestro Equipo'}</span>
               </h3>
               <p>
@@ -76,14 +77,20 @@ export const AboutUs: React.FC = () => {
               </span>
             </div>
             <div className="w-px h-10 bg-slate-200" />
-            <div>
-              <span className="font-heading font-extrabold text-2xl sm:text-3xl text-brand-blue block">
+            <a
+              href={BUSINESS_INFO.social.googleReviews}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block hover:opacity-90 transition-opacity"
+              aria-label="Ver reseñas de 5.0 en Google"
+            >
+              <span className="font-heading font-extrabold text-2xl sm:text-3xl text-amber-500 block group-hover:underline">
                 5.0 ★
               </span>
-              <span className="text-xs text-slate-400 font-medium">
-                {language === 'en' ? 'Google Rating' : 'Calificación Google'}
+              <span className="text-xs text-slate-400 font-medium group-hover:text-slate-600 transition-colors">
+                {language === 'en' ? 'Google Rating ↗' : 'Calificación Google ↗'}
               </span>
-            </div>
+            </a>
             <div className="w-px h-10 bg-slate-200" />
             <div>
               <span className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 block">
@@ -111,19 +118,15 @@ export const AboutUs: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
 
             {/* Minimalist Name Tag on Photo Bottom */}
-            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-white/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-white/40 flex items-center justify-between gap-3">
               <div>
                 <span className="font-heading font-extrabold text-slate-900 text-base block">
                   Yalila & Rodolfo
                 </span>
-                <span className="text-brand-blue text-xs font-bold tracking-wide">
+                <span className="text-brand-teal text-xs font-bold tracking-wide">
                   {language === 'en' ? 'Founders & Master Finishers' : 'Fundadores y Maestros de Acabados'}
                 </span>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full shadow-sm">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                <span>{language === 'en' ? 'FL Licensed & Insured' : 'Licencia y Seguro en Florida'}</span>
-              </span>
             </div>
           </div>
         </div>

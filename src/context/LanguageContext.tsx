@@ -6,15 +6,26 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void;
   toggleLanguage: () => void;
   t: (content: LocalizedString | string) => string;
+  isChanging: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>('en');
+  const [isChanging, setIsChanging] = useState<boolean>(false);
+
+  const setLanguage = (newLang: Language) => {
+    if (newLang === language) return;
+    setIsChanging(true);
+    setLanguageState(newLang);
+    setTimeout(() => {
+      setIsChanging(false);
+    }, 150);
+  };
 
   const toggleLanguage = () => {
-    setLanguage(prev => (prev === 'en' ? 'es' : 'en'));
+    setLanguage(language === 'en' ? 'es' : 'en');
   };
 
   const t = (content: LocalizedString | string): string => {
@@ -23,7 +34,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t, isChanging }}>
       {children}
     </LanguageContext.Provider>
   );

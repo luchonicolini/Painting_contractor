@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
           {/* Logo & Bio */}
           <div className="md:col-span-4 flex flex-col gap-4">
             <a href="#" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-brand-blue flex items-center justify-center text-white shadow-sm shadow-blue-500/20">
+              <div className="w-9 h-9 rounded-xl bg-brand-navy flex items-center justify-center text-white shadow-sm shadow-slate-900/20">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                   <polyline strokeLinecap="round" strokeLinejoin="round" points="9 22 9 12 15 12 15 22" />
@@ -84,22 +84,22 @@ export const Footer: React.FC = () => {
             <span className="font-heading font-bold text-slate-900 uppercase tracking-wider text-xs mb-1">
               {language === 'en' ? 'Services' : 'Servicios'}
             </span>
-            <a href="#services" className="hover:text-brand-blue transition-colors">
+            <a href="#services" className="hover:text-brand-amber transition-colors">
               {language === 'en' ? 'Exterior Weatherproofing' : 'Pintura Exterior y Estuco'}
             </a>
-            <a href="#services" className="hover:text-brand-blue transition-colors">
+            <a href="#services" className="hover:text-brand-amber transition-colors">
               {language === 'en' ? 'Interior Painting & Drywall' : 'Pintura Interior y Drywall'}
             </a>
-            <a href="#services" className="hover:text-brand-blue transition-colors">
+            <a href="#services" className="hover:text-brand-amber transition-colors">
               {language === 'en' ? 'Popcorn Ceiling Removal' : 'Retiro de Techo Popcorn'}
             </a>
-            <a href="#services" className="hover:text-brand-blue transition-colors">
+            <a href="#services" className="hover:text-brand-amber transition-colors">
               {language === 'en' ? 'Roof Restoration & Sealing' : 'Sellado y Pintura de Techos'}
             </a>
-            <a href="#services" className="hover:text-brand-blue transition-colors">
+            <a href="#services" className="hover:text-brand-amber transition-colors">
               {language === 'en' ? 'Pressure Washing & Driveways' : 'Lavado a Presión de Entradas'}
             </a>
-            <a href="#services" className="hover:text-brand-blue transition-colors">
+            <a href="#services" className="hover:text-brand-amber transition-colors">
               {language === 'en' ? 'Commercial & Rental Turnover' : 'Pintura Comercial y Renta'}
             </a>
           </div>
@@ -123,7 +123,7 @@ export const Footer: React.FC = () => {
             </span>
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="font-bold text-slate-900 text-sm hover:text-brand-blue transition-colors flex items-center gap-1.5"
+              className="font-bold text-slate-900 text-sm hover:text-brand-amber transition-colors flex items-center gap-1.5"
             >
               <Phone className="w-3.5 h-3.5 text-emerald-600" />
               <span>{BUSINESS_INFO.phone}</span>
@@ -131,7 +131,7 @@ export const Footer: React.FC = () => {
 
             <a
               href={`mailto:${BUSINESS_INFO.email}`}
-              className="text-slate-600 hover:text-brand-blue transition-colors break-all flex items-center gap-1.5 mt-1"
+              className="text-slate-600 hover:text-brand-amber transition-colors break-all flex items-center gap-1.5 mt-1"
             >
               <Mail className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
               <span className="text-xs">{BUSINESS_INFO.email}</span>
@@ -148,13 +148,29 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-          <span>© 2026 El Palmar Painting & Services. All rights reserved.</span>
-          <div className="flex items-center gap-6">
+        {/* Bottom Bar with Real Family Identity and Licensure */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+          <div className="text-center md:text-left leading-relaxed">
+            <span className="font-medium text-slate-700">© 2026 El Palmar Painting & Services.</span>{' '}
+            <span>
+              {language === 'en'
+                ? 'Dedicated family-owned painting contractors serving Hialeah, Pembroke Pines, Miramar, Doral, Miami & Broward County. Fully Licensed & Insured in Florida.'
+                : 'Empresa familiar de pintura al servicio de Hialeah, Pembroke Pines, Miramar, Doral, Miami y Broward. Contratista con Licencia y Seguro Activo en Florida.'}
+            </span>
+          </div>
+          <div className="flex items-center gap-4 flex-shrink-0">
+            <a
+              href={BUSINESS_INFO.social.googleReviews}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 hover:text-brand-amber transition-colors flex items-center gap-1 font-semibold"
+            >
+              <span>{language === 'en' ? 'Google Reviews (5.0 ★)' : 'Reseñas en Google (5.0 ★)'}</span>
+            </a>
+            <span className="text-slate-300">•</span>
             <button
               onClick={scrollToTop}
-              className="hover:text-slate-700 transition-colors flex items-center gap-1 cursor-pointer"
+              className="hover:text-brand-navy transition-colors flex items-center gap-1 cursor-pointer font-medium"
             >
               <span>{language === 'en' ? 'Back to top' : 'Volver arriba'}</span>
               <ArrowUp className="w-3.5 h-3.5" />
