@@ -1,6 +1,7 @@
 import { Phone, Mail, Clock, ArrowUp, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { BUSINESS_INFO } from '../data/company';
+import { BrandLogoIcon } from './BrandLogoIcon';
 
 export const Footer: React.FC = () => {
   const { language } = useLanguage();
@@ -15,18 +16,15 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-100">
           {/* Logo & Bio */}
           <div className="md:col-span-4 flex flex-col gap-4">
-            <a href="#" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-brand-navy flex items-center justify-center text-white shadow-sm shadow-slate-900/20">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline strokeLinecap="round" strokeLinejoin="round" points="9 22 9 12 15 12 15 22" />
-                </svg>
+            <a href="#" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white shadow-md shadow-slate-900/15 group-hover:bg-brand-navy-light transition-colors">
+                <BrandLogoIcon className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="font-heading font-extrabold text-slate-900 text-lg leading-none">
+                <span className="font-heading font-extrabold text-xl tracking-tight text-slate-900 leading-tight">
                   El Palmar
                 </span>
-                <span className="text-xs uppercase tracking-widest font-bold text-slate-400">
+                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-slate-400">
                   Painting & Services
                 </span>
               </div>
