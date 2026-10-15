@@ -37,11 +37,11 @@ export const Hero: React.FC = () => {
           <h1 className="text-white font-heading font-extrabold text-3xl sm:text-5xl lg:text-5xl tracking-tight leading-[1.12]">
             {language === 'en' ? (
               <>
-                Enhance Your <span className="text-blue-200">Favorite Lifestyle</span>
+                Architectural Painting & <span className="text-blue-200">Flawless Finishes</span>
               </>
             ) : (
               <>
-                Renueva Tu Hogar con <span className="text-blue-200">Acabados de Lujo</span>
+                Pintura Residencial & <span className="text-blue-200">Acabados de Precisión</span>
               </>
             )}
           </h1>
@@ -49,8 +49,8 @@ export const Hero: React.FC = () => {
           {/* Subheadline */}
           <p className="text-slate-200 text-base sm:text-lg font-normal leading-relaxed max-w-xl">
             {language === 'en'
-              ? 'Transforming South Florida homes with architectural precision, clean dust-free execution, and generational family pride across Miami-Dade & Broward.'
-              : 'Transformando residencias en el sur de la Florida con precisión arquitectónica, máxima limpieza y la dedicación de una empresa familiar de confianza.'}
+              ? 'South Florida’s dedicated family-owned painting contractors. Transforming homes with architectural precision, clean dust-free execution, and zero shortcuts across Miami-Dade & Broward.'
+              : 'Empresa familiar de pintura en el sur de la Florida. Transformamos tu hogar con precisión arquitectónica, máxima limpieza sin polvo y cero atajos en Miami-Dade y Broward.'}
           </p>
 
           {/* Action Buttons */}
@@ -94,8 +94,10 @@ export const Hero: React.FC = () => {
         {/* Floating Social Proof Quote on Desktop */}
         <div className="absolute top-12 right-12 hidden xl:flex max-w-xs flex-col gap-2 p-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 text-white shadow-2xl">
           <div className="flex items-center justify-between">
-            <span className="text-amber-400 text-xs">★★★★★</span>
-            <span className="text-xs text-slate-300 bg-white/10 px-2 py-0.5 rounded">Verified Review</span>
+            <span className="text-amber-400 text-xs" aria-label="5 stars rating">★★★★★</span>
+            <span className="text-xs text-slate-300 bg-white/10 px-2 py-0.5 rounded">
+              {language === 'en' ? 'Verified Client' : 'Cliente Verificado'}
+            </span>
           </div>
           <p className="text-xs text-slate-200 leading-relaxed italic">
             {language === 'en'
@@ -103,7 +105,7 @@ export const Hero: React.FC = () => {
               : '“Yalila y Rodolfo trataron nuestra casa como si fuera la suya. ¡Acabados impecables y máxima limpieza!”'}
           </p>
           <span className="text-xs font-semibold text-white">
-            — Homeowner in Pembroke Pines, FL
+            {language === 'en' ? '— Homeowner in Pembroke Pines, FL' : '— Propietario en Pembroke Pines, FL'}
           </span>
         </div>
       </div>

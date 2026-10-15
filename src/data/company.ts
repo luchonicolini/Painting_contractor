@@ -108,7 +108,7 @@ export const SERVICES: ServiceItem[] = [
       es: "Las texturas antiguas de popcorn acumulan polvo y oscurecen las habitaciones. Eliminamos el popcorn de forma limpia y contenida, alisando la superficie y dejando un acabado suave y moderno."
     },
     features: [
-      { en: "Dust-contained containment containment", es: "Aislamiento hermético de áreas de trabajo" },
+      { en: "Hermetic dust containment & full room masking", es: "Aislamiento hermético de áreas y protección total" },
       { en: "Smooth skim-coating level 5 finish", es: "Alisado profesional nivel 5" },
       { en: "Primer and ceiling finish coat", es: "Fijador sellador y pintura de terminación" },
       { en: "Wallpaper removal available", es: "También retiramos papel tapiz antiguo" }

@@ -85,15 +85,20 @@ export const WhyChooseUs: React.FC = () => {
   return (
     <section ref={revealRef} className="scroll-reveal bg-slate-50/80 py-20 border-y border-slate-100" id="why-us">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
-            {language === 'en' ? 'WHY CHOOSE US?' : '¿POR QUÉ ELEGIRNOS?'}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-blue block mb-2">
+            {language === 'en' ? 'THE EL PALMAR PROMISE' : 'LA PROMESA EL PALMAR'}
           </span>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">
             {language === 'en'
-              ? 'Why You Should Start Working with Us Right Away'
-              : 'La Tranquilidad de Trabajar con Verdaderos Profesionales'}
+              ? 'The Peace of Mind of Having the Owners on Your Jobsite'
+              : 'La Tranquilidad de Tratar Directamente con sus Dueños'}
           </h2>
+          <p className="text-slate-500 text-sm sm:text-base mt-3 leading-relaxed">
+            {language === 'en'
+              ? 'No sales reps or anonymous crews. Yalila and Rodolfo manage every project personally with meticulous prep, clean execution, and honest communication.'
+              : 'Sin intermediarios ni cuadrillas anónimas. Yalila y Rodolfo supervisan cada proyecto personalmente con preparación meticulosa, máxima limpieza y honestidad.'}
+          </p>
         </div>
 
         {/* Clean 2-Row Icon Matrix */}
