@@ -31,7 +31,7 @@ export const Testimonials: React.FC = () => {
       </div>
 
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[540px] flex items-center bg-slate-900 shadow-2xl border border-slate-800">
+        <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[540px] flex flex-col lg:flex-row items-center justify-between bg-slate-900 shadow-2xl border border-slate-800">
           {/* Authentic Craftsman Backdrop Image */}
           <img
             src="/images/testimonials-new-interior.webp"
@@ -41,18 +41,18 @@ export const Testimonials: React.FC = () => {
             className="absolute inset-0 w-full h-full object-cover opacity-90 scale-[1.02] transition-transform duration-1000"
           />
           {/* Directional scrim: high contrast for text on the left, clear view of the residence on the right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-slate-950/90 via-slate-950/70 lg:via-slate-950/40 to-slate-950/60 lg:to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-slate-950/20 pointer-events-none" />
 
           {/* Big Bold Impact Message on Left */}
-          <div className="relative z-10 p-8 sm:p-14 lg:p-16 max-w-xl flex flex-col gap-4">
-            <h3 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15]">
+          <div className="relative z-10 p-6 sm:p-10 lg:p-16 max-w-xl flex flex-col gap-3 sm:gap-4">
+            <h3 className="font-heading font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15]">
               {language === 'en'
                 ? 'We helped over 500 Florida families get their perfect home finish'
                 : 'Hemos ayudado a más de 500 familias en Florida a renovar su hogar'}
             </h3>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
               {language === 'en'
                 ? 'From single condos to sprawling estates, our reputation in Broward and Dade is built on personal accountability and spotless cleanups.'
                 : 'Desde condominios hasta grandes propiedades, nuestra reputación en Broward y Miami-Dade se basa en la seriedad personal y la limpieza absoluta.'}
@@ -60,7 +60,7 @@ export const Testimonials: React.FC = () => {
           </div>
 
           {/* Solid White Floating Testimonial Card with 100% High Contrast */}
-          <div className="relative z-20 m-6 sm:m-8 sm:ml-auto w-full sm:max-w-md lg:max-w-lg bg-white rounded-2xl shadow-2xl p-6 sm:p-7 border border-slate-100 flex flex-col gap-4">
+          <div className="relative z-20 m-4 sm:m-8 lg:ml-auto w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] lg:w-full sm:max-w-md lg:max-w-lg bg-white rounded-2xl shadow-2xl p-5 sm:p-7 border border-slate-100 flex flex-col gap-4">
             {/* Header: Stars & Carousel Controls */}
             <div className="flex items-center justify-between pb-1">
               <a

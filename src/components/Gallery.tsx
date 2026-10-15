@@ -11,6 +11,7 @@ export const Gallery: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [visibleCount, setVisibleCount] = useState<number>(12);
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const revealRef = useScrollReveal();
 
   const filterTabs = [
@@ -169,10 +170,10 @@ export const Gallery: React.FC = () => {
                 const idx = filteredItems.findIndex(i => i.id === selectedItem.id);
                 setSelectedItem(filteredItems[(idx - 1 + filteredItems.length) % filteredItems.length]);
               }}
-              className="hidden md:flex fixed left-5 top-1/2 -translate-y-1/2 z-[110] w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 text-white items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
+              className="flex fixed left-2 sm:left-5 top-1/2 -translate-y-1/2 z-[110] w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white/20 sm:bg-white/10 hover:bg-white/30 text-white items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
               aria-label="Previous image"
             >
-              <ChevronLeft className="w-7 h-7" />
+              <ChevronLeft className="w-5 h-5 sm:w-7 sm:h-7" />
             </button>
           )}
 
@@ -184,21 +185,35 @@ export const Gallery: React.FC = () => {
                 const idx = filteredItems.findIndex(i => i.id === selectedItem.id);
                 setSelectedItem(filteredItems[(idx + 1) % filteredItems.length]);
               }}
-              className="hidden md:flex fixed right-5 top-1/2 -translate-y-1/2 z-[110] w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 text-white items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
+              className="flex fixed right-2 sm:right-5 top-1/2 -translate-y-1/2 z-[110] w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white/20 sm:bg-white/10 hover:bg-white/30 text-white items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
               aria-label="Next image"
             >
-              <ChevronRight className="w-7 h-7" />
+              <ChevronRight className="w-5 h-5 sm:w-7 sm:h-7" />
             </button>
           )}
 
-          {/* Modal Card */}
+          {/* Modal Card with Touch Swipe */}
           <div
-            className="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col my-auto"
+            className="relative max-w-4xl w-full bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col my-auto"
             onClick={e => e.stopPropagation()}
+            onTouchStart={e => setTouchStartX(e.touches[0].clientX)}
+            onTouchEnd={e => {
+              if (touchStartX === null) return;
+              const diff = touchStartX - e.changedTouches[0].clientX;
+              if (Math.abs(diff) > 40) {
+                const idx = filteredItems.findIndex(i => i.id === selectedItem.id);
+                if (diff > 0) {
+                  setSelectedItem(filteredItems[(idx + 1) % filteredItems.length]);
+                } else {
+                  setSelectedItem(filteredItems[(idx - 1 + filteredItems.length) % filteredItems.length]);
+                }
+              }
+              setTouchStartX(null);
+            }}
             style={{ maxHeight: '88vh' }}
           >
             {/* Image Box */}
-            <div className="relative flex-1 bg-black flex items-center justify-center overflow-hidden min-h-[260px] max-h-[62vh]">
+            <div className="relative flex-1 bg-black flex items-center justify-center overflow-hidden min-h-[220px] max-h-[62vh]">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title[language]}

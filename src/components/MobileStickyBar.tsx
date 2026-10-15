@@ -6,7 +6,7 @@ export const MobileStickyBar: React.FC = () => {
   const { language } = useLanguage();
 
   return (
-    <aside aria-label="Quick contact actions" className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-lg border-t border-slate-200/80 p-3 shadow-[0_-8px_25px_rgba(15,41,66,0.12)]">
+    <aside aria-label="Quick contact actions" className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-lg border-t border-slate-200/80 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] shadow-[0_-8px_25px_rgba(15,41,66,0.12)]">
       <div className="max-w-md mx-auto grid grid-cols-3 gap-2">
         {/* Direct Phone Call */}
         <a

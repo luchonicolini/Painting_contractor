@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-4 flex flex-col gap-4">
             <a href="#" className="flex items-center gap-3 group">
               <div className="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white shadow-md shadow-slate-900/15 group-hover:bg-brand-navy-light transition-colors">
-                <BrandLogoIcon className="w-5 h-5 text-white" />
+                <BrandLogoIcon className="w-6 h-6 text-white" />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-extrabold text-xl tracking-tight text-slate-900 leading-tight">

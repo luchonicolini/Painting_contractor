@@ -123,10 +123,13 @@ export const BeforeAfter: React.FC = () => {
           />
 
           {/* Discreet Architectural Label: AFTER */}
-          <div className="absolute top-4 right-4 z-20 pointer-events-none">
-            <span className="px-3.5 py-1.5 rounded-lg bg-slate-950/75 backdrop-blur-md text-white font-medium text-xs tracking-wide border border-white/15 shadow-sm flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              <span>{language === 'en' ? 'After: El Palmar Finish' : 'Después: Acabado El Palmar'}</span>
+          <div className="absolute top-3 sm:top-4 right-3 sm:right-4 z-20 pointer-events-none">
+            <span className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg bg-slate-950/80 backdrop-blur-md text-white font-medium text-[11px] sm:text-xs tracking-wide border border-white/15 shadow-sm flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" />
+              <span>
+                {language === 'en' ? 'After' : 'Después'}
+                <span className="hidden sm:inline">: {language === 'en' ? 'El Palmar Finish' : 'Acabado El Palmar'}</span>
+              </span>
             </span>
           </div>
 
@@ -151,10 +154,13 @@ export const BeforeAfter: React.FC = () => {
             <div className="absolute inset-0 bg-slate-950/10 pointer-events-none" />
 
             {/* Discreet Architectural Label: BEFORE */}
-            <div className="absolute top-4 left-4 z-20 pointer-events-none">
-              <span className="px-3.5 py-1.5 rounded-lg bg-slate-950/75 backdrop-blur-md text-white font-medium text-xs tracking-wide border border-white/15 shadow-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-slate-400" />
-                <span>{language === 'en' ? 'Before: Weather-Worn' : 'Antes: Desgastado por el Clima'}</span>
+            <div className="absolute top-3 sm:top-4 left-3 sm:left-4 z-20 pointer-events-none">
+              <span className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg bg-slate-950/80 backdrop-blur-md text-white font-medium text-[11px] sm:text-xs tracking-wide border border-white/15 shadow-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-slate-400 flex-shrink-0" />
+                <span>
+                  {language === 'en' ? 'Before' : 'Antes'}
+                  <span className="hidden sm:inline">: {language === 'en' ? 'Weather-Worn' : 'Desgastado por el Clima'}</span>
+                </span>
               </span>
             </div>
           </div>

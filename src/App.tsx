@@ -15,7 +15,7 @@ function PageContent() {
   const { isChanging } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-white pb-20 lg:pb-0">
+    <div className="min-h-screen bg-white pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] lg:pb-0">
       <Navbar />
       <main className={`transition-opacity duration-150 ease-out ${isChanging ? 'opacity-75' : 'opacity-100'}`}>
         <Hero />

@@ -19,30 +19,30 @@ export const Hero: React.FC = () => {
         />
 
         {/* Cinematic Scrim: readable text on left, bright Florida daylight on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-slate-950/90 via-slate-950/70 sm:via-slate-950/40 to-slate-950/40 sm:to-transparent pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-slate-950/15 pointer-events-none" />
 
         {/* Hero Content Container */}
-        <div className="relative z-10 max-w-2xl px-6 sm:px-12 md:px-16 py-12 md:py-16 flex flex-col items-start gap-6">
+        <div className="relative z-10 max-w-2xl px-5 sm:px-12 md:px-16 py-10 sm:py-12 md:py-16 flex flex-col items-start gap-5 sm:gap-6">
           {/* Trust Badge Pill (Linked to Real Google Reviews) */}
           <a
             href={BUSINESS_INFO.social.googleReviews}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-xs font-medium border border-white/20 hover:border-white/40 shadow-sm transition-all duration-200 group cursor-pointer animate-fade-in"
+            className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-[11px] sm:text-xs font-medium border border-white/20 hover:border-white/40 shadow-sm transition-all duration-200 group cursor-pointer animate-fade-in"
             aria-label="Ver perfil y reseñas de El Palmar Painting en Google"
           >
-            <span className="flex text-amber-400">★★★★★</span>
+            <span className="flex text-amber-400 text-xs sm:text-sm">★★★★★</span>
             <span className="text-slate-200 group-hover:text-white transition-colors">
               {language === 'en'
-                ? '5.0 Google Rated • Family-Owned by Yalila & Rodolfo'
-                : '5.0 Estrellas en Google • Empresa Familiar de Yalila y Rodolfo'}
+                ? '5.0 Google Rated • Family-Owned'
+                : '5.0 en Google • Empresa Familiar'}
             </span>
-            <ExternalLink className="w-3 h-3 text-slate-300 group-hover:text-amber-300 transition-colors" />
+            <ExternalLink className="w-3 h-3 text-slate-300 group-hover:text-amber-300 transition-colors flex-shrink-0" />
           </a>
 
           {/* Main Headline */}
-          <h1 className="text-white font-heading font-extrabold text-3xl sm:text-5xl lg:text-5xl tracking-tight leading-[1.12]">
+          <h1 className="text-white font-heading font-extrabold text-[28px] sm:text-4xl md:text-5xl lg:text-5xl tracking-tight leading-[1.12]">
             {language === 'en' ? (
               <>
                 Architectural Painting & <span className="text-[#93C5FD]">Flawless Finishes</span>

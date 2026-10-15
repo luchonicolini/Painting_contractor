@@ -102,17 +102,17 @@ export const Navbar: React.FC = () => {
             : 'bg-white/90 backdrop-blur-sm border-slate-100/80 py-4'
         }`}
       >
-        <div className="max-w-[1240px] mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo with architectural brush mark */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white shadow-md shadow-slate-900/15 group-hover:bg-brand-navy-light transition-colors">
-              <BrandLogoIcon className="w-5 h-5 text-white" />
+          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white shadow-md shadow-slate-900/15 group-hover:bg-brand-navy-light transition-colors flex-shrink-0">
+              <BrandLogoIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-xl tracking-tight text-slate-900 leading-tight">
+              <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 leading-tight">
                 El Palmar
               </span>
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-slate-400">
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.2em] font-semibold text-slate-400">
                 Painting & Services
               </span>
             </div>

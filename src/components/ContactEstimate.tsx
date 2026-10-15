@@ -132,11 +132,11 @@ export const ContactEstimate: React.FC = () => {
           </div>
 
           {/* Right Column: Modern High-Converting Estimate Form */}
-          <div className="lg:col-span-7 bg-white text-slate-900 p-7 sm:p-10 rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-200/80">
-            <h3 className="font-heading font-extrabold text-2xl text-slate-900 mb-1">
+          <div className="lg:col-span-7 bg-white text-slate-900 p-5 sm:p-10 rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-200/80">
+            <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 mb-1">
               {language === 'en' ? 'Tell Us About Your Project' : 'Cuéntanos Sobre Tu Proyecto'}
             </h3>
-            <p className="text-slate-500 text-xs sm:text-sm mb-6">
+            <p className="text-slate-500 text-xs sm:text-sm mb-5 sm:mb-6">
               {language === 'en'
                 ? 'Fill in the quick details below and Yalila & Rodolfo will get back to you promptly.'
                 : 'Completa los datos y Yalila y Rodolfo se comunicarán contigo a la brevedad.'}

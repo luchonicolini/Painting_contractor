@@ -5,55 +5,46 @@ interface BrandLogoIconProps {
 }
 
 /**
- * Custom bespoke architectural painting mark for El Palmar Painting & Services.
- * Replaces generic tech/real-estate house icons with an authentic craftsman roller
- * applying fresh architectural coats.
+ * Bespoke Palm Tree Mark for El Palmar Painting & Services.
+ * Inspired directly by the iconic Florida Palm Tree:
+ * - Characteristic natural trunk contour with ground baseline.
+ * - Gracefully arching tropical palm fronds with smooth rounded curves.
+ * - Perfectly balanced for high-contrast visibility at small and large sizes.
  */
-export const BrandLogoIcon: React.FC<BrandLogoIconProps> = ({ className = "w-5 h-5" }) => {
+export const BrandLogoIcon: React.FC<BrandLogoIconProps> = ({ className = "w-6 h-6" }) => {
   return (
     <svg
       className={className}
-      viewBox="0 0 24 24"
+      viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      stroke="currentColor"
+      strokeWidth="2.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       aria-hidden="true"
     >
-      {/* Precision Paint Roller Cylinder with lacquer coat fill */}
-      <rect
-        x="3"
-        y="3.5"
-        width="13"
-        height="4.6"
-        rx="1.5"
-        fill="currentColor"
-        fillOpacity="0.3"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-      {/* Steel Frame wire */}
-      <path
-        d="M16 5.8h2.5a1.5 1.5 0 0 1 1.5 1.5v2.2a1.5 1.5 0 0 1-1.5 1.5H11a1.5 1.5 0 0 0-1.5 1.5V14"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      {/* Craftsman handle grip */}
-      <rect
-        x="8"
-        y="14"
-        width="3"
-        height="5.5"
-        rx="1"
-        fill="currentColor"
-      />
-      {/* Architectural fresh paint coating descending from the roller */}
-      <path
-        d="M5.2 8.1v3.5M8.8 8.1v5.2M12.4 8.1v2.5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        opacity="0.8"
-      />
+      {/* Ground Baseline */}
+      <path d="M5 28.5H20.5" strokeWidth="2.5" />
+
+      {/* Trunk (Natural curved dual-line trunk) */}
+      <path d="M8.8 28.5C9.8 23 11 17 12.8 11.5" />
+      <path d="M14.5 28.5C14.5 23 14 17 13.8 11.5" />
+
+      {/* Top-Right Majestic Sweeping Frond */}
+      <path d="M13.2 10.5C15.5 6.5 20.5 3 26.5 4.5C24 6.5 21 8.8 17.5 10.5" />
+
+      {/* Top-Left Arching Frond */}
+      <path d="M12.5 10C9.5 6.5 6 4 3 5.5C5.5 7.5 8 9.5 11.5 10.8" />
+
+      {/* Mid-Left Drooping Frond */}
+      <path d="M11 11.5C7.5 11.8 4.5 13.5 3.5 17.5C5.8 16 9 14.5 11.8 13.5" />
+
+      {/* Mid-Right Sweeping Frond */}
+      <path d="M14.5 11C18 11.2 23 12.5 27.5 15.5C24.5 16.5 20.8 16 17.5 14.5" />
+
+      {/* Low-Right Cascade Frond */}
+      <path d="M14 12.5C16.8 14.5 19.5 17.5 20.5 22.5C19.5 20 17.5 17.5 14 15.5" />
     </svg>
   );
 };

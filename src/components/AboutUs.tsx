@@ -67,16 +67,16 @@ export const AboutUs: React.FC = () => {
           </div>
 
           {/* Key Metrics Row */}
-          <div className="pt-4 flex items-center gap-6 sm:gap-8 border-t border-slate-100">
+          <div className="pt-4 flex items-center justify-between sm:justify-start gap-3 sm:gap-8 border-t border-slate-100">
             <div>
-              <span className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 block">
+              <span className="font-heading font-extrabold text-xl sm:text-3xl text-slate-900 block">
                 <AnimatedCounter end={12} suffix="+" />
               </span>
-              <span className="text-xs text-slate-400 font-medium">
+              <span className="text-[11px] sm:text-xs text-slate-400 font-medium">
                 {language === 'en' ? 'Years in Florida' : 'Años en Florida'}
               </span>
             </div>
-            <div className="w-px h-10 bg-slate-200" />
+            <div className="w-px h-8 sm:h-10 bg-slate-200" />
             <a
               href={BUSINESS_INFO.social.googleReviews}
               target="_blank"
@@ -84,20 +84,20 @@ export const AboutUs: React.FC = () => {
               className="group block hover:opacity-90 transition-opacity"
               aria-label="Ver reseñas de 5.0 en Google"
             >
-              <span className="font-heading font-extrabold text-2xl sm:text-3xl text-amber-500 block group-hover:underline">
+              <span className="font-heading font-extrabold text-xl sm:text-3xl text-amber-500 block group-hover:underline">
                 5.0 ★
               </span>
-              <span className="text-xs text-slate-400 font-medium group-hover:text-slate-600 transition-colors">
-                {language === 'en' ? 'Google Rating ↗' : 'Calificación Google ↗'}
+              <span className="text-[11px] sm:text-xs text-slate-400 font-medium group-hover:text-slate-600 transition-colors">
+                {language === 'en' ? 'Google ↗' : 'Google ↗'}
               </span>
             </a>
-            <div className="w-px h-10 bg-slate-200" />
+            <div className="w-px h-8 sm:h-10 bg-slate-200" />
             <div>
-              <span className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 block">
+              <span className="font-heading font-extrabold text-xl sm:text-3xl text-slate-900 block">
                 <AnimatedCounter end={100} suffix="%" />
               </span>
-              <span className="text-xs text-slate-400 font-medium">
-                {language === 'en' ? 'Owner Supervised' : 'Supervisado por Dueños'}
+              <span className="text-[11px] sm:text-xs text-slate-400 font-medium">
+                {language === 'en' ? 'Supervised' : 'Supervisado'}
               </span>
             </div>
           </div>
@@ -111,14 +111,14 @@ export const AboutUs: React.FC = () => {
               alt="Yalila and Rodolfo - Founders of El Palmar Painting and Services"
               loading="lazy"
               decoding="async"
-              className="w-full h-[480px] sm:h-[540px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
+              className="w-full h-[400px] sm:h-[540px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
             />
 
             {/* Gradient shadow overlay on bottom of photo */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
 
             {/* Minimalist Name Tag on Photo Bottom */}
-            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-white/40 flex items-center justify-between gap-3">
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-white/95 backdrop-blur-md p-3.5 sm:p-5 rounded-2xl shadow-xl border border-white/40 flex items-center justify-between gap-3">
               <div>
                 <span className="font-heading font-extrabold text-slate-900 text-base block">
                   Yalila & Rodolfo
