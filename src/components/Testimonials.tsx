@@ -118,10 +118,14 @@ export const Testimonials: React.FC = () => {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-brand-navy text-white font-heading font-bold text-xs flex items-center justify-center shadow-sm">
                   {current.author
-                    .split(' ')
+                    .replace(/&/g, '')
+                    .trim()
+                    .split(/\s+/)
                     .map(n => n[0])
+                    .filter(Boolean)
                     .slice(0, 2)
-                    .join('')}
+                    .join('')
+                    .toUpperCase()}
                 </div>
                 <div className="flex flex-col">
                   <span className="font-heading font-bold text-slate-900 text-sm leading-tight">
