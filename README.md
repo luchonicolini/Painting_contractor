@@ -5,6 +5,9 @@
 [![Vite](https://img.shields.io/badge/Vite-6.2.0-646CFF?logo=vite&logoColor=white&style=flat-square)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-06B6D4?logo=tailwindcss&logoColor=white&style=flat-square)](https://tailwindcss.com/)
 [![WebP Optimized](https://img.shields.io/badge/Assets-WebP_Pipeline_(-77%25)-10B981?style=flat-square)](https://developers.google.com/speed/webp)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-painting--contractor--demo1.vercel.app-000000?style=flat-square&logo=vercel&logoColor=white)](https://painting-contractor-demo1.vercel.app/)
+
+> **Live Production URL:** [https://painting-contractor-demo1.vercel.app/](https://painting-contractor-demo1.vercel.app/)
 
 A high-converting, agency-grade web application engineered for **El Palmar Painting & Services**, a premier family-owned architectural painting contractor serving **Miami-Dade and Broward County, Florida** (Hialeah, Pembroke Pines, Miramar, Doral, and Miami).
 
@@ -178,5 +181,6 @@ npm run preview
 
 Developed and refined by **Luciano Nicolini** as a showcase of senior frontend engineering, performance optimization, and architectural digital design.
 
+- **Live Deployment:** [https://painting-contractor-demo1.vercel.app/](https://painting-contractor-demo1.vercel.app/)
 - **GitHub:** [@luchonicolini](https://github.com/luchonicolini)
 - **Project:** [Painting_contractor Repository](https://github.com/luchonicolini/Painting_contractor)
