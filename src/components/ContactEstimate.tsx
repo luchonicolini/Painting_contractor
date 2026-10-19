@@ -43,10 +43,10 @@ export const ContactEstimate: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Context & Direct Contact */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-teal block">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2.5">
               {language === 'en' ? 'GET IN TOUCH' : 'CONTACTO DIRECTO'}
             </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
+            <h2 className="font-heading font-semibold text-3xl sm:text-4xl md:text-5xl text-slate-900 tracking-tight leading-[1.08]">
               {language === 'en'
                 ? 'Schedule Your Free On-Site Estimate'
                 : 'Agenda Tu Presupuesto Gratis en Obra'}
@@ -60,8 +60,8 @@ export const ContactEstimate: React.FC = () => {
             <div className="space-y-4 pt-4 border-t border-slate-200/80">
               {/* Phone */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-brand-amber flex-shrink-0 shadow-xs">
-                  <Phone className="w-5 h-5 text-brand-amber" />
+                <div className="w-11 h-11 rounded-xl bg-brand-sapphire-light border border-brand-sapphire/20 flex items-center justify-center text-brand-sapphire flex-shrink-0 shadow-xs">
+                  <Phone className="w-5 h-5 text-brand-sapphire" />
                 </div>
                 <div>
                   <span className="text-xs text-slate-500 block font-medium">
@@ -69,7 +69,7 @@ export const ContactEstimate: React.FC = () => {
                   </span>
                   <a
                     href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                    className="text-base font-bold text-slate-900 hover:text-brand-amber transition-colors"
+                    className="text-base font-bold text-slate-900 hover:text-brand-sapphire transition-colors"
                   >
                     {BUSINESS_INFO.phone}
                   </a>
@@ -107,7 +107,7 @@ export const ContactEstimate: React.FC = () => {
                   </span>
                   <a
                     href={`mailto:${BUSINESS_INFO.email}`}
-                    className="text-sm font-semibold text-slate-800 hover:text-brand-amber transition-colors"
+                    className="text-sm font-semibold text-slate-800 hover:text-brand-sapphire transition-colors"
                   >
                     {BUSINESS_INFO.email}
                   </a>
@@ -116,8 +116,8 @@ export const ContactEstimate: React.FC = () => {
 
               {/* Location & Coverage */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-200/60 flex items-center justify-center text-brand-teal flex-shrink-0 shadow-xs">
-                  <MapPin className="w-5 h-5 text-brand-teal" />
+                <div className="w-11 h-11 rounded-xl bg-brand-sky-light border border-brand-sky/20 flex items-center justify-center text-brand-sky flex-shrink-0 shadow-xs">
+                  <MapPin className="w-5 h-5 text-brand-sky" />
                 </div>
                 <div>
                   <span className="text-xs text-slate-500 block font-medium">
@@ -133,7 +133,7 @@ export const ContactEstimate: React.FC = () => {
 
           {/* Right Column: Modern High-Converting Estimate Form */}
           <div className="lg:col-span-7 bg-white text-slate-900 p-5 sm:p-10 rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-200/80">
-            <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 mb-1">
+            <h3 className="font-heading font-semibold text-xl sm:text-2xl text-slate-900 mb-1">
               {language === 'en' ? 'Tell Us About Your Project' : 'Cuéntanos Sobre Tu Proyecto'}
             </h3>
             <p className="text-slate-500 text-xs sm:text-sm mb-5 sm:mb-6">
@@ -176,17 +176,18 @@ export const ContactEstimate: React.FC = () => {
                         <button
                           key={srv.id}
                           type="button"
+                          aria-pressed={isChecked}
                           onClick={() => toggleService(srv.id)}
                           className={`flex items-center gap-2 p-2.5 rounded-xl border text-xs font-semibold transition-all text-left ${
                             isChecked
-                              ? 'bg-amber-50 border-brand-amber text-brand-amber shadow-sm'
+                              ? 'bg-brand-sapphire-light border-brand-sapphire text-brand-sapphire shadow-sm'
                               : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                           }`}
                         >
                           <span
                             className={`w-4 h-4 rounded-md flex items-center justify-center border text-xs ${
                               isChecked
-                                ? 'bg-brand-amber border-brand-amber text-white'
+                                ? 'bg-brand-sapphire border-brand-sapphire text-white'
                                 : 'bg-white border-slate-300'
                             }`}
                           >
@@ -279,7 +280,7 @@ export const ContactEstimate: React.FC = () => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="btn-prestige w-full py-4 rounded-xl bg-brand-amber hover:bg-brand-amber-hover text-white font-heading font-extrabold text-sm shadow-lg shadow-brand-amber/25 hover:shadow-xl active:scale-[0.99] transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                    className="btn-prestige w-full py-4 rounded-xl bg-brand-sapphire hover:bg-brand-sapphire-hover text-white font-heading font-extrabold text-sm shadow-lg shadow-brand-sapphire/25 hover:shadow-xl active:scale-[0.99] transition-all flex items-center justify-center gap-2 group cursor-pointer"
                   >
                     <span>{language === 'en' ? 'Request Free On-Site Estimate' : 'Solicitar Presupuesto Gratuito'}</span>
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

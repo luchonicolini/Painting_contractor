@@ -1,5 +1,22 @@
 import { BusinessInfo, ServiceItem, PortfolioItem, TestimonialItem } from '../types';
 
+/**
+ * Localized document-head copy. Consumed by LanguageContext to keep
+ * <title>, meta description and Open Graph tags in sync with the active language.
+ */
+export const SITE_META: Record<'en' | 'es', { title: string; description: string }> = {
+  en: {
+    title: 'El Palmar Painting & Services | Architectural Painting Contractors in South Florida',
+    description:
+      'Dedicated family-owned residential & commercial painting contractors in Hialeah, Miami-Dade & Broward County. Exterior weatherproofing, Level 5 interior finishes & dust-free popcorn ceiling removal. Florida Licensed & Insured.',
+  },
+  es: {
+    title: 'El Palmar Painting & Services | Pintores Arquitectónicos en el Sur de la Florida',
+    description:
+      'Empresa familiar de pintura residencial y comercial en Hialeah, Miami-Dade y el condado de Broward. Impermeabilización exterior, acabados interiores nivel 5 y remoción de techo popcorn sin polvo. Con licencia y seguro en Florida.',
+  },
+};
+
 export const BUSINESS_INFO: BusinessInfo = {
   name: "El Palmar Painting & Services",
   legalName: "El Palmar Painting and Services",

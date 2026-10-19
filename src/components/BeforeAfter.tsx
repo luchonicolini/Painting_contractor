@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { ChevronsLeftRight } from 'lucide-react';
+import { Hand } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { BEFORE_AFTER_CASES } from '../data/company';
@@ -18,8 +18,8 @@ export const BeforeAfter: React.FC = () => {
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
     let percentage = (x / rect.width) * 100;
-    if (percentage < 2) percentage = 2;
-    if (percentage > 98) percentage = 98;
+    if (percentage < 3) percentage = 3;
+    if (percentage > 97) percentage = 97;
     setSliderPosition(percentage);
   }, []);
 
@@ -61,12 +61,12 @@ export const BeforeAfter: React.FC = () => {
 
   return (
     <section ref={revealRef} className="scroll-reveal max-w-[1240px] mx-auto px-4 sm:px-6 py-20 border-t border-slate-100" id="before-after">
-      {/* Header */}
+      {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-10">
-        <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-500 block mb-2">
+        <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2.5">
           {language === 'en' ? 'FEATURED CASE STUDY • PEMBROKE PINES, FL' : 'CASO DE ESTUDIO REAL • PEMBROKE PINES, FL'}
         </span>
-        <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+        <h2 className="font-heading font-semibold text-3xl sm:text-4xl md:text-5xl text-slate-900 tracking-tight leading-[1.08]">
           {language === 'en' ? 'Exterior Stucco & Sun-Wear Restoration' : 'Restauración de Estuco y Protección Solar'}
         </h2>
         <p className="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
@@ -74,45 +74,17 @@ export const BeforeAfter: React.FC = () => {
             ? 'Compare the difference between faded, chalking stucco and our sealed, weather-resistant architectural finish.'
             : 'Compara la diferencia entre un estuco decolorado con micro-fisuras y nuestro sellado elastomérico de larga duración.'}
         </p>
-
-        {/* Quick View Controls: Enables effortless toggling on mobile without awkward dragging */}
-        <div className="inline-flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200/80 mt-6 text-xs font-semibold text-slate-600 gap-1 shadow-xs">
-          <button
-            onClick={() => setSliderPosition(98)}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
-              sliderPosition > 85 ? 'bg-white text-slate-900 shadow-xs' : 'hover:text-slate-900'
-            }`}
-          >
-            {language === 'en' ? 'View Before' : 'Ver Antes'}
-          </button>
-          <button
-            onClick={() => setSliderPosition(50)}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
-              sliderPosition >= 30 && sliderPosition <= 70 ? 'bg-white text-slate-900 shadow-xs' : 'hover:text-slate-900'
-            }`}
-          >
-            {language === 'en' ? 'Interactive 50 / 50' : 'Comparar 50 / 50'}
-          </button>
-          <button
-            onClick={() => setSliderPosition(2)}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
-              sliderPosition < 15 ? 'bg-white text-slate-900 shadow-xs' : 'hover:text-slate-900'
-            }`}
-          >
-            {language === 'en' ? 'View Finished' : 'Ver Terminado'}
-          </button>
-        </div>
       </div>
 
-      {/* Main Comparison Component */}
+      {/* Main Comparison Component matching reference design */}
       <div className="max-w-4xl mx-auto">
         <div
           ref={containerRef}
           onMouseDown={handleStartDrag}
           onTouchStart={handleStartDrag}
-          className="relative h-[360px] sm:h-[460px] md:h-[520px] rounded-3xl overflow-hidden shadow-xl select-none cursor-ew-resize border border-slate-200/90 bg-slate-900"
+          className="relative aspect-[4/3] sm:aspect-[16/10] md:h-[540px] rounded-3xl overflow-hidden shadow-2xl select-none cursor-ew-resize border border-slate-200/90 bg-slate-900 group"
         >
-          {/* AFTER IMAGE (Background base layer) */}
+          {/* AFTER IMAGE (Base layer) */}
           <img
             src={activeCase.afterImage}
             alt="South Florida home exterior after El Palmar painting restoration"
@@ -122,18 +94,14 @@ export const BeforeAfter: React.FC = () => {
             draggable={false}
           />
 
-          {/* Discreet Architectural Label: AFTER */}
-          <div className="absolute top-3 sm:top-4 right-3 sm:right-4 z-20 pointer-events-none">
-            <span className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg bg-slate-950/80 backdrop-blur-md text-white font-medium text-[11px] sm:text-xs tracking-wide border border-white/15 shadow-sm flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" />
-              <span>
-                {language === 'en' ? 'After' : 'Después'}
-                <span className="hidden sm:inline">: {language === 'en' ? 'El Palmar Finish' : 'Acabado El Palmar'}</span>
-              </span>
+          {/* Minimalist Pill: AFTER (Top-Right) */}
+          <div className="absolute top-4 sm:top-5 right-4 sm:right-5 z-20 pointer-events-none">
+            <span className="px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white font-sans text-xs sm:text-sm font-medium tracking-wide shadow-sm">
+              {language === 'en' ? 'After' : 'Después'}
             </span>
           </div>
 
-          {/* BEFORE IMAGE (Clipped overlay layer with 1:1 pixel alignment) */}
+          {/* BEFORE IMAGE (Clipped Layer) */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -150,37 +118,30 @@ export const BeforeAfter: React.FC = () => {
               draggable={false}
             />
 
-            {/* Subtle contrast tint on before layer */}
-            <div className="absolute inset-0 bg-slate-950/10 pointer-events-none" />
-
-            {/* Discreet Architectural Label: BEFORE */}
-            <div className="absolute top-3 sm:top-4 left-3 sm:left-4 z-20 pointer-events-none">
-              <span className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg bg-slate-950/80 backdrop-blur-md text-white font-medium text-[11px] sm:text-xs tracking-wide border border-white/15 shadow-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-slate-400 flex-shrink-0" />
-                <span>
-                  {language === 'en' ? 'Before' : 'Antes'}
-                  <span className="hidden sm:inline">: {language === 'en' ? 'Weather-Worn' : 'Desgastado por el Clima'}</span>
-                </span>
+            {/* Minimalist Pill: BEFORE (Top-Left) */}
+            <div className="absolute top-4 sm:top-5 left-4 sm:left-5 z-20 pointer-events-none">
+              <span className="px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white font-sans text-xs sm:text-sm font-medium tracking-wide shadow-sm">
+                {language === 'en' ? 'Before' : 'Antes'}
               </span>
             </div>
           </div>
 
-          {/* SLIDER DIVIDER LINE & MINIMAL TACTILE HANDLE */}
+          {/* SLIDER DIVIDER LINE & CIRCULAR HAND KNOB */}
           <div
             className="absolute top-0 bottom-0 z-30 pointer-events-none transition-none"
             style={{ left: `${sliderPosition}%` }}
           >
-            {/* Clean hairline divider line */}
-            <div className="absolute top-0 bottom-0 w-0.5 -ml-px bg-white/95 shadow-[0_0_10px_rgba(0,0,0,0.6)]" />
+            {/* White divider line */}
+            <div className="absolute top-0 bottom-0 w-0.5 -ml-px bg-white shadow-[0_0_10px_rgba(0,0,0,0.5)]" />
 
-            {/* Center Floating Handle Circle */}
+            {/* Center Circular White Handle with Hand Icon */}
             <div
               onMouseDown={handleStartDrag}
               onTouchStart={handleStartDrag}
-              className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white text-slate-800 shadow-xl flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing border border-slate-300 hover:scale-105 active:scale-95 transition-transform"
+              className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white text-slate-800 shadow-2xl flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing border border-black/5 hover:scale-105 active:scale-95 transition-transform"
               aria-label="Drag to compare before and after"
             >
-              <ChevronsLeftRight className="w-4 h-4 text-slate-700" />
+              <Hand className="w-5 h-5 sm:w-6 sm:h-6 text-slate-800" strokeWidth={1.8} />
             </div>
           </div>
 
@@ -190,7 +151,7 @@ export const BeforeAfter: React.FC = () => {
             min="0"
             max="100"
             value={sliderPosition}
-            onChange={e => setSliderPosition(Number(e.target.value))}
+            onChange={(e) => setSliderPosition(Number(e.target.value))}
             aria-label="Before and after image comparison slider"
             className="sr-only"
           />

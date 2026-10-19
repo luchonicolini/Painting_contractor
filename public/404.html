@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found · Página no encontrada | El Palmar Painting</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+        background-color: #f8fafc;
+        color: #0f172a;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .glow-1 {
+        position: absolute;
+        top: -8rem;
+        right: -6rem;
+        width: 28rem;
+        height: 28rem;
+        border-radius: 9999px;
+        background: rgba(2, 132, 199, 0.08);
+        filter: blur(64px);
+        pointer-events: none;
+      }
+      .glow-2 {
+        position: absolute;
+        bottom: 0;
+        left: -6rem;
+        width: 22rem;
+        height: 22rem;
+        border-radius: 9999px;
+        background: rgba(29, 78, 216, 0.05);
+        filter: blur(64px);
+        pointer-events: none;
+      }
+      .card {
+        max-width: 32rem;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        position: relative;
+        z-index: 10;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+      .logo-icon {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 0.75rem;
+        background-color: #0b192c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1);
+      }
+      .logo-text {
+        text-align: left;
+      }
+      .logo-title {
+        font-family: 'Fraunces', serif;
+        font-weight: 800;
+        font-size: 1.25rem;
+        color: #0f172a;
+        line-height: 1.2;
+        display: block;
+      }
+      .logo-sub {
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 600;
+        color: #94a3b8;
+      }
+      .watermark-404 {
+        font-family: 'Fraunces', serif;
+        font-size: 7rem;
+        line-height: 1;
+        color: rgba(11, 25, 44, 0.12);
+        user-select: none;
+        margin: -0.5rem 0;
+      }
+      h1 {
+        font-family: 'Fraunces', serif;
+        font-weight: 600;
+        font-size: 2rem;
+        color: #0f172a;
+        letter-spacing: -0.02em;
+      }
+      p {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      .btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+        padding-top: 0.5rem;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 1.75rem;
+        border-radius: 9999px;
+        background-color: #1d4ed8;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-decoration: none;
+        box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.25);
+        transition: background-color 0.2s;
+      }
+      .btn-primary:hover {
+        background-color: #1e40af;
+      }
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.85rem 1.5rem;
+        border-radius: 9999px;
+        border: 1px solid #cbd5e1;
+        color: #1e293b;
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-decoration: none;
+        background-color: #ffffff;
+        transition: background-color 0.2s;
+      }
+      .btn-secondary:hover {
+        background-color: #f1f5f9;
+      }
+      .phone-bar {
+        padding-top: 1.5rem;
+        border-top: 1px solid #e2e8f0;
+        width: 100%;
+        font-size: 0.75rem;
+        color: #64748b;
+      }
+      .phone-link {
+        font-weight: 700;
+        color: #0f172a;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+
+    <div class="card">
+      <a href="/" class="logo" aria-label="El Palmar Painting & Services — Home">
+        <div class="logo-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 32 32"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 28.5H20.5" stroke-width="2.5" />
+            <path d="M8.8 28.5C9.8 23 11 17 12.8 11.5" />
+            <path d="M14.5 28.5C14.5 23 14 17 13.8 11.5" />
+            <path d="M13.2 10.5C15.5 6.5 20.5 3 26.5 4.5C24 6.5 21 8.8 17.5 10.5" />
+            <path d="M12.5 10C9.5 6.5 6 4 3 5.5C5.5 7.5 8 9.5 11.5 10.8" />
+            <path d="M11 11.5C7.5 11.8 4.5 13.5 3.5 17.5C5.8 16 9 14.5 11.8 13.5" />
+            <path d="M14.5 11C18 11.2 23 12.5 27.5 15.5C24.5 16.5 20.8 16 17.5 14.5" />
+            <path d="M14 12.5C16.8 14.5 19.5 17.5 20.5 22.5C19.5 20 17.5 17.5 14 15.5" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">El Palmar</span>
+          <span class="logo-sub">Painting &amp; Services</span>
+        </div>
+      </a>
+
+      <div class="watermark-404" aria-hidden="true">404</div>
+
+      <h1>Page not found</h1>
+
+      <p>
+        The page you are looking for doesn’t exist or was moved.<br />
+        <span style="color: #64748b; font-size: 0.85rem">La página que buscas no existe o fue movida.</span>
+      </p>
+
+      <div class="btn-row">
+        <a href="/" class="btn-primary">
+          Back to home
+        </a>
+        <a href="/?lang=es" class="btn-secondary">
+          Ir al inicio (ES)
+        </a>
+      </div>
+
+      <div class="phone-bar">
+        Need immediate assistance? / ¿Necesitas ayuda?
+        <a href="tel:+17863706098" class="phone-link">(786) 370-6098</a>
+      </div>
+    </div>
+  </body>
+</html>

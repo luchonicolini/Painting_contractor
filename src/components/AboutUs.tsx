@@ -14,10 +14,10 @@ export const AboutUs: React.FC = () => {
         {/* Left Column: Editorial Structured Story */}
         <div className="lg:col-span-6 flex flex-col gap-6">
           <div>
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2.5">
               {language === 'en' ? 'ABOUT EL PALMAR' : 'SOBRE EL PALMAR'}
             </span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[40px] text-slate-900 tracking-tight leading-tight">
+            <h2 className="font-heading font-semibold text-3xl sm:text-4xl md:text-5xl text-slate-900 tracking-tight leading-[1.08]">
               {language === 'en'
                 ? 'A Family Promise of Honest Craft & Flawless Care'
                 : 'Una Promesa Familiar de Honestidad y Acabados Impecables'}
@@ -27,7 +27,7 @@ export const AboutUs: React.FC = () => {
           <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
             <div>
               <h3 className="font-heading font-bold text-lg text-slate-900 mb-1.5 flex items-center gap-2">
-                <HeartHandshake className="w-5 h-5 text-brand-teal" />
+                <HeartHandshake className="w-5 h-5 text-brand-sky" />
                 <span>{language === 'en' ? 'Our Team' : 'Nuestro Equipo'}</span>
               </h3>
               <p>
@@ -88,7 +88,7 @@ export const AboutUs: React.FC = () => {
                 5.0 ★
               </span>
               <span className="text-[11px] sm:text-xs text-slate-400 font-medium group-hover:text-slate-600 transition-colors">
-                {language === 'en' ? 'Google ↗' : 'Google ↗'}
+                {language === 'en' ? 'Google Reviews' : 'Reseñas Google'}
               </span>
             </a>
             <div className="w-px h-8 sm:h-10 bg-slate-200" />
@@ -105,30 +105,29 @@ export const AboutUs: React.FC = () => {
 
         {/* Right Column: Clean Portrait Photo of Founders */}
         <div className="lg:col-span-6">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-900 group">
+          <figure className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-900 group">
             <img
               src="/images/founders-yalila-rodolfo.webp"
-              alt="Yalila and Rodolfo - Founders of El Palmar Painting and Services"
+              alt={
+                language === 'en'
+                  ? 'Yalila and Rodolfo, founders of El Palmar Painting & Services'
+                  : 'Yalila y Rodolfo, fundadores de El Palmar Painting & Services'
+              }
               loading="lazy"
               decoding="async"
-              className="w-full h-[400px] sm:h-[540px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
+              className="w-full aspect-[4/5] sm:h-[540px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
             />
 
-            {/* Gradient shadow overlay on bottom of photo */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
-
-            {/* Minimalist Name Tag on Photo Bottom */}
-            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-white/95 backdrop-blur-md p-3.5 sm:p-5 rounded-2xl shadow-xl border border-white/40 flex items-center justify-between gap-3">
-              <div>
-                <span className="font-heading font-extrabold text-slate-900 text-base block">
-                  Yalila & Rodolfo
-                </span>
-                <span className="text-brand-teal text-xs font-bold tracking-wide">
-                  {language === 'en' ? 'Founders & Master Finishers' : 'Fundadores y Maestros de Acabados'}
-                </span>
-              </div>
-            </div>
-          </div>
+            {/* Bottom Gradient Overlay + Editorial Typography (Yalila & Rodolfo) */}
+            <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-6 pt-20 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent pointer-events-none">
+              <span className="font-heading italic text-white text-2xl sm:text-3xl leading-none block">
+                Yalila &amp; Rodolfo
+              </span>
+              <span className="text-white/75 text-[11px] sm:text-xs uppercase tracking-[0.2em] font-semibold mt-1.5 block">
+                {language === 'en' ? 'Founders · On every job' : 'Fundadores · En cada obra'}
+              </span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

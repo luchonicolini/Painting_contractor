@@ -1,53 +1,35 @@
 ---
-name: Florida Coastal Craft
+name: Florida Architectural Sapphire
 colors:
-  surface: '#f8f9ff'
-  surface-dim: '#ccdbf3'
-  surface-bright: '#f8f9ff'
-  surface-container-lowest: '#ffffff'
-  surface-container-low: '#eff4ff'
-  surface-container: '#e6eeff'
-  surface-container-high: '#dce9ff'
-  surface-container-highest: '#d5e3fc'
-  on-surface: '#0d1c2e'
-  on-surface-variant: '#43474d'
-  inverse-surface: '#233144'
-  inverse-on-surface: '#eaf1ff'
-  outline: '#74777e'
-  outline-variant: '#c3c6ce'
-  surface-tint: '#49607c'
-  primary: '#001428'
-  on-primary: '#ffffff'
-  primary-container: '#0f2942'
-  on-primary-container: '#7991af'
-  inverse-primary: '#b0c9e8'
-  secondary: '#006a61'
-  on-secondary: '#ffffff'
-  secondary-container: '#86f2e4'
-  on-secondary-container: '#006f66'
-  tertiary: '#220e00'
-  on-tertiary: '#ffffff'
-  tertiary-container: '#401f00'
-  on-tertiary-container: '#d77503'
-  error: '#ba1a1a'
-  on-error: '#ffffff'
-  error-container: '#ffdad6'
-  on-error-container: '#93000a'
-  primary-fixed: '#d1e4ff'
-  primary-fixed-dim: '#b0c9e8'
-  on-primary-fixed: '#011d35'
-  on-primary-fixed-variant: '#314863'
-  secondary-fixed: '#89f5e7'
-  secondary-fixed-dim: '#6bd8cb'
-  on-secondary-fixed: '#00201d'
-  on-secondary-fixed-variant: '#005049'
-  tertiary-fixed: '#ffdcc3'
-  tertiary-fixed-dim: '#ffb77d'
-  on-tertiary-fixed: '#2f1500'
-  on-tertiary-fixed-variant: '#6e3900'
-  background: '#f8f9ff'
-  on-background: '#0d1c2e'
-  surface-variant: '#d5e3fc'
+  # Foundation — Deep Architectural Navy
+  primary: '#0B192C'
+  on-primary: '#FFFFFF'
+  primary-dark: '#06101E'
+  primary-light: '#162842'
+
+  # Conversion accent — Royal Sapphire (the single CTA color)
+  secondary: '#1D4ED8'
+  on-secondary: '#FFFFFF'
+  secondary-hover: '#1E40AF'
+  secondary-container: '#EFF6FF'
+
+  # Support accent — Sky / Aegean
+  tertiary: '#0284C7'
+  on-tertiary: '#FFFFFF'
+  tertiary-hover: '#0369A1'
+  tertiary-container: '#E0F2FE'
+
+  # Neutrals & surfaces
+  background: '#FFFFFF'
+  surface: '#FFFFFF'
+  surface-container: '#F8FAFC'
+  on-surface: '#0B192C'
+  on-surface-variant: '#334155'
+  outline: '#64748B'
+  outline-variant: '#E2E8F0'
+
+  error: '#BA1A1A'
+  on-error: '#FFFFFF'
 typography:
   display-hero:
     fontFamily: Plus Jakarta Sans
@@ -146,27 +128,29 @@ spacing:
 
 This design system expresses high-end residential and commercial architectural finishing across South Florida. It combines the tailored precision of modern luxury estates with the warmth and sun-drenched permanence of coastal architecture. The aesthetic diverges sharply from typical trade contractor clichés—avoiding paint rollers, generic splash icons, and aggressive yellow badge bursts—in favor of editorial composition, expansive air, structured geometry, and refined materials.
 
-The emotional tone balances institutional trustworthiness, generational craft, and effortless tropical sophistication. Layouts prioritize crisp boundaries, immaculate white space, and deliberate contrasts. Architectural photography anchors the interface, balanced by deep nautical foundations, sun-baked earth accents for decisive actions, and subtle marine undertones.
+The emotional tone balances institutional trustworthiness, generational craft, and effortless tropical sophistication. Layouts prioritize crisp boundaries, immaculate white space, and deliberate contrasts. Architectural photography anchors the interface, balanced by a deep nautical foundation and a single decisive Sapphire accent reserved for conversion.
 
 ## Colors
 
-- **Deep Navy (`#0F2942` - Primary):** Serves as the authoritative backbone. Used for high-level branding, prominent headlines, dark container states, footers, and key navigational surfaces.
-- **Coastal Teal (`#0D9488` - Secondary):** A restrained, salt-air accent used for trust badges, warranty seals, subtle metric rings, and quiet interactive states.
-- **Terracotta Amber (`#D97706` - Tertiary / Conversion Accent):** Evokes South Florida clay tiles and golden hour warmth. Strictly allocated to critical calls-to-action (e.g., "Request an Estimate", "Schedule Color Consultation"), active indicators, and high-priority notices.
-- **Slate Gray (`#475569` - Neutral):** Calibrated for long-form readability, metadata, and secondary UI labels on light backgrounds.
-- **Alabaster Canvas (`#F8FAFC` - Background Base):** An off-white, light-reflective base that provides a gallery-level canvas for photography.
+- **Deep Architectural Navy (`#0B192C` - Primary):** Serves as the authoritative backbone. Used for high-level branding, prominent headlines, dark container states, footers, and key navigational surfaces.
+- **Royal Sapphire (`#1D4ED8` - Secondary / Conversion Accent):** The single, strictly allocated accent for critical calls-to-action (e.g., "Get an Estimate", "Request a Free Quote"), active indicators, and high-priority links. Nothing else competes for this color.
+- **Aegean Sky (`#0284C7` - Tertiary / Support Accent):** A restrained, salt-air accent used for trust marks, section eyebrows, location markers, and quiet interactive states.
+- **Slate (`#334155`) & Muted (`#64748B` - Neutrals):** Calibrated for long-form readability, metadata, and secondary UI labels on light backgrounds.
+- **Alabaster Canvas (`#F8FAFC` - Background Tint):** An off-white, light-reflective base that provides a gallery-level canvas for photography and alternating sections.
 - **Surface Crisp White (`#FFFFFF`):** High-level elevation surface for cards, modals, and input fields.
-- **Subtle Coastal Border (`#E2E8F0`):** Fine architectural line-work that defines compartments without visual heaviness.
+- **Subtle Border (`#E2E8F0`):** Fine architectural line-work that defines compartments without visual heaviness.
+
+> **Note on real yellow/gold:** For genuine amber or gold (star ratings, celebratory accents), use Tailwind's default `amber-*` palette. The brand tokens are blue by design and were once misnamed `amber`/`gold`; those legacy aliases now resolve to Sapphire.
 
 ## Typography
 
-The typographical hierarchy mirrors modern architectural monograph design. Headings in Plus Jakarta Sans provide sculpted, geometric confidence with slightly tightened tracking, establishing authority. The body typography in Inter ensures uncompromised legibility for service breakdowns, scope outlines, and project estimates. 
+The typographical hierarchy mirrors modern architectural monograph design. Headings in Plus Jakarta Sans provide sculpted, geometric confidence with slightly tightened tracking, establishing authority. The body typography in Inter ensures uncompromised legibility for service breakdowns, scope outlines, and project estimates.
 
-Uppercase treatments are reserved exclusively for `label-sm` category headers, location markers (e.g., `CORAL GABLES · FORT LAUDERDALE`), and technical specifications.
+Uppercase treatments are reserved exclusively for `label-sm` category headers, location markers (e.g., `HIALEAH · MIAMI-DADE · BROWARD`), and technical specifications.
 
 ## Layout & Spacing
 
-A 12-column fluid grid system governs desktop views with a maximum container boundary of `1280px`. Breakpoints are established at:
+A 12-column fluid grid system governs desktop views with a maximum container boundary of `1240px`. Breakpoints are established at:
 - **Mobile:** `< 768px` (4-column grid, `margin: 1.25rem`, `gutter: 1rem`)
 - **Tablet:** `768px – 1023px` (8-column grid, `margin: 2rem`, `gutter: 1.5rem`)
 - **Desktop:** `≥ 1024px` (12-column grid, `margin: 3rem`, `gutter: 2rem`)
@@ -178,13 +162,13 @@ Layout rhythm prioritizes generous breathing room between thematic case studies,
 Visual hierarchy combines low-contrast hairline borders with soft ambient illumination, reminiscent of bright Florida daylight. Heavy, muddy drop shadows are strictly avoided.
 
 - **Level 0 (Flat Surface):** `#F8FAFC` base with `#E2E8F0` hairline borders.
-- **Level 1 (Cards, Rested UI):** `#FFFFFF` fill with `1px solid #E2E8F0` and subtle ambient shadow: `0px 4px 20px -2px rgba(15, 41, 66, 0.05)`.
-- **Level 2 (Hover States, Floating Selectors):** Subtle displacement (`translate-y: -2px`) paired with expanded shadow: `0px 12px 28px -4px rgba(15, 41, 66, 0.08)`.
-- **Level 3 (Sticky Estimate Bars, Modals):** Crisp border retained, reinforced by directional diffusion: `0px 20px 40px -8px rgba(15, 41, 66, 0.12)`.
+- **Level 1 (Cards, Rested UI):** `#FFFFFF` fill with `1px solid #E2E8F0` and subtle ambient shadow: `0px 4px 20px -2px rgba(11, 25, 44, 0.05)`.
+- **Level 2 (Hover States, Floating Selectors):** Subtle displacement (`translate-y: -2px`) paired with expanded shadow: `0px 12px 28px -4px rgba(11, 25, 44, 0.08)`.
+- **Level 3 (Sticky Estimate Bars, Modals):** Crisp border retained, reinforced by directional diffusion: `0px 20px 40px -8px rgba(11, 25, 44, 0.12)`.
 
 ## Shapes
 
-The system uses a calibrated `roundedness: 2` scale to achieve structured elegance without harsh utility:
+The system achieves structured elegance without harsh utility:
 - Small controls (inputs, secondary pills): `8px` (`0.5rem`)
 - Standard cards, interactive tiles: `12px` to `16px` (`rounded-lg` to `rounded-xl`)
 - Full-bleed portfolio media: Corner radius matches container boundary (`16px`)
@@ -193,18 +177,18 @@ The system uses a calibrated `roundedness: 2` scale to achieve structured elegan
 ## Components
 
 - **Buttons:**
-  - *Primary (Conversion):* Terracotta fill (`#D97706`), crisp white text, `8px` radius, hover state shifts to deeper amber (`#B45309`) with a `0px 4px 12px rgba(217, 119, 6, 0.25)` glow.
-  - *Secondary (Architectural):* Deep Navy fill (`#0F2942`), crisp white text, subtle hover lift.
-  - *Outline (Exploration):* Transparent background, `1.5px` border in `#0F2942`, text in `#0F2942`.
+  - *Primary (Conversion):* Royal Sapphire fill (`#1D4ED8`), crisp white text, `12px` radius, hover state shifts to deeper sapphire (`#1E40AF`), with an optional `btn-prestige` light-sweep on hover.
+  - *Secondary (Architectural):* Deep Navy fill (`#0B192C`), crisp white text, subtle hover lift to `#162842`.
+  - *Outline (Exploration):* Transparent background, `1.5px` border in `#0B192C`, text in `#0B192C`.
 - **Cards (Service & Portfolio):**
-  - Solid `#FFFFFF` background, `16px` radius, encapsulated by a `1px solid #E2E8F0` border. Portfolio cards feature high-resolution imagery with an integrated coastal teal tag (`#0D9488` tint) denoting the project locality (e.g., "Pinecrest Estate", "Las Olas Modern").
+  - Solid `#FFFFFF` background, `16px` radius, encapsulated by a `1px solid #E2E8F0` border. Portfolio cards feature high-resolution imagery with a Sky (`#0284C7`) locality marker (e.g., "Pinecrest Estate", "Las Olas Modern").
 - **Inputs & Form Controls:**
-  - Standard height `48px`, background `#FFFFFF`, border `1px solid #CBD5E1`. Focus state transitions to a `2px` ring in Deep Navy (`#0F2942`) with zero offset. Field labels sit above in `label-md` weight using Deep Navy.
+  - Standard height `48px`, background `#FFFFFF`, border `1px solid #E2E8F0`. Focus state transitions to a `2px` ring in Deep Navy (`#0B192C`) with zero offset. Field labels sit above in `label-md` weight using Slate.
 - **Checkboxes & Radios:**
-  - `20px` custom controls with `6px` radius (checkbox) or full circle (radio). Active state fills with Deep Navy (`#0F2942`) with a crisp white interior glyph.
+  - `16px` custom controls (rendered as `<button>` with an accessible pressed state). Active state fills with Royal Sapphire (`#1D4ED8`) with a crisp white glyph on a `#EFF6FF` container.
 - **Chips & Badges:**
-  - Height `28px`, `6px` radius, subtle background tint (`#0D9488` at 10% opacity) with `#0D9488` text for quality guarantees (e.g., "Licensed & Insured", "Sherwin-Williams Emerald Partner").
+  - Height `28px`, subtle tinted background paired with a matching icon color — e.g. `#EFF6FF` / `#1D4ED8` for Sapphire, `#E0F2FE` / `#0284C7` for Sky, and Tailwind `emerald-*` for WhatsApp/verified states.
 - **Before / After Comparison Slider:**
-  - High-precision interactive image slider encased in a `16px` radius card, utilizing a hairline `#FFFFFF` divider handle with a floating circular control.
-- **Instant Estimate Floating Drawer:**
-  - Anchored bottom interface with Level 3 elevation, presenting real-time pricing tiers and immediate consultation triggers.
+  - High-precision interactive image slider encased in a `16px` radius card, using a CSS `clip-path: polygon(...)` divider with a hairline `#FFFFFF` handle and a floating circular control.
+- **Mobile Sticky Action Dock:**
+  - Level 3 elevation bar pinned to the bottom on mobile, presenting direct Call and WhatsApp actions with safe-area-inset padding.

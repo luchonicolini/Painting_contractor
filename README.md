@@ -54,7 +54,8 @@ flowchart TD
 
 ### 5. Native Bilingual Localization (i18n)
 - Built-in React Context engine (`LanguageContext.tsx`) providing seamless switching between **English** and **Spanish** with smooth cross-fade opacity transitions (`opacity-75` during render).
-- Complete localized metadata, phone direct links, review cards, and legal compliance copy for South Florida's bilingual demographic.
+- **Language-aware document head:** `<html lang>`, `<title>`, meta description, Open Graph tags and the canonical URL are re-synchronized on every switch, and the active locale is reflected in the address bar as `?lang=es` so links stay shareable and match the self-referential `hreflang` alternates declared in `index.html`.
+- Complete localized phone direct links, review cards, and legal compliance copy for South Florida's bilingual demographic.
 
 ---
 
@@ -73,14 +74,20 @@ flowchart TD
 
 ## Design System & Color Tokens
 
+Canonical Tailwind tokens (see `tailwind.config.js`, `DESIGN.md` — keep all three in sync):
+
 ```
-Primary Navy:       #0B192C  (Deep Architectural Anchor)
-Navy Surface:       #162842  (Elevated Container Tone)
-Sapphire Brand:     #1D4ED8  (High-Intent Action Callouts & Shimmer)
-Canvas Light:       #F8FAFC  (Subtle Architectural Section Tint)
-Base Surface:       #FFFFFF  (Clean Natural Daylight)
-Typography:         Plus Jakarta Sans (Headings) + Inter (Body Copy)
+brand-navy           #0B192C  (Deep Architectural Anchor / primary)
+brand-navy-light     #162842  (Elevated Container Tone)
+brand-sapphire       #1D4ED8  (Single Conversion Accent — CTAs & active states)
+brand-sky            #0284C7  (Support Accent — trust marks & eyebrows)
+brand-light          #F8FAFC  (Subtle Architectural Section Tint)
+brand-surface        #FFFFFF  (Clean Natural Daylight)
+Typography:          Plus Jakarta Sans (Headings) + Inter (Body Copy)
 ```
+
+> Legacy aliases `brand-amber`, `brand-gold` and `brand-teal` still resolve (they are the
+> Sapphire / Sky blues above) but are deprecated — use the canonical names in new code.
 
 ---
 

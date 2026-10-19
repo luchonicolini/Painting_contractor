@@ -1,4 +1,4 @@
-import { Phone, Mail, Clock, ArrowUp, MessageCircle } from 'lucide-react';
+import { Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { BUSINESS_INFO } from '../data/company';
 import { BrandLogoIcon } from './BrandLogoIcon';
@@ -82,22 +82,22 @@ export const Footer: React.FC = () => {
             <span className="font-heading font-bold text-slate-900 uppercase tracking-wider text-xs mb-1">
               {language === 'en' ? 'Services' : 'Servicios'}
             </span>
-            <a href="#services" className="hover:text-brand-amber transition-colors">
+            <a href="#services" className="hover:text-brand-sapphire transition-colors">
               {language === 'en' ? 'Exterior Weatherproofing' : 'Pintura Exterior y Estuco'}
             </a>
-            <a href="#services" className="hover:text-brand-amber transition-colors">
+            <a href="#services" className="hover:text-brand-sapphire transition-colors">
               {language === 'en' ? 'Interior Painting & Drywall' : 'Pintura Interior y Drywall'}
             </a>
-            <a href="#services" className="hover:text-brand-amber transition-colors">
+            <a href="#services" className="hover:text-brand-sapphire transition-colors">
               {language === 'en' ? 'Popcorn Ceiling Removal' : 'Retiro de Techo Popcorn'}
             </a>
-            <a href="#services" className="hover:text-brand-amber transition-colors">
+            <a href="#services" className="hover:text-brand-sapphire transition-colors">
               {language === 'en' ? 'Roof Restoration & Sealing' : 'Sellado y Pintura de Techos'}
             </a>
-            <a href="#services" className="hover:text-brand-amber transition-colors">
+            <a href="#services" className="hover:text-brand-sapphire transition-colors">
               {language === 'en' ? 'Pressure Washing & Driveways' : 'Lavado a Presión de Entradas'}
             </a>
-            <a href="#services" className="hover:text-brand-amber transition-colors">
+            <a href="#services" className="hover:text-brand-sapphire transition-colors">
               {language === 'en' ? 'Commercial & Rental Turnover' : 'Pintura Comercial y Renta'}
             </a>
           </div>
@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
             </span>
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="font-bold text-slate-900 text-sm hover:text-brand-amber transition-colors flex items-center gap-1.5"
+              className="font-bold text-slate-900 text-sm hover:text-brand-sapphire transition-colors flex items-center gap-1.5"
             >
               <Phone className="w-3.5 h-3.5 text-emerald-600" />
               <span>{BUSINESS_INFO.phone}</span>
@@ -129,7 +129,7 @@ export const Footer: React.FC = () => {
 
             <a
               href={`mailto:${BUSINESS_INFO.email}`}
-              className="text-slate-600 hover:text-brand-amber transition-colors break-all flex items-center gap-1.5 mt-1"
+              className="text-slate-600 hover:text-brand-sapphire transition-colors break-all flex items-center gap-1.5 mt-1"
             >
               <Mail className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
               <span className="text-xs">{BUSINESS_INFO.email}</span>
@@ -161,7 +161,7 @@ export const Footer: React.FC = () => {
               href={BUSINESS_INFO.social.googleReviews}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-brand-amber transition-colors flex items-center gap-1 font-semibold"
+              className="text-slate-500 hover:text-brand-sapphire transition-colors flex items-center gap-1 font-semibold"
             >
               <span>{language === 'en' ? 'Google Reviews (5.0 ★)' : 'Reseñas en Google (5.0 ★)'}</span>
             </a>
@@ -171,7 +171,6 @@ export const Footer: React.FC = () => {
               className="hover:text-brand-navy transition-colors flex items-center gap-1 cursor-pointer font-medium"
             >
               <span>{language === 'en' ? 'Back to top' : 'Volver arriba'}</span>
-              <ArrowUp className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>

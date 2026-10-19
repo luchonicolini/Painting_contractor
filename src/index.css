@@ -12,11 +12,11 @@
     padding: 0;
     background-color: #ffffff;
     color: #0d1c2e;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Instrument Sans', 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Fraunces', 'Plus Jakarta Sans', serif;
     letter-spacing: -0.02em;
   }
 }
@@ -82,4 +82,40 @@
   box-shadow: 0 20px 35px -10px rgba(11, 25, 44, 0.12),
               0 8px 16px -6px rgba(11, 25, 44, 0.08);
 }
-/* Option 2: Architectural Navy & Sapphire */
+
+/* Navbar elevation on scroll */
+#site-nav.is-scrolled {
+  box-shadow: 0 12px 34px -20px rgba(11, 25, 44, 0.18);
+}
+
+/* Animated underline + active section */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  border-radius: 2px;
+  background: #1D4ED8;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after,
+.nav-link[aria-current='true']::after {
+  transform: scaleX(1);
+}
+.nav-link[aria-current='true'] {
+  color: #0B192C;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link::after {
+    transition: none;
+  }
+}
