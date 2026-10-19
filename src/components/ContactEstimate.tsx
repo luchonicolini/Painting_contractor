@@ -126,8 +126,8 @@ export const ContactEstimate: React.FC = () => {
                     </span>
                     <span className="text-xs text-slate-500 block truncate">
                       {language === 'en'
-                        ? 'Open in Google Maps to view location & verified reviews (4.9 ★)'
-                        : 'Abrir en Google Maps para ver cobertura y opiniones (4.9 ★)'}
+                        ? 'Serving homes and businesses across South Florida'
+                        : 'Atendemos hogares y negocios en todo el sur de la Florida'}
                     </span>
                   </div>
                 </div>
