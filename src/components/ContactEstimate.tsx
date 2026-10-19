@@ -73,9 +73,6 @@ export const ContactEstimate: React.FC = () => {
                     <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[11px] font-semibold text-emerald-700 uppercase tracking-wider block">
-                      {language === 'en' ? 'Fast Photo Estimates' : 'Cotización Rápida por Fotos'}
-                    </span>
                     <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors truncate block">
                       WhatsApp (786) 370-6098
                     </span>
@@ -103,9 +100,6 @@ export const ContactEstimate: React.FC = () => {
                     <Phone className="w-5 h-5 text-brand-sapphire" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[11px] font-semibold text-brand-sapphire uppercase tracking-wider block">
-                      {language === 'en' ? 'Direct Phone Line' : 'Línea Telefónica Directa'}
-                    </span>
                     <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-brand-sapphire transition-colors truncate block">
                       {BUSINESS_INFO.phone}
                     </span>
@@ -135,21 +129,13 @@ export const ContactEstimate: React.FC = () => {
                     <GoogleMapsIcon className="w-full h-full" />
                   </div>
                   <div className="min-w-0">
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-[11px] font-semibold text-slate-600 uppercase tracking-wider block">
-                        {language === 'en' ? 'Google Maps · 4.9 ★' : 'Google Maps · 4.9 ★'}
-                      </span>
-                      <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
-                        {language === 'en' ? 'Verified' : 'Verificado'}
-                      </span>
-                    </div>
                     <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-brand-navy transition-colors truncate block">
                       Hialeah, Miami-Dade & Broward
                     </span>
                     <span className="text-xs text-slate-500 block truncate">
                       {language === 'en'
-                        ? 'Open in Maps to view location & verified reviews'
-                        : 'Abrir mapa para ver cobertura y opiniones'}
+                        ? 'Open in Google Maps to view location & verified reviews (4.9 ★)'
+                        : 'Abrir en Google Maps para ver cobertura y opiniones (4.9 ★)'}
                     </span>
                   </div>
                 </div>
@@ -170,9 +156,6 @@ export const ContactEstimate: React.FC = () => {
                     <GmailIcon className="w-full h-full text-[#EA4335]" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[11px] font-semibold text-slate-600 uppercase tracking-wider block">
-                      {language === 'en' ? 'Direct Email' : 'Correo Electrónico'}
-                    </span>
                     <span className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#EA4335] transition-colors truncate block">
                       {BUSINESS_INFO.email}
                     </span>
