@@ -1,6 +1,7 @@
-import { Phone, MessageCircle, FileText } from 'lucide-react';
+import { Phone, FileText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { BUSINESS_INFO } from '../data/company';
+import { WhatsAppIcon } from './BrandIcons';
 
 export const MobileStickyBar: React.FC = () => {
   const { language } = useLanguage();
@@ -28,7 +29,7 @@ export const MobileStickyBar: React.FC = () => {
           className="flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white transition-colors active:scale-95 shadow-sm shadow-emerald-600/30"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle className="w-4 h-4 text-white" />
+          <WhatsAppIcon className="w-4 h-4 text-white" />
           <span className="text-xs font-heading font-bold leading-none">
             WhatsApp
           </span>

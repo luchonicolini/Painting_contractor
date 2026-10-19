@@ -1,7 +1,8 @@
-import { Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import { Phone, Mail, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { BUSINESS_INFO } from '../data/company';
 import { BrandLogoIcon } from './BrandLogoIcon';
+import { WhatsAppIcon } from './BrandIcons';
 
 export const Footer: React.FC = () => {
   const { language } = useLanguage();
@@ -72,7 +73,7 @@ export const Footer: React.FC = () => {
                 className="w-8 h-8 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-600 flex items-center justify-center transition-colors"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
               </a>
             </div>
           </div>
