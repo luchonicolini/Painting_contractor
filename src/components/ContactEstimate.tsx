@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, CheckCircle2, Send, ArrowUpRight, PhoneCall, ExternalLink } from 'lucide-react';
+import { Phone, CheckCircle2, Send } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { BUSINESS_INFO } from '../data/company';
@@ -65,14 +65,14 @@ export const ContactEstimate: React.FC = () => {
                 href={BUSINESS_INFO.social.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-emerald-300 hover:-translate-y-0.5 transition-all duration-200"
+                className="group flex items-center p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-emerald-300 hover:-translate-y-0.5 transition-all duration-200"
                 aria-label="WhatsApp (786) 370-6098"
               >
-                <div className="flex items-center gap-3.5 min-w-0">
+                <div className="flex items-center gap-3.5 min-w-0 w-full">
                   <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center flex-shrink-0 text-[#25D366] shadow-xs group-hover:scale-105 transition-transform">
                     <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors truncate block">
                       WhatsApp (786) 370-6098
                     </span>
@@ -83,23 +83,19 @@ export const ContactEstimate: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 group-hover:bg-emerald-600 group-hover:text-white px-2.5 py-1.5 rounded-full transition-colors flex-shrink-0 ml-2">
-                  <span>{language === 'en' ? 'Chat' : 'Chatear'}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </div>
               </a>
 
               {/* Direct Phone Line */}
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-brand-sapphire/40 hover:-translate-y-0.5 transition-all duration-200"
+                className="group flex items-center p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-brand-sapphire/40 hover:-translate-y-0.5 transition-all duration-200"
                 aria-label="Direct Phone Line (786) 370-6098"
               >
-                <div className="flex items-center gap-3.5 min-w-0">
+                <div className="flex items-center gap-3.5 min-w-0 w-full">
                   <div className="w-11 h-11 rounded-xl bg-brand-sapphire-light border border-brand-sapphire/20 flex items-center justify-center flex-shrink-0 text-brand-sapphire shadow-xs group-hover:scale-105 transition-transform">
                     <Phone className="w-5 h-5 text-brand-sapphire" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-brand-sapphire transition-colors truncate block">
                       {BUSINESS_INFO.phone}
                     </span>
@@ -110,10 +106,6 @@ export const ContactEstimate: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-xs font-semibold text-brand-sapphire bg-blue-50 group-hover:bg-brand-sapphire group-hover:text-white px-2.5 py-1.5 rounded-full transition-colors flex-shrink-0 ml-2">
-                  <span>{language === 'en' ? 'Call' : 'Llamar'}</span>
-                  <PhoneCall className="w-3.5 h-3.5" />
-                </div>
               </a>
 
               {/* Google Maps / Service Area Card */}
@@ -121,14 +113,14 @@ export const ContactEstimate: React.FC = () => {
                 href={BUSINESS_INFO.social.googleReviews}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-blue-300 hover:-translate-y-0.5 transition-all duration-200"
+                className="group flex items-center p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-blue-300 hover:-translate-y-0.5 transition-all duration-200"
                 aria-label="Google Maps Profile and Service Areas"
               >
-                <div className="flex items-center gap-3.5 min-w-0">
+                <div className="flex items-center gap-3.5 min-w-0 w-full">
                   <div className="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-center flex-shrink-0 p-2 shadow-xs group-hover:scale-105 transition-transform">
                     <GoogleMapsIcon className="w-full h-full" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-brand-navy transition-colors truncate block">
                       Hialeah, Miami-Dade & Broward
                     </span>
@@ -139,23 +131,19 @@ export const ContactEstimate: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-xs font-semibold text-slate-700 bg-slate-100 group-hover:bg-slate-900 group-hover:text-white px-2.5 py-1.5 rounded-full transition-colors flex-shrink-0 ml-2">
-                  <span>{language === 'en' ? 'Map' : 'Mapa'}</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </div>
               </a>
 
               {/* Direct Email (Gmail) */}
               <a
                 href={`mailto:${BUSINESS_INFO.email}`}
-                className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-red-200 hover:-translate-y-0.5 transition-all duration-200"
+                className="group flex items-center p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-red-200 hover:-translate-y-0.5 transition-all duration-200"
                 aria-label="Send direct email"
               >
-                <div className="flex items-center gap-3.5 min-w-0">
+                <div className="flex items-center gap-3.5 min-w-0 w-full">
                   <div className="w-11 h-11 rounded-xl bg-red-50 border border-red-100/80 flex items-center justify-center flex-shrink-0 p-2.5 text-[#EA4335] shadow-xs group-hover:scale-105 transition-transform">
                     <GmailIcon className="w-full h-full text-[#EA4335]" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#EA4335] transition-colors truncate block">
                       {BUSINESS_INFO.email}
                     </span>
@@ -165,10 +153,6 @@ export const ContactEstimate: React.FC = () => {
                         : 'Para planos, detalles y proyectos comerciales'}
                     </span>
                   </div>
-                </div>
-                <div className="flex items-center gap-1 text-xs font-semibold text-slate-700 bg-slate-100 group-hover:bg-slate-900 group-hover:text-white px-2.5 py-1.5 rounded-full transition-colors flex-shrink-0 ml-2">
-                  <span>{language === 'en' ? 'Email' : 'Email'}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
                 </div>
               </a>
             </div>
