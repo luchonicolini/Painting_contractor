@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   UserCheck,
   FileCheck,
@@ -13,6 +13,7 @@ import { BUSINESS_INFO } from '../data/company';
 
 export const WhyChooseUs: React.FC = () => {
   const { language } = useLanguage();
+  const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
   const revealRef = useScrollReveal();
   const en = language === 'en';
 
@@ -87,7 +88,10 @@ export const WhyChooseUs: React.FC = () => {
           <div className="lg:col-span-5 flex flex-col justify-between rounded-[2rem] bg-white border border-slate-200/80 p-5 sm:p-6 shadow-sm shadow-slate-900/5">
             <div>
               {/* Photo Frame */}
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/4.2] sm:aspect-[4/3.8] lg:aspect-[4/4.2] shadow-sm">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/4.2] sm:aspect-[4/3.8] lg:aspect-[4/4.2] shadow-sm bg-slate-100">
+                {!isPhotoLoaded && (
+                  <div className="absolute inset-0 skeleton-shimmer" />
+                )}
                 <img
                   src="/images/founders-yalila-rodolfo.webp"
                   alt={
@@ -97,7 +101,10 @@ export const WhyChooseUs: React.FC = () => {
                   }
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover"
+                  onLoad={() => setIsPhotoLoaded(true)}
+                  className={`w-full h-full object-cover transition-opacity duration-500 ${
+                    isPhotoLoaded ? 'opacity-100' : 'opacity-0'
+                  }`}
                 />
 
                 {/* Bottom Gradient Caption */}

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Hand, Loader2 } from 'lucide-react';
+import { Hand } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { BEFORE_AFTER_CASES } from '../data/company';
@@ -85,13 +85,14 @@ export const BeforeAfter: React.FC = () => {
           onTouchStart={handleStartDrag}
           className="relative aspect-[4/3] sm:aspect-[16/10] md:h-[540px] rounded-3xl overflow-hidden shadow-2xl select-none cursor-ew-resize border border-slate-200/90 bg-slate-900 group"
         >
-          {/* Loading Indicator for slow connection */}
+          {/* Skeleton Screen while comparison image loads */}
           {!isAfterLoaded && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 text-white z-10">
-              <Loader2 className="w-8 h-8 text-brand-sapphire animate-spin mb-3" />
-              <span className="text-xs font-medium text-slate-300 tracking-wider uppercase">
-                {language === 'en' ? 'Loading restoration comparison...' : 'Cargando comparación de restauración...'}
-              </span>
+            <div className="absolute inset-0 skeleton-shimmer flex items-center justify-center z-10">
+              {/* Wireframe slider divider */}
+              <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-slate-300" />
+              <div className="w-12 h-12 rounded-full bg-slate-300/80 shadow-md flex items-center justify-center animate-pulse" />
+              <div className="absolute top-5 left-5 h-7 w-20 bg-slate-300/80 rounded-full animate-pulse" />
+              <div className="absolute top-5 right-5 h-7 w-20 bg-slate-300/80 rounded-full animate-pulse" />
             </div>
           )}
 

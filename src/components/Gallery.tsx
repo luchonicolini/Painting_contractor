@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { MapPin, ZoomIn, X, ShieldCheck, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { MapPin, ZoomIn, X, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { PORTFOLIO } from '../data/company';
@@ -114,13 +114,14 @@ export const Gallery: React.FC = () => {
                 aria-label={item.title[language]}
                 className="group relative mb-3 sm:mb-4 block w-full break-inside-avoid rounded-2xl overflow-hidden bg-slate-100 cursor-pointer text-left ring-1 ring-slate-200/80 shadow-xs hover:shadow-xl transition-all"
               >
-                {/* Architectural shimmer skeleton shown while loading */}
+                {/* Skeleton Screen Shimmer Card */}
                 {!isLoaded && (
-                  <div className="w-full aspect-[4/3] bg-gradient-to-br from-slate-100 via-slate-200 to-slate-100 animate-pulse flex flex-col items-center justify-center text-slate-400 p-4">
-                    <Loader2 className="w-5 h-5 animate-spin text-slate-400 mb-1.5" />
-                    <span className="text-[11px] font-medium tracking-wider uppercase text-slate-400">
-                      {en ? 'Loading photo...' : 'Cargando...'}
-                    </span>
+                  <div className="w-full aspect-[4/3] skeleton-shimmer rounded-2xl flex flex-col justify-end p-4">
+                    <div className="h-4 w-3/5 bg-slate-300/80 rounded-md mb-2 animate-pulse" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-slate-300/70 animate-pulse" />
+                      <div className="h-3 w-2/5 bg-slate-300/60 rounded-md animate-pulse" />
+                    </div>
                   </div>
                 )}
                 <img
@@ -258,17 +259,13 @@ export const Gallery: React.FC = () => {
               }}
               style={{ maxHeight: '88vh' }}
             >
-              <div className="relative flex-1 bg-black flex items-center justify-center overflow-hidden min-h-[260px] sm:min-h-[360px] max-h-[62vh]">
-                {/* Slow Connection Loader Overlay */}
+              <div className="relative flex-1 bg-black flex items-center justify-center overflow-hidden min-h-[260px] sm:min-h-[380px] max-h-[62vh]">
+                {/* Modal Skeleton Screen */}
                 {!modalImageLoaded && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950 text-white p-6 z-10">
-                    <Loader2 className="w-8 h-8 text-brand-sapphire animate-spin mb-3" />
-                    <p className="text-sm font-semibold text-slate-200 tracking-wide text-center">
-                      {en ? 'Loading high-resolution photograph...' : 'Cargando fotografía en alta resolución...'}
-                    </p>
-                    <p className="text-xs text-slate-400 mt-1 text-center">
-                      {en ? 'Optimizing details for your connection speed' : 'Optimizando detalles para tu velocidad de conexión'}
-                    </p>
+                  <div className="absolute inset-0 skeleton-shimmer-dark flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 animate-pulse flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-white/10" />
+                    </div>
                   </div>
                 )}
                 <img

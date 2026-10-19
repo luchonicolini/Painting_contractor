@@ -137,9 +137,18 @@ export const Hero: React.FC = () => {
             className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-slate-900/10 border border-slate-200/80 aspect-[4/3] sm:aspect-[16/11] bg-slate-100 will-change-transform"
             data-shift="26"
           >
-            {/* Shimmer Placeholder while hero loads */}
+            {/* Skeleton Screen while hero loads */}
             {!isHeroLoaded && (
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-200 via-slate-100 to-slate-200 animate-pulse" />
+              <div className="absolute inset-0 skeleton-shimmer flex flex-col justify-between p-6">
+                <div className="flex justify-between items-start">
+                  <div className="h-6 w-28 bg-slate-300/60 rounded-full animate-pulse" />
+                  <div className="h-10 w-10 bg-slate-300/50 rounded-2xl animate-pulse" />
+                </div>
+                <div className="space-y-2">
+                  <div className="h-4 w-1/3 bg-slate-300/70 rounded-md animate-pulse" />
+                  <div className="h-3 w-1/2 bg-slate-300/50 rounded-md animate-pulse" />
+                </div>
+              </div>
             )}
             <img
               src="/images/hero-new-luxury.webp"
