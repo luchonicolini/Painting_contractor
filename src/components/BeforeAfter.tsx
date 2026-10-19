@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Hand } from 'lucide-react';
+import { Hand, Loader2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { BEFORE_AFTER_CASES } from '../data/company';
@@ -8,6 +8,7 @@ export const BeforeAfter: React.FC = () => {
   const { language } = useLanguage();
   const [sliderPosition, setSliderPosition] = useState<number>(50);
   const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [isAfterLoaded, setIsAfterLoaded] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const revealRef = useScrollReveal();
 
@@ -84,13 +85,26 @@ export const BeforeAfter: React.FC = () => {
           onTouchStart={handleStartDrag}
           className="relative aspect-[4/3] sm:aspect-[16/10] md:h-[540px] rounded-3xl overflow-hidden shadow-2xl select-none cursor-ew-resize border border-slate-200/90 bg-slate-900 group"
         >
+          {/* Loading Indicator for slow connection */}
+          {!isAfterLoaded && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 text-white z-10">
+              <Loader2 className="w-8 h-8 text-brand-sapphire animate-spin mb-3" />
+              <span className="text-xs font-medium text-slate-300 tracking-wider uppercase">
+                {language === 'en' ? 'Loading restoration comparison...' : 'Cargando comparación de restauración...'}
+              </span>
+            </div>
+          )}
+
           {/* AFTER IMAGE (Base layer) */}
           <img
             src={activeCase.afterImage}
             alt="South Florida home exterior after El Palmar painting restoration"
             loading="lazy"
             decoding="async"
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            onLoad={() => setIsAfterLoaded(true)}
+            className={`absolute inset-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500 ${
+              isAfterLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
             draggable={false}
           />
 

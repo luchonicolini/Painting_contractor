@@ -18,7 +18,6 @@ export const Navbar: React.FC = () => {
     { href: '#services', label: { en: 'Services', es: 'Servicios' } },
     { href: '#gallery', label: { en: 'Work Gallery', es: 'Galería' } },
     { href: '#why-us', label: { en: 'Why Choose Us', es: 'Por Qué Elegirnos' } },
-    { href: '#about', label: { en: 'About Us', es: 'Sobre Nosotros' } },
     { href: '#reviews', label: { en: 'Reviews', es: 'Reseñas' } },
     { href: '#contact', label: { en: 'Contact', es: 'Contacto' } },
   ];
@@ -34,7 +33,7 @@ export const Navbar: React.FC = () => {
         ticking = false;
         setIsScrolled(window.scrollY > 8);
 
-        const sectionIds = ['services', 'gallery', 'why-us', 'about', 'reviews', 'contact'];
+        const sectionIds = ['services', 'gallery', 'why-us', 'reviews', 'contact'];
         const probe = window.scrollY + 180;
         let currentId = '';
 

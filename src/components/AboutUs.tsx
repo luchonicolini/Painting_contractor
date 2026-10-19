@@ -82,10 +82,10 @@ export const AboutUs: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group block hover:opacity-90 transition-opacity"
-              aria-label="Ver reseñas de 5.0 en Google"
+              aria-label="Ver reseñas de 4.9 en Google"
             >
               <span className="font-heading font-extrabold text-xl sm:text-3xl text-amber-500 block group-hover:underline">
-                5.0 ★
+                4.9 ★
               </span>
               <span className="text-[11px] sm:text-xs text-slate-400 font-medium group-hover:text-slate-600 transition-colors">
                 {language === 'en' ? 'Google Reviews' : 'Reseñas Google'}

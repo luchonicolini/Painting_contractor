@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
+import { Preloader } from './components/Preloader';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { BeforeAfter } from './components/BeforeAfter';
 import { Gallery } from './components/Gallery';
 import { WhyChooseUs } from './components/WhyChooseUs';
-import { AboutUs } from './components/AboutUs';
 import { Testimonials } from './components/Testimonials';
 import { ContactEstimate } from './components/ContactEstimate';
 import { Footer } from './components/Footer';
@@ -45,6 +45,7 @@ function PageContent() {
 
   return (
     <div className="min-h-screen bg-white pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] lg:pb-0">
+      <Preloader />
       <Navbar />
       <main className={`transition-opacity duration-150 ease-out ${isChanging ? 'opacity-75' : 'opacity-100'}`}>
         <Hero />
@@ -52,7 +53,6 @@ function PageContent() {
         <BeforeAfter />
         <Gallery />
         <WhyChooseUs />
-        <AboutUs />
         <Testimonials />
         <ContactEstimate />
       </main>

@@ -1,124 +1,205 @@
+import React from 'react';
 import {
-  Building2,
-  Users,
-  ShieldCheck,
-  FileText,
-  Paintbrush,
+  UserCheck,
+  FileCheck,
   Sparkles,
-  Clock,
-  Sun,
+  ShieldCheck,
+  CheckCircle2,
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { AnimatedCounter } from './AnimatedCounter';
+import { BUSINESS_INFO } from '../data/company';
 
 export const WhyChooseUs: React.FC = () => {
   const { language } = useLanguage();
   const revealRef = useScrollReveal();
+  const en = language === 'en';
 
-  const reasons = [
+  const yearsNum = parseInt(BUSINESS_INFO.stats.yearsExperience, 10) || 12;
+
+  const bentoCards = [
     {
-      icon: Building2,
-      title: { en: '500+ Homes Perfected', es: 'Más de 500 Casas Pintadas' },
-      desc: {
-        en: 'Over 12 years perfecting luxury residences and commercial properties across South Florida.',
-        es: 'Más de 12 años perfeccionando residencias y comercios en todo el sur de Florida.'
-      }
-    },
-    {
-      icon: Users,
-      title: { en: 'Our Difference', es: 'Nuestra Gran Diferencia' },
-      desc: {
-        en: 'Owners Yalila and Rodolfo work directly on every jobsite. Zero anonymous sub-contractors.',
-        es: 'Los dueños, Yalila y Rodolfo, trabajan directamente en cada obra. Cero subcontratistas anónimos.'
-      }
-    },
-    {
-      icon: ShieldCheck,
-      title: { en: 'Written Guarantee', es: 'Garantía por Escrito' },
-      desc: {
-        en: 'Guaranteed protection against peeling, flaking, and Florida UV fading on exterior coatings.',
-        es: 'Protección garantizada contra descascarillado, grietas y desgaste solar por los rayos UV.'
-      }
-    },
-    {
-      icon: FileText,
-      title: { en: 'Transparent Estimates', es: 'Presupuestos Transparentes' },
-      desc: {
-        en: 'Itemized breakdown of paint quantities, prep procedures, and zero hidden surprise fees.',
-        es: 'Desglose detallado de cantidades de pintura, preparación y sin costos sorpresa ocultos.'
-      }
-    },
-    {
-      icon: Paintbrush,
-      title: { en: 'Color & HOA Guidance', es: 'Asesoría de Color y HOA' },
-      desc: {
-        en: 'We help prepare color rendering packets that sail through strict South Florida HOA approval boards.',
-        es: 'Te ayudamos a preparar las muestras para aprobar los estrictos comités de asociaciones (HOA).'
-      }
+      icon: UserCheck,
+      tag: en ? 'Direct Oversight' : 'Supervisión Directa',
+      title: en ? 'The Owners On Every Jobsite' : 'Los Dueños en Cada Obra',
+      desc: en
+        ? 'Yalila and Rodolfo personally oversee prep, application, and final walkthrough. No commissioned sales reps, no anonymous sub-contractors on your property.'
+        : 'Yalila y Rodolfo supervisan personalmente la preparación, pintura y entrega final. Cero intermediarios y cero cuadrillas anónimas en tu propiedad.',
+      feature: en ? '100% Owner supervised daily' : 'Supervisión presencial diaria',
     },
     {
       icon: Sparkles,
-      title: { en: 'HEPA Dust-Free Clean', es: 'Limpieza Total Sin Polvo' },
-      desc: {
-        en: 'Comprehensive furniture masking and floor runners. We leave your residence cleaner than we found it.',
-        es: 'Protección exhaustiva de muebles y pisos. Dejamos tu residencia más limpia de lo que la encontramos.'
-      }
+      tag: en ? 'Clean Living' : 'Cuidado Total',
+      title: en ? 'HEPA Dust-Free Protection' : 'Protección Sin Polvo HEPA',
+      desc: en
+        ? 'Comprehensive furniture masking, heavy floor runners, and continuous dust containment. We leave your residence cleaner and fresher than we found it.'
+        : 'Protección exhaustiva de muebles, pisos y contención de polvo con filtro HEPA. Dejamos tu residencia más limpia de lo que la encontramos.',
+      feature: en ? 'Zero airborne dust or residue' : 'Cero polvo ni residuos en el aire',
     },
     {
-      icon: Clock,
-      title: { en: 'Project Management', es: 'Gestión Puntual' },
-      desc: {
-        en: 'Punctual daily arrivals, consistent WhatsApp progress photos, and dedicated direct contact.',
-        es: 'Llegada puntual diaria, fotos de avance por WhatsApp y contacto directo y permanente.'
-      }
+      icon: ShieldCheck,
+      tag: en ? 'Coastal Armor' : 'Clima de Florida',
+      title: en ? 'Florida Proven Formulas' : 'Fórmulas para Clima de Florida',
+      desc: en
+        ? 'Alkali-resistant primers, 100% acrylic elastomeric coatings, and mildewcides formulated strictly to endure South Florida intense heat, storms, and humidity.'
+        : 'Selladores resistentes a los álcalis, recubrimientos elastoméricos y anti-moho diseñados para soportar el sol, tormentas y humedad del sur de Florida.',
+      feature: en ? 'Guaranteed UV & peeling defense' : 'Garantía contra descascarillado y UV',
     },
     {
-      icon: Sun,
-      title: { en: 'Florida Proven Formulas', es: 'Fórmulas para Clima de Florida' },
-      desc: {
-        en: 'Alkali-resistant primers and mildewcides formulated strictly for high-humidity coastal climates.',
-        es: 'Selladores resistentes a los álcalis y anti-moho formulados especialmente para la alta humedad.'
-      }
-    }
+      icon: FileCheck,
+      tag: en ? 'Zero Surprises' : 'Presupuestos Transparentes',
+      title: en ? 'Itemized Estimates & HOA' : 'Presupuestos Claros y Asesoría HOA',
+      desc: en
+        ? 'Itemized breakdown of paint coats, prep procedures, and zero hidden fees. We also prepare color rendering packets that sail through strict HOA boards.'
+        : 'Desglose detallado de manos de pintura y preparación sin costos ocultos. Elaboramos paquetes de color para aprobar comités de asociaciones (HOA).',
+      feature: en ? 'Guaranteed written estimate' : 'Cotización detallada por escrito',
+    },
   ];
 
   return (
-    <section ref={revealRef} className="scroll-reveal bg-slate-50/80 py-20 border-y border-slate-100" id="why-us">
+    <section
+      ref={revealRef}
+      className="scroll-reveal bg-slate-50/80 py-20 md:py-28 border-y border-slate-100"
+      id="why-us"
+    >
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-400 block mb-2.5">
-            {language === 'en' ? 'THE EL PALMAR PROMISE' : 'LA PROMESA EL PALMAR'}
+        {/* Section Header */}
+        <div className="mb-12 sm:mb-16 max-w-2xl">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brand-sapphire block mb-2.5">
+            {en ? 'THE EL PALMAR PROMISE' : 'LA PROMESA EL PALMAR'}
           </span>
-          <h2 className="font-heading font-semibold text-3xl sm:text-4xl md:text-5xl text-slate-900 tracking-tight leading-[1.08]">
-            {language === 'en'
+          <h2 className="font-heading font-semibold text-3xl sm:text-4xl md:text-5xl text-slate-900 tracking-tight leading-[1.08] text-balance">
+            {en
               ? 'The Peace of Mind of Having the Owners on Your Jobsite'
               : 'La Tranquilidad de Tratar Directamente con sus Dueños'}
           </h2>
-          <p className="text-slate-500 text-sm sm:text-base mt-3 leading-relaxed">
-            {language === 'en'
-              ? 'No sales reps or anonymous crews. Yalila and Rodolfo manage every project personally with meticulous prep, clean execution, and honest communication.'
-              : 'Sin intermediarios ni cuadrillas anónimas. Yalila y Rodolfo supervisan cada proyecto personalmente con preparación meticulosa, máxima limpieza y honestidad.'}
+          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed text-pretty">
+            {en
+              ? 'No sales reps, no anonymous crews. For over a decade, Yalila and Rodolfo have managed every project personally with architectural precision, clean execution, and honest communication.'
+              : 'Sin intermediarios ni cuadrillas anónimas. Por más de una década, Yalila y Rodolfo han liderado cada obra personalmente con precisión arquitectónica, máxima limpieza y honestidad.'}
           </p>
         </div>
 
-        {/* Clean 2-Row Icon Matrix */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-          {reasons.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div key={idx} className="flex flex-col items-center text-center group">
-                <div className="w-13 h-13 p-3.5 rounded-2xl bg-white shadow-sm border border-slate-200/80 flex items-center justify-center text-brand-navy mb-4 group-hover:scale-105 group-hover:border-amber-200 group-hover:text-brand-sapphire group-hover:shadow-md transition-all">
-                  <Icon className="w-6 h-6" />
+        {/* Bento Grid Layout */}
+        <div className="grid lg:grid-cols-12 gap-8 items-stretch">
+          {/* Left Anchor Card: Founders Story & Face of Trust */}
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-[2rem] bg-white border border-slate-200/80 p-5 sm:p-6 shadow-sm shadow-slate-900/5">
+            <div>
+              {/* Photo Frame */}
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/4.2] sm:aspect-[4/3.8] lg:aspect-[4/4.2] shadow-sm">
+                <img
+                  src="/images/founders-yalila-rodolfo.webp"
+                  alt={
+                    en
+                      ? 'Yalila and Rodolfo, founders of El Palmar'
+                      : 'Yalila y Rodolfo, fundadores de El Palmar'
+                  }
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Bottom Gradient Caption */}
+                <div className="absolute inset-x-0 bottom-0 p-5 pt-16 bg-gradient-to-t from-brand-navy/95 via-brand-navy/40 to-transparent">
+                  <span className="font-heading italic text-white text-2xl leading-none block font-normal">
+                    Yalila &amp; Rodolfo
+                  </span>
+                  <span className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-[0.2em] font-semibold mt-1.5 block">
+                    {en ? 'Founders · On Every Jobsite' : 'Fundadores · En Cada Obra'}
+                  </span>
                 </div>
-                <span className="font-heading font-bold text-slate-900 text-base block">
-                  {item.title[language]}
-                </span>
-                <p className="text-slate-500 text-xs leading-relaxed mt-2 max-w-xs">
-                  {item.desc[language]}
-                </p>
               </div>
-            );
-          })}
+
+              {/* Personal Quote */}
+              <div className="mt-5 p-4 rounded-xl bg-slate-50 border border-slate-200/70">
+                <p className="font-heading italic text-slate-700 text-xs sm:text-sm leading-relaxed text-pretty">
+                  {en
+                    ? '“When you invite someone into your home, you place trust in their character. Our family is on your property every day, treating your home as if it were our own.”'
+                    : '“Cuando invitas a alguien a trabajar en tu casa, depositas tu confianza en su persona. Nuestra propia familia está en tu obra todos los días, cuidando tu hogar como el nuestro.”'}
+                </p>
+                <span className="block mt-2 text-[11px] font-heading font-bold uppercase tracking-wider text-slate-400 not-italic">
+                  — Yalila &amp; Rodolfo
+                </span>
+              </div>
+            </div>
+
+            {/* Integrated Proof Metrics */}
+            <div className="grid grid-cols-3 gap-2 pt-4 mt-4 border-t border-slate-100 text-center">
+              <div>
+                <AnimatedCounter
+                  end={yearsNum}
+                  suffix="+"
+                  className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 block"
+                />
+                <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider block mt-0.5">
+                  {en ? 'Years in FL' : 'Años en FL'}
+                </span>
+              </div>
+              <div className="border-x border-slate-100">
+                <a
+                  href={BUSINESS_INFO.social.googleReviews}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                  aria-label="4.9 Google Reviews"
+                >
+                  <span className="font-heading font-extrabold text-xl sm:text-2xl text-amber-500 block group-hover:underline">
+                    4.9 ★
+                  </span>
+                  <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider block mt-0.5 group-hover:text-slate-600 transition-colors">
+                    {en ? 'Google Reviews' : 'Reseñas Google'}
+                  </span>
+                </a>
+              </div>
+              <div>
+                <AnimatedCounter
+                  end={100}
+                  suffix="%"
+                  className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 block"
+                />
+                <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider block mt-0.5">
+                  {en ? 'Supervised' : 'Supervisado'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: 4 Architectural Bento Cards */}
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5 items-stretch">
+            {bentoCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <div
+                  key={card.title}
+                  className="rounded-[1.75rem] bg-white border border-slate-200/80 p-6 sm:p-7 shadow-xs hover:shadow-md hover:border-brand-sapphire/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-3 mb-4">
+                      <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-brand-navy group-hover:bg-brand-sapphire group-hover:text-white transition-colors duration-300 shadow-xs">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <span className="text-[10px] uppercase font-bold tracking-[0.16em] text-brand-sapphire bg-brand-sapphire/5 px-2.5 py-1 rounded-full group-hover:bg-brand-sapphire/10 transition-colors">
+                        {card.tag}
+                      </span>
+                    </div>
+
+                    <h3 className="font-heading font-bold text-lg sm:text-xl text-slate-900 leading-snug group-hover:text-brand-navy transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mt-2.5">
+                      {card.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 mt-5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>{card.feature}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

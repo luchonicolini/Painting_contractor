@@ -163,7 +163,7 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-brand-sapphire transition-colors flex items-center gap-1 font-semibold"
             >
-              <span>{language === 'en' ? 'Google Reviews (5.0 ★)' : 'Reseñas en Google (5.0 ★)'}</span>
+              <span>{language === 'en' ? 'Google Reviews (4.9 ★)' : 'Reseñas en Google (4.9 ★)'}</span>
             </a>
             <span className="text-slate-300">•</span>
             <button

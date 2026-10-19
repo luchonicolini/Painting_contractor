@@ -48,14 +48,14 @@ export const BUSINESS_INFO: BusinessInfo = {
     facebook: "https://facebook.com/ElPalmarPaintingAndServices",
     instagram: "https://instagram.com/elpalmarpaintingandservices/",
     whatsapp: "https://wa.me/17863706098",
-    googleReviews: "https://www.google.com/search?q=El+Palmar+Painting+and+Services+Florida"
+    googleReviews: "https://www.google.com/maps/place/El+Palmar+Painting+and+Services/@25.766936,-80.305201,10z/data=!3m1!4b1!4m6!3m5!1s0xa4eed2869edf2bb3:0xaaa474f7532c36b7!8m2!3d25.766936!4d-80.305201!16s%2Fg%2F11p5nf5mfv"
   },
   hours: [
     { day: { en: "Monday – Friday", es: "Lunes – Viernes" }, time: "8:00 AM – 5:00 PM" },
     { day: { en: "Saturday – Sunday", es: "Sábado – Domingo" }, time: "10:00 AM – 3:00 PM" }
   ],
   stats: {
-    rating: 5.0,
+    rating: 4.9,
     reviewCount: 48,
     yearsExperience: "10+",
     satisfactionRate: "100%"
